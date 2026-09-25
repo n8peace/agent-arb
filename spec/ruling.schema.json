@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n8peace/agent-arb/spec/ruling.schema.json",
+  "title": "Agent Arb ruling",
+  "description": "Draft v0. Output of the fact panel plus the deterministic decision. Every number traces back to a finding, and every finding traces back to evidence.",
+  "type": "object",
+  "required": ["version", "caseId", "findings", "owed", "decision", "record"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "0.1" },
+    "caseId": { "type": "string" },
+    "findings": {
+      "description": "Panel verdict on each claim. A finding stands only with 2 of 3 independent panelists agreeing.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claimId", "result", "votes"],
+        "additionalProperties": false,
+        "properties": {
+          "claimId": { "type": "string" },
+          "result": { "enum": ["accepted", "rejected", "no_majority"] },
+          "amount": { "type": "integer", "minimum": 0 },
+          "votes": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["panelist", "result"],
+              "additionalProperties": false,
+              "properties": {
+                "panelist": { "type": "string", "description": "vendor/model" },
+                "result": { "enum": ["accepted", "rejected", "abstain"] },
+                "reason": { "type": "string", "maxLength": 1000 }
+              }
+            }
+          },
+          "adverseInference": { "type": "boolean", "default": false, "description": "True when decided against a party that withheld a required disclosure." }
+        }
+      }
+    },
+    "owed": {
+      "description": "What the claimant is owed under the contract, from accepted findings. This, not either side's walk-away point, is the reference for the decision.",
+      "type": "object",
+      "required": ["low", "high", "point"],
+      "additionalProperties": false,
+      "properties": {
+        "low": { "type": "integer", "minimum": 0 },
+        "high": { "type": "integer", "minimum": 0 },
+        "point": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "required": ["mechanism", "outcome"],
+      "additionalProperties": false,
+      "properties": {
+        "mechanism": { "enum": ["final_offer", "nash_owed", "human_review"] },
+        "winningPartyId": { "type": "string" },
+        "outcome": { "type": "integer", "minimum": 0, "description": "Amount the respondent pays the claimant, in minor units." },
+        "explanation": { "type": "string" }
+      }
+    },
+    "record": {
+      "description": "Tamper-evident case log.",
+      "type": "object",
+      "required": ["sha256", "previous"],
+      "additionalProperties": false,
+      "properties": {
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "previous": { "type": ["string", "null"], "description": "Hash of the prior record in the log." }
+      }
+    }
+  }
+}

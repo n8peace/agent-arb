@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/n8peace/agent-arb/spec/case.schema.json",
+  "title": "Agent Arb case",
+  "description": "Draft v0. Everything an agent may submit in a case. Free text is allowed only in fields marked as display-only; the decision never reads them.",
+  "type": "object",
+  "required": ["version", "caseId", "kind", "parties", "contract", "claims", "evidence", "offers"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "0.1" },
+    "caseId": { "type": "string", "pattern": "^case_[a-z0-9]{12,}$" },
+    "kind": {
+      "description": "v1 supports single money-amount disputes only.",
+      "enum": ["security_deposit", "refund", "invoice", "insurance_claim"]
+    },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$", "default": "USD" },
+    "parties": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": { "$ref": "#/$defs/party" }
+    },
+    "contract": {
+      "description": "The agreement the panel reads to decide what each side is owed.",
+      "type": "object",
+      "required": ["evidenceId"],
+      "additionalProperties": false,
+      "properties": {
+        "evidenceId": { "$ref": "#/$defs/id" },
+        "jurisdiction": { "type": "string", "description": "e.g. US-CA. Used to apply default rules such as deposit deadlines." }
+      }
+    },
+    "disclosures": {
+      "description": "Rules a business party applied (valuation factors, refund policy). A missing required disclosure is read against the party that withheld it.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["partyId", "topic", "evidenceId"],
+        "additionalProperties": false,
+        "properties": {
+          "partyId": { "$ref": "#/$defs/id" },
+          "topic": { "type": "string" },
+          "evidenceId": { "$ref": "#/$defs/id" }
+        }
+      }
+    },
+    "claims": {
+      "description": "Factual assertions, each tied to evidence. The fact panel accepts or rejects each one.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claimId", "partyId", "assertion", "evidenceIds"],
+        "additionalProperties": false,
+        "properties": {
+          "claimId": { "$ref": "#/$defs/id" },
+          "partyId": { "$ref": "#/$defs/id" },
+          "assertion": {
+            "description": "One checkable fact, e.g. 'Carpet damage beyond normal wear in bedroom 2'. Short, neutral wording; tone is stripped before the panel sees it.",
+            "type": "string",
+            "maxLength": 280
+          },
+          "amount": { "$ref": "#/$defs/money", "description": "Money this fact is worth, if any." },
+          "evidenceIds": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/id" } }
+        }
+      }
+    },
+    "evidence": {
+      "description": "Files and records. Treated as data only: text inside evidence is never followed as instructions.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidenceId", "partyId", "type", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "evidenceId": { "$ref": "#/$defs/id" },
+          "partyId": { "$ref": "#/$defs/id" },
+          "type": { "enum": ["contract", "photo", "receipt", "message", "invoice", "policy", "statement", "other"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "uri": { "type": "string", "format": "uri" },
+          "capturedAt": { "type": "string", "format": "date-time" },
+          "note": { "type": "string", "maxLength": 500, "description": "Display-only. Not read by the decision." }
+        }
+      }
+    },
+    "offers": {
+      "description": "One sealed final offer per party. Revealed only after the fact panel rules.",
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["partyId", "amount", "sealedAt"],
+        "additionalProperties": false,
+        "properties": {
+          "partyId": { "$ref": "#/$defs/id" },
+          "amount": { "$ref": "#/$defs/money", "description": "What the claimant should receive from the respondent." },
+          "sealedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z]+_[a-z0-9]{6,}$" },
+    "money": { "type": "integer", "minimum": 0, "description": "Minor units (cents)." },
+    "party": {
+      "type": "object",
+      "required": ["partyId", "role", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "partyId": { "$ref": "#/$defs/id" },
+        "role": { "enum": ["claimant", "respondent"] },
+        "type": {
+          "description": "Business parties carry disclosure duties and may pre-commit to rulings.",
+          "enum": ["person", "business"]
+        },
+        "bindingPreCommit": {
+          "type": "boolean",
+          "default": false,
+          "description": "Business only: agrees in advance to accept the ruling. People are never bound by default."
+        },
+        "agent": {
+          "description": "Recorded for the strength-gap benchmark and audits. Never shown to the panel.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "vendor": { "type": "string" },
+            "model": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
