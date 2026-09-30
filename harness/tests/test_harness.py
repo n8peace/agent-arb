@@ -208,7 +208,7 @@ class Providers(unittest.TestCase):
 
     def test_default_models(self):
         self.assertEqual(config.MODELS["anthropic"]["strong"], os.environ.get("ARB_ANTHROPIC_STRONG_MODEL", "claude-opus-5-5"))
-        self.assertEqual(config.MODELS["anthropic"]["weak"], os.environ.get("ARB_ANTHROPIC_WEAK_MODEL", "claude-haiku-4-5-20251001"))
+        self.assertEqual(config.MODELS["anthropic"]["weak"], os.environ.get("ARB_ANTHROPIC_WEAK_MODEL", "claude-haiku-4-5"))
 
 
 class FullScriptedRun(unittest.TestCase):

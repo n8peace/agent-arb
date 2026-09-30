@@ -6,6 +6,7 @@ APIs; they are never used by the tests or by default runs.
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from typing import Dict, List, Optional
@@ -219,7 +220,7 @@ class ScriptedProvider(Provider):
 
 
 # ---------------------------------------------------------------------------
-# Paid providers (stubs). Never used by tests or default runs.
+# Paid providers. Never used by tests or default runs.
 # ---------------------------------------------------------------------------
 
 def _require_key(provider: str) -> str:
@@ -244,24 +245,98 @@ def _post_json(url: str, headers: Dict[str, str], body: dict) -> dict:
         raise ProviderError("network error: %s" % e)
 
 
-class AnthropicProvider(Provider):
-    """Anthropic Messages API over plain HTTPS (no SDK needed). Untested against the live API."""
+def _import_anthropic():
+    """Import the official SDK on first use, so scripted and offline runs need only the stdlib."""
+    try:
+        import anthropic
+    except ImportError:
+        raise ProviderError(
+            "the 'anthropic' package is not installed. Run: python3 -m venv .venv && "
+            ". .venv/bin/activate && pip install -r harness/requirements.txt")
+    return anthropic
 
-    def __init__(self, strength: str, model: Optional[str] = None):
-        self._key = _require_key("anthropic")
+
+# stop reasons that mean the reply is complete. Anything else (refusal, max_tokens, ...) is malformed.
+_COMPLETE_STOPS = ("end_turn", "stop_sequence")
+
+
+class AnthropicProvider(Provider):
+    """Anthropic Messages API through the official SDK. Not yet run against the live API.
+
+    Request rules (see config.MODEL_PARAMS): no temperature/top_p, no assistant prefill, no
+    thinking param. Opus 5.5 gets output_config={"effort": "low"} (its thinking cannot be turned
+    off, and counts against max_tokens); Haiku 4.5 gets a plain request.
+    """
+
+    def __init__(self, strength: str, model: Optional[str] = None, tracker=None,
+                 client=None, sdk=None, sleep=time.sleep):
         self.model = model or config.MODELS["anthropic"][strength]
+        params = config.MODEL_PARAMS.get(self.model)
+        if params is None or self.model not in config.PRICES_USD_PER_MTOK:
+            raise ProviderError(
+                "model %r has no entry in config.MODEL_PARAMS / PRICES_USD_PER_MTOK; add its "
+                "max_tokens, effort setting and price there before using it" % self.model)
+        self.max_tokens = params["max_tokens"]
+        self.effort = params.get("effort")
         self.name = "anthropic:%s" % self.model
+        self.tracker = tracker
+        self._sleep = sleep
+        if client is None:
+            _require_key("anthropic")            # the SDK reads ANTHROPIC_API_KEY itself
+            sdk = _import_anthropic()
+            client = sdk.Anthropic()
+        self._sdk = sdk or _import_anthropic()
+        self._client = client
+
+    def _request(self, system: str, messages: List[dict]) -> dict:
+        kw = {"model": self.model, "max_tokens": self.max_tokens, "system": system, "messages": messages}
+        if self.effort:
+            kw["output_config"] = {"effort": self.effort}
+        return kw
+
+    def _create(self, kw: dict):
+        sdk = self._sdk
+        attempt = 0
+        while True:
+            try:
+                return self._client.messages.create(**kw)
+            except sdk.RateLimitError as e:
+                if attempt >= config.RATE_LIMIT_RETRIES:
+                    raise ProviderError("rate limited: still 429 after %d retries: %s"
+                                        % (attempt, str(e)[:300]))
+                self._sleep(self._retry_delay(e, attempt))
+                attempt += 1
+            except sdk.APIStatusError as e:
+                raise ProviderError("Anthropic API error %s: %s" % (getattr(e, "status_code", "?"), str(e)[:500]))
+            except sdk.APIConnectionError as e:
+                raise ProviderError("network error talking to Anthropic: %s" % e)
+
+    @staticmethod
+    def _retry_delay(err, attempt: int) -> float:
+        try:
+            return min(60.0, max(1.0, float(err.response.headers.get("retry-after"))))
+        except Exception:
+            return min(60.0, 5.0 * 2 ** attempt)
 
     def reply(self, system: str, messages: List[dict]) -> str:
-        data = _post_json(
-            "https://api.anthropic.com/v1/messages",
-            {"x-api-key": self._key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            {"model": self.model, "max_tokens": config.MAX_TOKENS, "system": system, "messages": messages})
-        return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+        if self.tracker is not None:
+            self.tracker.check_before(self.model, system, messages, self.max_tokens)
+        resp = self._create(self._request(system, messages))
+        if self.tracker is not None:
+            self.tracker.record(self.model, resp.usage.input_tokens, resp.usage.output_tokens)
+        if resp.stop_reason not in _COMPLETE_STOPS:
+            # refusal, max_tokens (a cut-off "OFFER: 5" must not parse), etc.: return no text so
+            # the caller sees a malformed reply and applies its one-retry rule.
+            if self.tracker is not None:
+                self.tracker.malformed += 1
+            return ""
+        # text blocks only; thinking blocks are skipped
+        return "".join(b.text for b in resp.content if getattr(b, "type", None) == "text")
 
 
 class OpenAIProvider(Provider):
-    """OpenAI Chat Completions over plain HTTPS (no SDK needed). Untested against the live API."""
+    """OpenAI Chat Completions over plain HTTPS (no SDK needed). UNTESTED against the live API,
+    and it has no cost tracking, so harness.run refuses to run it."""
 
     def __init__(self, strength: str, model: Optional[str] = None):
         self._key = _require_key("openai")
@@ -276,11 +351,18 @@ class OpenAIProvider(Provider):
         return data["choices"][0]["message"]["content"] or ""
 
 
-def make_provider(kind: str, strength: str) -> Provider:
+def preflight(kind: str) -> None:
+    """Fail fast (before any run or output file) if a paid provider is not ready to call."""
+    if kind == "anthropic":
+        _require_key("anthropic")
+        _import_anthropic()
+
+
+def make_provider(kind: str, strength: str, tracker=None) -> Provider:
     if kind == "scripted":
         return ScriptedProvider(strength)
     if kind == "anthropic":
-        return AnthropicProvider(strength)
+        return AnthropicProvider(strength, tracker=tracker)
     if kind == "openai":
         return OpenAIProvider(strength)
     raise ValueError("unknown provider %r" % kind)

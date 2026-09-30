@@ -1,6 +1,5 @@
-# The harness itself uses only the Python standard library.
-# Nothing here is needed for offline runs or tests.
-# The built-in Anthropic/OpenAI providers talk to the APIs over plain HTTPS, so the SDKs
-# below are OPTIONAL (only if you later swap in SDK-based providers).
-# anthropic>=0.40
-# openai>=1.50
+# Offline and scripted runs and the tests need only the Python standard library.
+# The Anthropic provider needs the official SDK (imported lazily, only for paid runs):
+#   python3 -m venv .venv && . .venv/bin/activate && pip install -r harness/requirements.txt
+anthropic>=1.9
+# The OpenAI provider is untested and calls the API over plain HTTPS (no SDK needed).
