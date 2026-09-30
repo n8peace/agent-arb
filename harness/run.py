@@ -16,6 +16,8 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DISPUTES = os.path.join(REPO_ROOT, "bench", "disputes")
 ARB_LABEL = ("UPPER BOUND, not a real result: arb mechanisms use answer.json (owedCents, lowCents, "
              "highCents) as a perfect fact panel. Offers are sealed and scripted.")
+SIM_LABEL = ("SIMULATED PANEL, not a real result: arb mechanisms use answer.json plus simulated "
+             "panel error (arb.simpanel). Offers are sealed and scripted.")
 MECHANISM_CHOICES = ["haggle", "arb-final", "arb-clamped", "arb"]
 MECHANISM_ALIASES = {"arb": "arb-final"}
 
@@ -86,6 +88,17 @@ def main(argv: Optional[List[str]] = None) -> int:
                          "rule; arb-clamped = final-offer clamped to the panel's range, panel amount when the "
                          "range is narrow. arb is an alias for arb-final. Both arb modes use sealed offers and "
                          "a perfect-panel stand-in; scripted only, an UPPER BOUND, not a real result")
+    ap.add_argument("--panel", choices=["perfect", "noisy", "biased"], default="perfect",
+                    help="arb modes only. perfect = answer.json as the panel (default). noisy = three "
+                         "simulated panelists with seeded noise, median point, min-max range. biased = "
+                         "noisy plus a pull toward the side that filed more claims/evidence. See arb/simpanel.py")
+    ap.add_argument("--noise-pct", type=float, default=None,
+                    help="noisy/biased: panelist noise sd as %% of the contested amount (default 10)")
+    ap.add_argument("--bias", type=float, default=None,
+                    help="biased: persuasion factor toward the side that filed more (default 0.5)")
+    ap.add_argument("--margin-pct", type=float, default=None,
+                    help="noisy/biased: widen the panel range by this %% of the contested amount (default 0)")
+    ap.add_argument("--seed", type=int, default=None, help="noisy/biased: panel noise seed (default 0)")
     ap.add_argument("--rounds", type=int, default=config.MAX_ROUNDS)
     ap.add_argument("--friction-cents", type=int, default=config.COURT_FRICTION_CENTS)
     ap.add_argument("--disputes-dir", default=DEFAULT_DISPUTES)
@@ -106,12 +119,28 @@ def main(argv: Optional[List[str]] = None) -> int:
               "stand-in panel). Use --provider scripted." % args.mechanism, file=sys.stderr)
         return 2
 
+    panel_opts = {k: v for k, v in (("noise_pct", args.noise_pct), ("bias", args.bias),
+                                     ("margin_pct", args.margin_pct), ("seed", args.seed)) if v is not None}
+    if not is_arb and (args.panel != "perfect" or panel_opts):
+        print("Refusing to run: --panel and its options apply to arb mechanisms only "
+              "(haggle has no fact panel).", file=sys.stderr)
+        return 2
+    panel = None
+    if is_arb:
+        from arb.simpanel import make_panel
+        try:
+            panel = make_panel(args.panel, **panel_opts)
+        except ValueError as e:
+            print("error: %s" % e, file=sys.stderr)
+            return 2
+    label = ARB_LABEL if args.panel == "perfect" else SIM_LABEL
+
     case_dirs = list_case_dirs(args.disputes_dir, args.cases)
     try:
         if is_arb:
             from arb.bench import HARNESS_MECHANISMS, run_cases_arb
             runs = run_cases_arb(case_dirs, args.friction_cents,
-                                 mechanism=HARNESS_MECHANISMS[args.mechanism])
+                                 mechanism=HARNESS_MECHANISMS[args.mechanism], panel=panel)
         else:
             runs = run_cases(case_dirs, args.provider, args.rounds, args.friction_cents)
     except ProviderError as e:
@@ -119,6 +148,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 2
 
     summary = summarize(runs)
+    if is_arb:
+        from arb.simpanel import extra_metrics
+        summary["panelMetrics"] = extra_metrics(runs)
     stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     out = args.out or os.path.join(REPO_ROOT, "results", "%s.json" % stamp)
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
@@ -127,7 +159,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             "generatedAt": datetime.datetime.now().isoformat(timespec="seconds"),
             "provider": args.provider,
             "mechanism": args.mechanism,
-            "notARealResult": ARB_LABEL if is_arb else None,
+            "notARealResult": label if is_arb else None,
+            "panel": panel.describe() if is_arb else None,
             "cases": len(case_dirs),
             "maxRounds": args.rounds,
             "courtFrictionCents": args.friction_cents,
@@ -139,10 +172,13 @@ def main(argv: Optional[List[str]] = None) -> int:
     with open(out, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=2)
     if is_arb:
-        print("*** %s ***\n" % ARB_LABEL)
+        print("*** %s ***\n" % label)
     print(format_summary(summary, len(case_dirs), args.friction_cents))
     if is_arb:
-        print("\n*** %s ***" % ARB_LABEL)
+        pm = summary["panelMetrics"]
+        print("\nPanel: %s. Human review rate: %.1f%%. Mean |award - owed| on awarded runs: $%.2f" % (
+            args.panel, pm["humanReviewRate"] * 100, pm["meanAbsErrorAwardedCents"] / 100.0))
+        print("\n*** %s ***" % label)
     print("\nWrote %s" % out)
     return 0
 

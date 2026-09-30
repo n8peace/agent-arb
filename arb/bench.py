@@ -1,11 +1,15 @@
 """Bridge from the strength-gap harness to the Agent Arb decision rules (scripted only).
 
-    run_cases_arb(case_dirs, friction_cents, provider_factory=None, mechanism="final_offer")
-        -> list of run records
+    run_cases_arb(case_dirs, friction_cents, provider_factory=None, mechanism="final_offer",
+                  panel=None) -> list of run records
 
 UPPER BOUND, NOT A REAL RESULT. The fact panel is a stand-in that flatters the mechanism:
   * "Perfect panel": owed_point is the hidden answer key's owedCents, and the owed range is
     its lowCents..highCents. A real fact panel will be wrong sometimes.
+  * panel=arb.simpanel.SimPanel("noisy" | "biased", ...) swaps in a simulated imperfect panel
+    (still built from answer.json, still not a real result). The panel is harness-side only: it
+    runs after both sealed offers are in and never reaches a prompt. panel=None or "perfect"
+    gives exactly the perfect-panel records above.
 Offers are truly sealed: each side gets only its own view of the case (the same visibility
 rule as the haggle, harness.prompts) and one kickoff message. Neither side is ever shown the
 other's offer, so a side's offer cannot depend on what the other side does.
@@ -24,9 +28,13 @@ from harness.providers import make_provider
 from harness.scoring import STRENGTHS, load_answer, score_run
 
 from . import decide
+from .simpanel import SimPanel
 
 # CLI name -> decide mechanism
 HARNESS_MECHANISMS = {"arb-final": decide.MECH_FINAL_OFFER, "arb-clamped": decide.MECH_CLAMPED}
+
+SIM_LABEL = ("SIMULATED PANEL, not a real result: arb mechanisms use answer.json plus simulated "
+             "panel error (arb.simpanel). Offers are sealed and scripted.")
 
 LABEL = ("UPPER BOUND, not a real result: arb mechanisms use answer.json (owedCents, lowCents, "
          "highCents) as a perfect fact panel. Offers are sealed and scripted.")
@@ -52,16 +60,18 @@ def sealed_offer(provider, system: str):
 
 def run_cases_arb(case_dirs: List[str], friction_cents: int,
                   provider_factory: Optional[Callable] = None,
-                  mechanism: str = decide.MECH_FINAL_OFFER) -> List[dict]:
+                  mechanism: str = decide.MECH_FINAL_OFFER,
+                  panel: Optional[SimPanel] = None) -> List[dict]:
     if mechanism not in decide.MECHANISMS:
         raise ValueError("unknown mechanism %r" % mechanism)
     harness_name = next(k for k, v in HARNESS_MECHANISMS.items() if v == mechanism)
     factory = provider_factory or (lambda strength: make_provider("scripted", strength))
+    simulated = panel is not None and panel.kind != "perfect"
     runs: List[dict] = []
     for case_dir in case_dirs:
         case = load_case(case_dir)
         ans = load_answer(case_dir)                       # perfect-panel stand-in
-        owed, owed_range = ans["owedCents"], (ans["lowCents"], ans["highCents"])
+        owed = ans["owedCents"]                           # truth, for scoring
         parties = [{"partyId": case.party_id(role), "role": role, "type": case.parties[role]["type"]}
                    for role in ("claimant", "respondent")]
         sys_c = build_sealed_prompt(case, "claimant", mechanism)
@@ -73,7 +83,11 @@ def run_cases_arb(case_dirs: List[str], friction_cents: int,
                 _, r_offer = sealed_offer(respondent, sys_r)
                 offers = [{"partyId": p["partyId"], "amount": amt}
                           for p, amt in zip(parties, (c_offer, r_offer)) if amt is not None]
-                decision = decide.apply_mechanism(mechanism, owed, offers, parties, owed_range=owed_range)
+                if simulated:
+                    point, owed_range = panel.find(case, ans, cs, rs)
+                else:
+                    point, owed_range = owed, (ans["lowCents"], ans["highCents"])
+                decision = decide.apply_mechanism(mechanism, point, offers, parties, owed_range=owed_range)
                 deal = None if decision["mechanism"] == decide.MECH_HUMAN_REVIEW else decision["outcome"]
                 rec = {
                     "caseId": case.case_id,
@@ -84,7 +98,7 @@ def run_cases_arb(case_dirs: List[str], friction_cents: int,
                     "claimantModel": claimant.name,
                     "respondentModel": respondent.name,
                     "owedCents": owed,
-                    "owedRangeCents": list(owed_range),
+                    "owedRangeCents": [ans["lowCents"], ans["highCents"]],
                     "outcome": "deal" if deal is not None else "no_deal",
                     "reason": decision["mechanism"],
                     "acceptedBy": None,
@@ -96,6 +110,10 @@ def run_cases_arb(case_dirs: List[str], friction_cents: int,
                                          if p["partyId"] == decision.get("winningPartyId")), None),
                     "upperBoundNotARealResult": True,
                 }
+                if simulated:
+                    rec["panel"] = panel.kind
+                    rec["panelPointCents"] = point
+                    rec["panelRangeCents"] = list(owed_range)
                 rec.update(score_run(owed, deal, friction_cents))
                 runs.append(rec)
     return runs
