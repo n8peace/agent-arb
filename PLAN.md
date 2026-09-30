@@ -31,7 +31,7 @@ It has one big flaw we have to fix. The standard version measures "better off" f
 3. **Disclose.** The company side has to show the rules it applied (for example the claim-valuation factors or the refund policy). If it refuses, the panel assumes the missing rule would have favored the person, the same inference courts draw from hidden evidence.
 4. **Find the facts.** Three models from different companies each read the evidence on their own and answer set questions: what happened, what the contract says, and what range each side is owed. A fact counts only when at least two agree. No majority means the case goes to a human. (This is the same agreement rule [Open Election Data](https://github.com/n8peace/open-election-data) uses.)
 5. **Decide with math.** Deterministic code, public and tested, turns the facts plus each side's offer into an outcome:
-   - **v1, a single money amount** (refund, deposit, claim): *final-offer arbitration.* Each side submits one sealed final number, and the one closer to the panel's "owed" estimate wins outright. Overreaching loses, so both sides are pushed toward honest numbers. It's simple, hard to game, and proven in baseball salary disputes.
+   - **v1, a single money amount** (refund, deposit, claim): *clamped final-offer.* When the panel's "owed" range is narrow, the award is exactly what's owed and the offers don't matter. When it's wide, each side's sealed number competes, the one closer to "owed" wins, and the award is capped to the panel's range. We tried plain final-offer first, where the winner gets its own number in full. It rewarded whoever guessed the ruling best, not whoever was right: even with a perfect panel, the average award was off by about $200. See [Results so far](#results-so-far).
    - **v2, several issues at once** (amount, timing, repairs, apology): the Nash bargaining solution measured from what each side is owed, using each side's stated priorities.
 6. **Ruling.** A written result explains every fact, its source and the math. The full case record is signed and hashed so nobody can alter it later.
 7. **The person keeps the exit.** Rulings are **non-binding for the person by default**: they can take the result or walk away to court or a human arbitrator. Companies can commit in advance to accept rulings, which is what earns them a public "fair dealing" badge. This is the opposite of forced arbitration: the company is bound and the person keeps the choice.
@@ -86,6 +86,21 @@ These tests are the product. If they fail, the change doesn't ship.
 
 **Phase 5: governance**
 - Rule changes go through a public proposal process. No single company, including us, can quietly change how rulings work.
+
+## Results so far
+
+*Offline, scripted bargainers, 50 disputes, 4 weak/strong pairings each. The two Agent Arb rows assume a perfect fact panel (the answer key), so they are best cases, not real results.*
+
+| Method | Strong claimant's edge | Strong respondent's edge | Average award error |
+|---|---|---|---|
+| Open haggling | +$334 | +$104 | $284 |
+| Plain final-offer | −$94 | −$75 | $203 |
+| Clamped final-offer (v1) | −$4 | $0 | $1 |
+
+What this does and doesn't show:
+- The gap to beat is real in the harness, and clamping removes it *when the facts are found correctly*.
+- The clamped result mostly means "the panel decided it." 45 of 50 answer ranges are a single number. With a perfect panel, the whole fight moves into fact-finding and into which claims and evidence each agent files. That's where a stronger model will try to win next, and the next tests go there: an imperfect panel, then real models.
+- Human review could fire often once real panels return wider ranges. We'll measure that rate before we call v1 done.
 
 ## Where to start
 
