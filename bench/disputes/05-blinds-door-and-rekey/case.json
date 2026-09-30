@@ -1,0 +1,125 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0005",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c05clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c05rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c05e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c05k01",
+      "partyId": "pty_c05clm",
+      "assertion": "Bedroom 1 blinds were bent with two slats missing at move-in on 2023-04-15",
+      "evidenceIds": [
+        "ev_c05e02"
+      ]
+    },
+    {
+      "claimId": "clm_c05k02",
+      "partyId": "pty_c05clm",
+      "assertion": "Tenant returned three unit keys and one mailbox key on 2025-04-14",
+      "evidenceIds": [
+        "ev_c05e04"
+      ]
+    },
+    {
+      "claimId": "clm_c05k03",
+      "partyId": "pty_c05clm",
+      "assertion": "Landlord withheld $645 and refunded $1,305 of the deposit",
+      "amount": 64500,
+      "evidenceIds": [
+        "ev_c05e05"
+      ]
+    },
+    {
+      "claimId": "clm_c05k04",
+      "partyId": "pty_c05rsp",
+      "assertion": "Bedroom 1 door had a hole of about 4 inches at move-out and was in good condition at move-in",
+      "evidenceIds": [
+        "ev_c05e03",
+        "ev_c05e02"
+      ]
+    },
+    {
+      "claimId": "clm_c05k05",
+      "partyId": "pty_c05rsp",
+      "assertion": "Door repair cost $340 per invoice",
+      "amount": 34000,
+      "evidenceIds": [
+        "ev_c05e05"
+      ]
+    },
+    {
+      "claimId": "clm_c05k06",
+      "partyId": "pty_c05rsp",
+      "assertion": "Re-keying the lock cost $95 because keys were not returned",
+      "amount": 9500,
+      "evidenceIds": [
+        "ev_c05e05",
+        "ev_c05e01"
+      ]
+    },
+    {
+      "claimId": "clm_c05k07",
+      "partyId": "pty_c05rsp",
+      "assertion": "Blinds replacement cost $210",
+      "amount": 21000,
+      "evidenceIds": [
+        "ev_c05e05",
+        "ev_c05e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c05e01",
+      "partyId": "pty_c05rsp",
+      "type": "contract",
+      "sha256": "f193e0d44341e61d6124075c16dc717dccabf88a3c4b3382e208d2b30ffc8c76",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c05e02",
+      "partyId": "pty_c05clm",
+      "type": "other",
+      "sha256": "59d4805aba357f559180fb99bbd260b339bd8aee1f0c52440222ac6c76a170b5",
+      "uri": "evidence/move-in-checklist-2023-04-15.txt"
+    },
+    {
+      "evidenceId": "ev_c05e03",
+      "partyId": "pty_c05rsp",
+      "type": "other",
+      "sha256": "46038051cf0d90dc31efb759e38310c1f9e28a71a45a623807e5716e193bc433",
+      "uri": "evidence/move-out-inspection-2025-04-14.txt"
+    },
+    {
+      "evidenceId": "ev_c05e04",
+      "partyId": "pty_c05clm",
+      "type": "receipt",
+      "sha256": "b9a6edf2ad5cb2eb46cbea74beffb2bdc53989a0c2321f9ce6a99b74166098a0",
+      "uri": "evidence/key-return-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c05e05",
+      "partyId": "pty_c05rsp",
+      "type": "statement",
+      "sha256": "f01bb3bdd1527b41766764a09603be61af256b0cdd64ead3d712662fd8eb740a",
+      "uri": "evidence/deduction-statement-with-invoices.txt"
+    }
+  ],
+  "offers": []
+}

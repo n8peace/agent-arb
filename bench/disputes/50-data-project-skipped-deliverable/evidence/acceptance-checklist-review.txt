@@ -1,0 +1,6 @@
+NORTHFIELD FREIGHT CO. - INTERNAL ACCEPTANCE CHECKLIST REVIEW (produced by Northfield)
+Reviewer: Owen Park. Date: 2025-05-19.
+
+D1 Operations dashboards: 8 of 8 checklist items PASS. Comment: "Meets spec."
+D2 Cleaned shipment dataset: 6 of 6 checklist items PASS. Comment: "Good, matches data dictionary."
+D3: not reviewed.

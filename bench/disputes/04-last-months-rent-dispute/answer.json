@@ -1,0 +1,8 @@
+{
+  "owedCents": 165000,
+  "lowCents": 165000,
+  "highCents": 165000,
+  "reasoning": "Lease clause 3 makes Landlord's text reply a valid receipt; she replied 'Got it, thanks Malik' on 6/1 (msg) and Zelle shows delivery to the lease number (zelle, lease). Her notice gives no other deduction and reports no damage (stmt). Full deposit owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

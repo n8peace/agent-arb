@@ -1,0 +1,6 @@
+Emails, Rafael Ostrow and Tallgrass (Meera Castillo, Product)
+
+2025-06-02 (Mon) 2:10 PM Rafael: Milestone 3 delivered, release tag v0.3.0. All items S1-S6 are covered, test report attached. Invoice for $6,000 attached.
+2025-06-13 (Fri) 4:45 PM Meera: We are rejecting Milestone 3. Issues: (1) primary button color doesn't match our brand blue, (2) list screen feels slow on older phones, (3) CSV header says "Adress".
+2025-06-13 Rafael: None of those are S1-S6 non-conformance and your notice is past the 5 business days (deadline June 9). I'll fix the button and the typo under warranty. Payment is due.
+2025-06-20 Meera: We won't pay until everything is fixed.

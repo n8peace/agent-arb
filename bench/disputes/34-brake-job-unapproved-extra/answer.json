@@ -1,0 +1,8 @@
+{
+  "owedCents": 29000,
+  "lowCents": 29000,
+  "highCents": 29000,
+  "reasoning": "The estimate bars charges above $480 without logged customer approval (estimate). The shop's own call log shows the $100 flush approved and the $290 caliper rebuild expressly not approved (calllog); California also requires customer authorization for added repair work. So $480 + $100 = $580 is payable; $870 - $580 = $290 owed. The call log is held only by the shop.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

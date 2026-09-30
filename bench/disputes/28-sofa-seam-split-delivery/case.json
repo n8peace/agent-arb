@@ -1,0 +1,103 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0028",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c28clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c28rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c28e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c28k01",
+      "partyId": "pty_c28clm",
+      "assertion": "The customer reported the split seam on 2025-04-08, three days after delivery",
+      "evidenceIds": [
+        "ev_c28e04",
+        "ev_c28e03"
+      ]
+    },
+    {
+      "claimId": "clm_c28k02",
+      "partyId": "pty_c28clm",
+      "assertion": "Order total was $1,335 including $95 delivery",
+      "amount": 133500,
+      "evidenceIds": [
+        "ev_c28e02"
+      ]
+    },
+    {
+      "claimId": "clm_c28k03",
+      "partyId": "pty_c28clm",
+      "assertion": "Policy section 2 refunds item price and delivery fee for damaged or defective items reported within 7 days",
+      "evidenceIds": [
+        "ev_c28e01"
+      ]
+    },
+    {
+      "claimId": "clm_c28k04",
+      "partyId": "pty_c28rsp",
+      "assertion": "The customer signed the delivery receipt on 2025-04-05",
+      "evidenceIds": [
+        "ev_c28e03"
+      ]
+    },
+    {
+      "claimId": "clm_c28k05",
+      "partyId": "pty_c28rsp",
+      "assertion": "Hearthside's own inspection on 2025-04-15 found a 10-inch seam split from a manufacturing defect with no impact damage",
+      "evidenceIds": [
+        "ev_c28e05"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c28e01",
+      "partyId": "pty_c28rsp",
+      "type": "policy",
+      "sha256": "484e29a4af0d78f015212752f5c17e07dbcd94387da2d080f4ab836d023b7792",
+      "uri": "evidence/return-policy.txt"
+    },
+    {
+      "evidenceId": "ev_c28e02",
+      "partyId": "pty_c28clm",
+      "type": "receipt",
+      "sha256": "c2f8357c57d8ae90c3da2a237db2f629c1bb8ed4667f3900ea502e0eb54ab60d",
+      "uri": "evidence/order-confirmation.txt"
+    },
+    {
+      "evidenceId": "ev_c28e03",
+      "partyId": "pty_c28rsp",
+      "type": "other",
+      "sha256": "b5fadabda9aa55d2a677b8a59cb79fa8f4f70560a43209b84f6267362132798a",
+      "uri": "evidence/delivery-receipt-and-driver-note.txt"
+    },
+    {
+      "evidenceId": "ev_c28e04",
+      "partyId": "pty_c28clm",
+      "type": "message",
+      "sha256": "65bd414436ada40d7f622d41c00ab1275ca9bdbfbdfe6397384dff0d434a29a7",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c28e05",
+      "partyId": "pty_c28rsp",
+      "type": "other",
+      "sha256": "a21ae22aaa33c7b19e4f55ec7978732451493d89d5b73936c24100c0288b91ca",
+      "uri": "evidence/inspection-report-2025-04-15.txt"
+    }
+  ],
+  "offers": []
+}

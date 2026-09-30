@@ -1,0 +1,5 @@
+INVOICE 0611 - Ilse Brandt to Northfield Freight Co. - 2025-06-10
+D1 Operations dashboards: $1,000.00
+D2 Cleaned shipment dataset: $750.00
+D3 Forecasting model, work completed (about 70%): $1,000.00
+TOTAL: $2,750.00. Payments received: $0.00.

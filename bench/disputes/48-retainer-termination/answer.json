@@ -1,0 +1,8 @@
+{
+  "owedCents": 44000,
+  "lowCents": 44000,
+  "highCents": 44000,
+  "reasoning": "Section 6: termination takes effect 30 days after notice (3/12 + 30 = 4/11) and fees accrue daily at $40 through that date (agreement, emails). April 1-11 = 11 days x $40 = $440 (log confirms work in that period). Full-month April invoice overstates; nothing after 4/11 accrues.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

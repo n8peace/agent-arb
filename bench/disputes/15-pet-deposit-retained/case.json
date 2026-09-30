@@ -1,0 +1,101 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0015",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c15clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c15rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c15e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c15k01",
+      "partyId": "pty_c15clm",
+      "assertion": "Pet Addendum states the $500 pet deposit is refundable less pet-caused damage or odor",
+      "amount": 50000,
+      "evidenceIds": [
+        "ev_c15e01"
+      ]
+    },
+    {
+      "claimId": "clm_c15k02",
+      "partyId": "pty_c15clm",
+      "assertion": "The move-out inspection found no pet damage or pet odor",
+      "evidenceIds": [
+        "ev_c15e03"
+      ]
+    },
+    {
+      "claimId": "clm_c15k03",
+      "partyId": "pty_c15clm",
+      "assertion": "Landlord withheld $700 of the $2,000 held and refunded $1,300",
+      "amount": 70000,
+      "evidenceIds": [
+        "ev_c15e04"
+      ]
+    },
+    {
+      "claimId": "clm_c15k04",
+      "partyId": "pty_c15rsp",
+      "assertion": "Landlord retained the $500 pet deposit as non-refundable under community policy",
+      "amount": 50000,
+      "evidenceIds": [
+        "ev_c15e04",
+        "ev_c15e02"
+      ]
+    },
+    {
+      "claimId": "clm_c15k05",
+      "partyId": "pty_c15rsp",
+      "assertion": "Oven had heavy grease at move-out and cleaning cost $200",
+      "amount": 20000,
+      "evidenceIds": [
+        "ev_c15e03",
+        "ev_c15e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c15e01",
+      "partyId": "pty_c15rsp",
+      "type": "contract",
+      "sha256": "c7999c16773791113c17d3ca6b93cf3d9bd6bdc1520e6abfc9402bc0687be797",
+      "uri": "evidence/lease-and-pet-addendum.txt"
+    },
+    {
+      "evidenceId": "ev_c15e02",
+      "partyId": "pty_c15rsp",
+      "type": "policy",
+      "sha256": "56ee4be3cdb2655897604396aba0617038d07e01e9ea49582cacf1781dd19990",
+      "uri": "evidence/resident-handbook-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c15e03",
+      "partyId": "pty_c15rsp",
+      "type": "other",
+      "sha256": "2a52ff58c8579962e7537d544a46d1c608090ba0f79e584c6929797db8e46de7",
+      "uri": "evidence/move-out-inspection-2025-05-31.txt"
+    },
+    {
+      "evidenceId": "ev_c15e04",
+      "partyId": "pty_c15rsp",
+      "type": "statement",
+      "sha256": "1519d6f30aa9b23d4b5a475b5d987fdf31afbcba187c0b5b7b9d03407d1cc6f0",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

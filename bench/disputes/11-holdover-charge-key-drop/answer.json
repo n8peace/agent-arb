@@ -1,0 +1,8 @@
+{
+  "owedCents": 19500,
+  "lowCents": 19500,
+  "highCents": 19500,
+  "reasoning": "Lease s.14 defines return as placing keys in the drop box; the landlord's own key log shows the envelope marked 'dropped 1/31 4:40pm' (keylog), so no holdover accrued and $195 is invalid. The couch haul-away has a receipt and is confirmed by the walkthrough (keylog), so $85 stands. Owed $195.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

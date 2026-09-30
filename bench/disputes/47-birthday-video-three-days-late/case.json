@@ -1,0 +1,88 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0047",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c47clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c47rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c47e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c47k01",
+      "partyId": "pty_c47clm",
+      "assertion": "Final delivery was on 2025-02-04, four days after the target date and four days before the party",
+      "evidenceIds": [
+        "ev_c47e02"
+      ]
+    },
+    {
+      "claimId": "clm_c47k02",
+      "partyId": "pty_c47clm",
+      "assertion": "The agreement says the target date is not a deadline and a delay under 14 days does not reduce the fee",
+      "evidenceIds": [
+        "ev_c47e01"
+      ]
+    },
+    {
+      "claimId": "clm_c47k03",
+      "partyId": "pty_c47clm",
+      "assertion": "The $1,100 fee was due on 2025-02-11 and nothing has been paid",
+      "amount": 110000,
+      "evidenceIds": [
+        "ev_c47e03"
+      ]
+    },
+    {
+      "claimId": "clm_c47k04",
+      "partyId": "pty_c47rsp",
+      "assertion": "Client says she is not paying because the video was late",
+      "evidenceIds": [
+        "ev_c47e02"
+      ]
+    },
+    {
+      "claimId": "clm_c47k05",
+      "partyId": "pty_c47rsp",
+      "assertion": "Client asked for one revision, moving a clip, which was completed on 2025-02-04",
+      "evidenceIds": [
+        "ev_c47e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c47e01",
+      "partyId": "pty_c47clm",
+      "type": "contract",
+      "sha256": "2f173697602ba361aeb15a4830f12d1e0941e7176f112fe43debc9294a9d4c38",
+      "uri": "evidence/editing-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c47e02",
+      "partyId": "pty_c47clm",
+      "type": "message",
+      "sha256": "29b4bd98073e86c930a7914b91181ef1d8b628bc9df90bd767e3f56fe72b99f4",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c47e03",
+      "partyId": "pty_c47clm",
+      "type": "invoice",
+      "sha256": "e5aaa7fedfd5e484b6510d5c6951fb790550cf4a89dde19223c4462a6c8daec7",
+      "uri": "evidence/invoice-2025-07.txt"
+    }
+  ],
+  "offers": []
+}

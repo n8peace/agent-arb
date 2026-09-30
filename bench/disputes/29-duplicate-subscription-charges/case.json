@@ -1,0 +1,106 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0029",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c29clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c29rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c29e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c29k01",
+      "partyId": "pty_c29clm",
+      "assertion": "The customer was charged twice per month from 2025-02-01 through 2025-06-01",
+      "evidenceIds": [
+        "ev_c29e03",
+        "ev_c29e02"
+      ]
+    },
+    {
+      "claimId": "clm_c29k02",
+      "partyId": "pty_c29clm",
+      "assertion": "The customer used one account and the second subscription had zero logins",
+      "evidenceIds": [
+        "ev_c29e02"
+      ]
+    },
+    {
+      "claimId": "clm_c29k03",
+      "partyId": "pty_c29clm",
+      "assertion": "Customer requests refund of five duplicate charges of $29 ($145)",
+      "amount": 14500,
+      "evidenceIds": [
+        "ev_c29e04"
+      ]
+    },
+    {
+      "claimId": "clm_c29k04",
+      "partyId": "pty_c29rsp",
+      "assertion": "Credit note CN-4410 already refunded the duplicate charge of 2025-02-01",
+      "amount": 2900,
+      "evidenceIds": [
+        "ev_c29e02",
+        "ev_c29e03"
+      ]
+    },
+    {
+      "claimId": "clm_c29k05",
+      "partyId": "pty_c29rsp",
+      "assertion": "Billing terms 6.2 refund each duplicate charge for the same plan and period",
+      "evidenceIds": [
+        "ev_c29e01"
+      ]
+    },
+    {
+      "claimId": "clm_c29k06",
+      "partyId": "pty_c29rsp",
+      "assertion": "Support offered a refund limited to the last 30 days",
+      "evidenceIds": [
+        "ev_c29e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c29e01",
+      "partyId": "pty_c29rsp",
+      "type": "policy",
+      "sha256": "554847676198be06a4d2d06bf264135a8d24d3d8d91904dd2dabc30eeda56474",
+      "uri": "evidence/billing-terms.txt"
+    },
+    {
+      "evidenceId": "ev_c29e02",
+      "partyId": "pty_c29rsp",
+      "type": "statement",
+      "sha256": "6a168c4622dde8fc2345005d8f6a9188edb883dfa117bbc99e559f1a13937314",
+      "uri": "evidence/billing-export.txt"
+    },
+    {
+      "evidenceId": "ev_c29e03",
+      "partyId": "pty_c29clm",
+      "type": "statement",
+      "sha256": "8d70188e55abdc8dbb7f20e4713ca03868171c3c8a6916536d7a6f8c71cec83d",
+      "uri": "evidence/card-statement-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c29e04",
+      "partyId": "pty_c29clm",
+      "type": "message",
+      "sha256": "af00e629fa32ef06f8ceacbdd30f529270518adb63a8be3ea6d8772cd5776da8",
+      "uri": "evidence/support-chat.txt"
+    }
+  ],
+  "offers": []
+}

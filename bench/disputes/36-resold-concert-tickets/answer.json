@@ -1,0 +1,8 @@
+{
+  "owedCents": 30000,
+  "lowCents": 30000,
+  "highCents": 30000,
+  "reasoning": "Payment of $300 (zelle); the tickets Noor bought were never valid because the seller had already transferred them to someone else (venue, appscreen), which he admits and promises to refund (chat). Full $300 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

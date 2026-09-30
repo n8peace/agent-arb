@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0014",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c14clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c14rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c14e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c14k01",
+      "partyId": "pty_c14clm",
+      "assertion": "Tenant reported the dishwasher was loud and leaking on 2025-03-14 and Landlord told her to keep using it",
+      "evidenceIds": [
+        "ev_c14e02"
+      ]
+    },
+    {
+      "claimId": "clm_c14k02",
+      "partyId": "pty_c14clm",
+      "assertion": "Landlord withheld $410 and refunded $1,490",
+      "amount": 41000,
+      "evidenceIds": [
+        "ev_c14e04"
+      ]
+    },
+    {
+      "claimId": "clm_c14k03",
+      "partyId": "pty_c14rsp",
+      "assertion": "A fork was lodged in the dishwasher impeller housing",
+      "evidenceIds": [
+        "ev_c14e03"
+      ]
+    },
+    {
+      "claimId": "clm_c14k04",
+      "partyId": "pty_c14rsp",
+      "assertion": "Removing the fork cost $85 in labor",
+      "amount": 8500,
+      "evidenceIds": [
+        "ev_c14e03"
+      ]
+    },
+    {
+      "claimId": "clm_c14k05",
+      "partyId": "pty_c14rsp",
+      "assertion": "The drain pump failed from age and would have needed replacement regardless of the fork",
+      "amount": 32500,
+      "evidenceIds": [
+        "ev_c14e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c14e01",
+      "partyId": "pty_c14rsp",
+      "type": "contract",
+      "sha256": "da2daa0684e8571e1a001c9c60c671ad294500fe9340a389f1d317cd987806e4",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c14e02",
+      "partyId": "pty_c14clm",
+      "type": "message",
+      "sha256": "ed7d57b4f4a9815b2c4bc59d9c88009c784c0c9a9b309c65be8653a9973f6172",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c14e03",
+      "partyId": "pty_c14rsp",
+      "type": "invoice",
+      "sha256": "ba311cfdbc35d80bb34df1199fe1c61a2e2a33418b76457ec6909e41a4b259d5",
+      "uri": "evidence/appliance-tech-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c14e04",
+      "partyId": "pty_c14rsp",
+      "type": "statement",
+      "sha256": "c4a0eda09457679d3e0177d4e09c4d0f2ee89b6130138e5bad1f576a03d04581",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

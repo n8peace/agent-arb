@@ -1,0 +1,95 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0043",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c43clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c43rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c43e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c43k01",
+      "partyId": "pty_c43clm",
+      "assertion": "Client approved up to 60 total hours by email on 2025-06-10",
+      "evidenceIds": [
+        "ev_c43e02"
+      ]
+    },
+    {
+      "claimId": "clm_c43k02",
+      "partyId": "pty_c43clm",
+      "assertion": "Contractor logged 62.0 total hours; 30.0 were invoiced and paid",
+      "evidenceIds": [
+        "ev_c43e03"
+      ]
+    },
+    {
+      "claimId": "clm_c43k03",
+      "partyId": "pty_c43clm",
+      "assertion": "Invoice 2 bills 32.0 hours at $65 for $2,080",
+      "amount": 208000,
+      "evidenceIds": [
+        "ev_c43e04"
+      ]
+    },
+    {
+      "claimId": "clm_c43k04",
+      "partyId": "pty_c43rsp",
+      "assertion": "SOW caps billable time at 50 hours unless Client approves a new limit in writing",
+      "evidenceIds": [
+        "ev_c43e01"
+      ]
+    },
+    {
+      "claimId": "clm_c43k05",
+      "partyId": "pty_c43rsp",
+      "assertion": "Client says it will pay only through the 50th hour",
+      "evidenceIds": [
+        "ev_c43e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c43e01",
+      "partyId": "pty_c43clm",
+      "type": "contract",
+      "sha256": "90977c2ac56a1e8b44f76653c2d2e2b5ab03b070b7075b29859c97ae7222d725",
+      "uri": "evidence/statement-of-work.txt"
+    },
+    {
+      "evidenceId": "ev_c43e02",
+      "partyId": "pty_c43clm",
+      "type": "message",
+      "sha256": "f1975e6a9d7cfca7635d36b39f458702a58972d1f3abdb6c61e8b1c5dff799b2",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c43e03",
+      "partyId": "pty_c43clm",
+      "type": "other",
+      "sha256": "8a00dffaed374eeaecd9837940397a2bd2e4579b6caef92da820a8b82603e2d8",
+      "uri": "evidence/time-log.txt"
+    },
+    {
+      "evidenceId": "ev_c43e04",
+      "partyId": "pty_c43clm",
+      "type": "invoice",
+      "sha256": "f709b5834d7ae41464c6c09446fa4945d011b48173a06a29cb03314fb2dd13a2",
+      "uri": "evidence/invoice-2.txt"
+    }
+  ],
+  "offers": []
+}

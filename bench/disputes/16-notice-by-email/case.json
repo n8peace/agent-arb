@@ -1,0 +1,97 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0016",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c16clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c16rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c16e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c16k01",
+      "partyId": "pty_c16clm",
+      "assertion": "Tenant emailed 30-day written notice to the address in the lease on 2025-04-25 for a 2025-05-31 move-out",
+      "evidenceIds": [
+        "ev_c16e02",
+        "ev_c16e01"
+      ]
+    },
+    {
+      "claimId": "clm_c16k02",
+      "partyId": "pty_c16clm",
+      "assertion": "Landlord replied 'Ok, noted' and completed a walkthrough on 2025-05-31 finding everything fine",
+      "evidenceIds": [
+        "ev_c16e02"
+      ]
+    },
+    {
+      "claimId": "clm_c16k03",
+      "partyId": "pty_c16clm",
+      "assertion": "Tenant paid rent through May 2025 and vacated on 2025-05-31",
+      "evidenceIds": [
+        "ev_c16e03"
+      ]
+    },
+    {
+      "claimId": "clm_c16k04",
+      "partyId": "pty_c16rsp",
+      "assertion": "Landlord retained the $1,000 deposit and billed June rent because he says notice had to be certified mail",
+      "amount": 100000,
+      "evidenceIds": [
+        "ev_c16e04"
+      ]
+    },
+    {
+      "claimId": "clm_c16k05",
+      "partyId": "pty_c16rsp",
+      "assertion": "Lease section 2 requires written notice by hand, mail or email",
+      "evidenceIds": [
+        "ev_c16e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c16e01",
+      "partyId": "pty_c16rsp",
+      "type": "contract",
+      "sha256": "e22cd2ab00ced50060ea59c25996704025261d24697650e04290acdda06b3ef7",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c16e02",
+      "partyId": "pty_c16clm",
+      "type": "message",
+      "sha256": "2627bf0a7ebf1eb3b9ace4f99cd04dcf49efc9615106c81986a83b0224563314",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c16e03",
+      "partyId": "pty_c16clm",
+      "type": "receipt",
+      "sha256": "18a3830771fb42714713eea3444f71441d82205382a356a4ae9593b7024370e1",
+      "uri": "evidence/rent-payment-records.txt"
+    },
+    {
+      "evidenceId": "ev_c16e04",
+      "partyId": "pty_c16rsp",
+      "type": "statement",
+      "sha256": "0e70180cf56e00d826b41409b5c15f39ea4fa60d721054c2798a4254310ac7cb",
+      "uri": "evidence/landlord-letter-2025-06-21.txt"
+    }
+  ],
+  "offers": []
+}

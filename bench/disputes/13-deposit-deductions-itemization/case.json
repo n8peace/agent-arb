@@ -1,0 +1,113 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0013",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c13clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c13rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c13e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c13k01",
+      "partyId": "pty_c13clm",
+      "assertion": "Move-in checklist records light scratches on the kitchen floor and an already-broken refrigerator ice maker",
+      "evidenceIds": [
+        "ev_c13e02"
+      ]
+    },
+    {
+      "claimId": "clm_c13k02",
+      "partyId": "pty_c13clm",
+      "assertion": "The 2025-03-31 video shows no gouges or water damage, a working dishwasher, and the same scratches as at move-in",
+      "evidenceIds": [
+        "ev_c13e03"
+      ]
+    },
+    {
+      "claimId": "clm_c13k03",
+      "partyId": "pty_c13clm",
+      "assertion": "Tenant requested invoices and photos three times between 2025-05-08 and 2025-05-27 and received no reply",
+      "evidenceIds": [
+        "ev_c13e05"
+      ]
+    },
+    {
+      "claimId": "clm_c13k04",
+      "partyId": "pty_c13clm",
+      "assertion": "Landlord withheld $1,410 and refunded $1,190",
+      "amount": 141000,
+      "evidenceIds": [
+        "ev_c13e04"
+      ]
+    },
+    {
+      "claimId": "clm_c13k05",
+      "partyId": "pty_c13rsp",
+      "assertion": "Kitchen flooring damage of $890 and appliance repair of $520 were deducted",
+      "amount": 141000,
+      "evidenceIds": [
+        "ev_c13e04"
+      ]
+    },
+    {
+      "claimId": "clm_c13k06",
+      "partyId": "pty_c13rsp",
+      "assertion": "Statement was dated and mailed 36 days after the tenant vacated",
+      "evidenceIds": [
+        "ev_c13e04",
+        "ev_c13e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c13e01",
+      "partyId": "pty_c13rsp",
+      "type": "contract",
+      "sha256": "5575ad85a6a0a884f9ec4d2919b088354562e4826ee89fcd7721de73d225e43e",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c13e02",
+      "partyId": "pty_c13clm",
+      "type": "other",
+      "sha256": "e1996aca65b14000cac1d94d488f8eb045f5978051d965f3e737fb87cae586cd",
+      "uri": "evidence/move-in-checklist-2023-04-01.txt"
+    },
+    {
+      "evidenceId": "ev_c13e03",
+      "partyId": "pty_c13clm",
+      "type": "photo",
+      "sha256": "e5a5f0e106cd1db87bc05493ad29a2bc551a8d88a7322d2bc773df441bfec69c",
+      "uri": "evidence/move-out-video-log-2025-03-31.txt"
+    },
+    {
+      "evidenceId": "ev_c13e04",
+      "partyId": "pty_c13rsp",
+      "type": "statement",
+      "sha256": "3109752c082af6f4368ce6cf47246b3a5ec6aeba12cbccb99ce33b5cdcff4a2d",
+      "uri": "evidence/deduction-statement-2025-05-06.txt"
+    },
+    {
+      "evidenceId": "ev_c13e05",
+      "partyId": "pty_c13clm",
+      "type": "message",
+      "sha256": "a2f884c3103185ba74b75741559c9ec90d3205bdf99629655c7791e8370f16c3",
+      "uri": "evidence/emails.txt"
+    }
+  ],
+  "offers": []
+}

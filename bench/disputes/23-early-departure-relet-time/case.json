@@ -1,0 +1,104 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0023",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c23clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c23rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c23e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c23k01",
+      "partyId": "pty_c23clm",
+      "assertion": "Tenant moved out on 2025-05-31 and the unit was clean and undamaged",
+      "evidenceIds": [
+        "ev_c23e02"
+      ]
+    },
+    {
+      "claimId": "clm_c23k02",
+      "partyId": "pty_c23clm",
+      "assertion": "A new tenant signed on 2025-07-08 with a lease starting 2025-07-12",
+      "evidenceIds": [
+        "ev_c23e03"
+      ]
+    },
+    {
+      "claimId": "clm_c23k03",
+      "partyId": "pty_c23clm",
+      "assertion": "Landlord retained the full $3,000 deposit for June and July rent",
+      "amount": 300000,
+      "evidenceIds": [
+        "ev_c23e04"
+      ]
+    },
+    {
+      "claimId": "clm_c23k04",
+      "partyId": "pty_c23rsp",
+      "assertion": "Landlord listed the unit on 2025-06-03 at the same $1,500 rent and held 4 showings",
+      "evidenceIds": [
+        "ev_c23e03"
+      ]
+    },
+    {
+      "claimId": "clm_c23k05",
+      "partyId": "pty_c23rsp",
+      "assertion": "Lease section 4 keeps Tenant liable for rent until the unit is re-let, prorated at $50 per day",
+      "evidenceIds": [
+        "ev_c23e01"
+      ]
+    },
+    {
+      "claimId": "clm_c23k06",
+      "partyId": "pty_c23rsp",
+      "assertion": "Tenant acknowledged in writing on 2025-05-01 that she was breaking the lease",
+      "evidenceIds": [
+        "ev_c23e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c23e01",
+      "partyId": "pty_c23rsp",
+      "type": "contract",
+      "sha256": "a70609199bed6fc65f847787d0de9b194b0ba1c304ad294c295cd917e76afaa3",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c23e02",
+      "partyId": "pty_c23clm",
+      "type": "message",
+      "sha256": "b776c60de20bd065fdeb58285e6fefbca9cdafd19fd8feec4f4a8ed4856dff34",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c23e03",
+      "partyId": "pty_c23rsp",
+      "type": "other",
+      "sha256": "4c340f67ce53c4e3cd7002d93e03fcbee430ce45024cc555b9d8583794216e3f",
+      "uri": "evidence/listing-and-showings-log.txt"
+    },
+    {
+      "evidenceId": "ev_c23e04",
+      "partyId": "pty_c23rsp",
+      "type": "statement",
+      "sha256": "9e0cc87a6cf083d32b2af041311ea760568558ed651cd9f534dc8a2647e704f3",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

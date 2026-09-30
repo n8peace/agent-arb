@@ -1,0 +1,8 @@
+Emails, Sofia Reyes and Marlow Court leasing office
+
+2025-04-20 Sofia to leasing@marlowcourt.example: I am exercising the early termination option in section 12. I will move out on May 21.
+2025-04-21 Leasing (Dana): Notice received. Please return keys by May 21.
+2025-05-21 Sofia: Keys and remote returned at the office. Unit is empty and clean.
+2025-06-04 Dana: We kept the whole deposit as the early termination fee. The fee is one month's rent.
+2025-06-04 Sofia: The lease says 75 percent. Please check section 12.
+2025-06-05 Dana: Policy is one month.

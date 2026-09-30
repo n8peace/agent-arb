@@ -1,0 +1,8 @@
+{
+  "owedCents": 141000,
+  "lowCents": 141000,
+  "highCents": 141000,
+  "reasoning": "Lease s.12 and CA Civ. Code 1950.5 require receipts for deductions over $125; none were supplied despite three requests (emails, stmt). Independent evidence shows the floor unchanged since move-in and working appliances (movein, video). Nothing in the file supports either deduction, so the full $1,410 is owed. The invoices, if any, are held only by the landlord.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

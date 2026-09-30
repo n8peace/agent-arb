@@ -1,0 +1,109 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0019",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c19clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c19rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c19e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c19k01",
+      "partyId": "pty_c19clm",
+      "assertion": "Tenant paid $156.20 to Ridgeline on 2025-05-12 with memo 'WATER MAY'",
+      "amount": 15620,
+      "evidenceIds": [
+        "ev_c19e02"
+      ]
+    },
+    {
+      "claimId": "clm_c19k02",
+      "partyId": "pty_c19clm",
+      "assertion": "Landlord withheld $312.40 for unpaid May and June water",
+      "amount": 31240,
+      "evidenceIds": [
+        "ev_c19e05"
+      ]
+    },
+    {
+      "claimId": "clm_c19k03",
+      "partyId": "pty_c19rsp",
+      "assertion": "The May water charge of $156.20 was not credited in the tenant ledger",
+      "amount": 15620,
+      "evidenceIds": [
+        "ev_c19e04"
+      ]
+    },
+    {
+      "claimId": "clm_c19k04",
+      "partyId": "pty_c19rsp",
+      "assertion": "The utility statements show the final June share was $98.10, prorated to move-out",
+      "amount": 9810,
+      "evidenceIds": [
+        "ev_c19e03",
+        "ev_c19e01"
+      ]
+    },
+    {
+      "claimId": "clm_c19k05",
+      "partyId": "pty_c19rsp",
+      "assertion": "The deposit statement charged $156.20 for June water",
+      "amount": 15620,
+      "evidenceIds": [
+        "ev_c19e05",
+        "ev_c19e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c19e01",
+      "partyId": "pty_c19rsp",
+      "type": "contract",
+      "sha256": "fd4efca54d2e6df027fda8980725466f195daea6f745124827d6edcdc4b11ade",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c19e02",
+      "partyId": "pty_c19clm",
+      "type": "statement",
+      "sha256": "a0016bc8734f119aba4c0ca1ba8c4171be528a8bb21e45e328fb0eba4f8ffae0",
+      "uri": "evidence/bank-statement-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c19e03",
+      "partyId": "pty_c19rsp",
+      "type": "invoice",
+      "sha256": "e8f0bffe1d701cdf27ff0bda4ad33453ef6ce1af25b38a95388697e19dabbc87",
+      "uri": "evidence/utility-statements.txt"
+    },
+    {
+      "evidenceId": "ev_c19e04",
+      "partyId": "pty_c19rsp",
+      "type": "statement",
+      "sha256": "d7907d3c162d197823ba04a59f4d9c96b052739792ac3eba388764fc94b01957",
+      "uri": "evidence/tenant-ledger.txt"
+    },
+    {
+      "evidenceId": "ev_c19e05",
+      "partyId": "pty_c19rsp",
+      "type": "statement",
+      "sha256": "b0fd1586f3928dd1002e8ec9b89799564649034d9a216296bdee99987e0579a0",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

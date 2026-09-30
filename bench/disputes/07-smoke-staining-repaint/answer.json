@@ -1,0 +1,8 @@
+{
+  "owedCents": 52000,
+  "lowCents": 52000,
+  "highCents": 52000,
+  "reasoning": "Smoking inside is admitted (msg) and confirmed by the painter (invoice), so the repaint was tenant-caused. Lease clause 8 charges only the unamortized cost: 2 whole years elapsed since 2023-08-01, so 1/3 remains: $780 x 1/3 = $260 chargeable. Withheld $780, owed $520.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,8 @@
+{
+  "owedCents": 43000,
+  "lowCents": 43000,
+  "highCents": 50000,
+  "reasoning": "Jonah's share is $800 (agreement, venmo). Agreement s.4 allows deducting damage in his own room ($300, landlord statement) and his unpaid utilities (May $210/3 = $70, bill; he left 5/31 so s.5 applies). The $180 self-cleaning claim has no basis in the agreement (only the landlord's statement, which reports no other damage) and is rejected. $800 - $300 - $70 = $430.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

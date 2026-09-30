@@ -1,0 +1,117 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0001",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c01clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c01rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c01e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c01k01",
+      "partyId": "pty_c01clm",
+      "assertion": "Living room and bedroom carpet showed worn traffic paths at move-in on 2020-03-01",
+      "evidenceIds": [
+        "ev_c01e02"
+      ]
+    },
+    {
+      "claimId": "clm_c01k02",
+      "partyId": "pty_c01clm",
+      "assertion": "The 2025-02-28 move-out inspection records no carpet stains, burns or tears",
+      "evidenceIds": [
+        "ev_c01e03"
+      ]
+    },
+    {
+      "claimId": "clm_c01k03",
+      "partyId": "pty_c01clm",
+      "assertion": "Wall marks at move-out were scuffs and small nail holes after a five-year tenancy",
+      "evidenceIds": [
+        "ev_c01e03",
+        "ev_c01e02"
+      ]
+    },
+    {
+      "claimId": "clm_c01k04",
+      "partyId": "pty_c01clm",
+      "assertion": "Landlord withheld $1,070 of the $2,100 deposit and refunded $1,030",
+      "amount": 107000,
+      "evidenceIds": [
+        "ev_c01e04"
+      ]
+    },
+    {
+      "claimId": "clm_c01k05",
+      "partyId": "pty_c01rsp",
+      "assertion": "Carpet replacement charge of $650 was applied to the deposit",
+      "amount": 65000,
+      "evidenceIds": [
+        "ev_c01e04"
+      ]
+    },
+    {
+      "claimId": "clm_c01k06",
+      "partyId": "pty_c01rsp",
+      "assertion": "Interior repaint charge of $300 was applied to the deposit",
+      "amount": 30000,
+      "evidenceIds": [
+        "ev_c01e04"
+      ]
+    },
+    {
+      "claimId": "clm_c01k07",
+      "partyId": "pty_c01rsp",
+      "assertion": "Oven had heavy baked-on grease at move-out and was professionally cleaned for $120",
+      "amount": 12000,
+      "evidenceIds": [
+        "ev_c01e03",
+        "ev_c01e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c01e01",
+      "partyId": "pty_c01rsp",
+      "type": "contract",
+      "sha256": "99601378ebbc059396f2725b9e9552d72d2f1585841f7b07a8f6553fff55754f",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c01e02",
+      "partyId": "pty_c01clm",
+      "type": "other",
+      "sha256": "31032fa5722a4a09a8bd2be08b1a7da14b85c4cc2cd17253404c5c9f579dda78",
+      "uri": "evidence/move-in-checklist-2020-03-01.txt"
+    },
+    {
+      "evidenceId": "ev_c01e03",
+      "partyId": "pty_c01rsp",
+      "type": "other",
+      "sha256": "3f4fecda44c9591442921ceb3bf16573e46cf4c1b9dfc5314be849180c6d5111",
+      "uri": "evidence/move-out-checklist-2025-02-28.txt"
+    },
+    {
+      "evidenceId": "ev_c01e04",
+      "partyId": "pty_c01rsp",
+      "type": "statement",
+      "sha256": "9e28c4995aa400d47be5cfacce0fa3ed25eae045cc15676a8e1748df0ae8b00d",
+      "uri": "evidence/deduction-statement-2025-03-14.txt"
+    }
+  ],
+  "offers": []
+}

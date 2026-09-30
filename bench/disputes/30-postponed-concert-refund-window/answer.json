@@ -1,0 +1,8 @@
+{
+  "owedCents": 0,
+  "lowCents": 0,
+  "highCents": 0,
+  "reasoning": "Terms s.7-8: refund window is 30 days from sending the notice to the account address. The log shows the notice sent 8/1 to the address on her order, delivered and opened (maillog, order), so the window closed 8/31. Her request on 9/10 is late (emails), and fees are non-refundable regardless. Owed $0. The delivery log is held only by NightOwl.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

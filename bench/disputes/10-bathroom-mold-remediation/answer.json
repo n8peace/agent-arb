@@ -1,0 +1,8 @@
+{
+  "owedCents": 78000,
+  "lowCents": 78000,
+  "highCents": 78000,
+  "reasoning": "The remediation report (report) attributes the mold to a corroded supply fitting leaking long-term and notes the fan works; the tenant reported it twice (req) and Highline closed the ticket as 'unresponsive' after one weekday attempt without notifying him (log). Mold is landlord-side damage, so $780 is invalid. Oven cleaning $90 is not disputed. Owed $780. The ticket log and report are in Highline's hands only.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

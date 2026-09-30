@@ -1,0 +1,97 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0030",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c30clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c30rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c30e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c30k01",
+      "partyId": "pty_c30clm",
+      "assertion": "Customer paid $392 including $340 face value and $52 fees",
+      "amount": 39200,
+      "evidenceIds": [
+        "ev_c30e02"
+      ]
+    },
+    {
+      "claimId": "clm_c30k02",
+      "partyId": "pty_c30clm",
+      "assertion": "Customer first requested a refund on 2025-09-10",
+      "evidenceIds": [
+        "ev_c30e04"
+      ]
+    },
+    {
+      "claimId": "clm_c30k03",
+      "partyId": "pty_c30clm",
+      "assertion": "Customer states she did not receive the postponement notice",
+      "evidenceIds": [
+        "ev_c30e04"
+      ]
+    },
+    {
+      "claimId": "clm_c30k04",
+      "partyId": "pty_c30rsp",
+      "assertion": "Postponement notice was sent to the account address on 2025-08-01 and logged as delivered and opened the same day",
+      "evidenceIds": [
+        "ev_c30e03",
+        "ev_c30e02"
+      ]
+    },
+    {
+      "claimId": "clm_c30k05",
+      "partyId": "pty_c30rsp",
+      "assertion": "Terms give a 30-day refund window after the notice, ending 2025-08-31, and exclude service fees",
+      "evidenceIds": [
+        "ev_c30e01",
+        "ev_c30e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c30e01",
+      "partyId": "pty_c30rsp",
+      "type": "policy",
+      "sha256": "0637b5884b375e43d99d96e9bec89178a2c3cf38f9fe1a106898316345cf4e75",
+      "uri": "evidence/ticket-terms.txt"
+    },
+    {
+      "evidenceId": "ev_c30e02",
+      "partyId": "pty_c30clm",
+      "type": "receipt",
+      "sha256": "864ffbf2966775754e7a4620063724f469e9af2dbb28c4b09e056cee7d28bb6d",
+      "uri": "evidence/order-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c30e03",
+      "partyId": "pty_c30rsp",
+      "type": "other",
+      "sha256": "ac19a937533ead0b7ea1668d0862187d9d0740703af74590c6a56f2dff436be5",
+      "uri": "evidence/postponement-notice-and-email-log.txt"
+    },
+    {
+      "evidenceId": "ev_c30e04",
+      "partyId": "pty_c30clm",
+      "type": "message",
+      "sha256": "faac938cf38322fba931b774db64088e744db8b30f88d52f47701f8c597fd691",
+      "uri": "evidence/refund-request-emails.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,5 @@
+WORD COUNT REPORT for "memoir-ch1-6.docx" (the file emailed by Client on 2025-06-02), taken by Translator on receipt
+
+Word > Review > Word Count, with "Include textboxes, footnotes and endnotes" ticked:
+  Pages 61. Words 17,940. Characters (no spaces) 91,412.
+Same dialog with the box unticked: Words 15,212.

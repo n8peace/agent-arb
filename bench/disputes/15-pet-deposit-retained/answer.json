@@ -1,0 +1,8 @@
+{
+  "owedCents": 50000,
+  "lowCents": 50000,
+  "highCents": 50000,
+  "reasoning": "Lease clause 19 makes the lease and Pet Addendum the entire agreement; the unsigned handbook cannot override the addendum (lease, handbook). The addendum makes the pet deposit refundable less pet damage, and the inspection found none (moveout). California also does not allow a 'non-refundable' deposit. The $200 oven cleaning is supported (moveout, stmt). Owed $500.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

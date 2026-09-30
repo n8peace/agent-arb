@@ -1,0 +1,91 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0037",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c37clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c37rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c37e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c37k01",
+      "partyId": "pty_c37clm",
+      "assertion": "Petra paid $450 on 2025-05-20 and cancelled on 2025-06-04, 10 days before the 2025-06-14 rental",
+      "amount": 45000,
+      "evidenceIds": [
+        "ev_c37e02",
+        "ev_c37e03",
+        "ev_c37e01"
+      ]
+    },
+    {
+      "claimId": "clm_c37k02",
+      "partyId": "pty_c37clm",
+      "assertion": "Sam acknowledged the cancellation on 2025-06-04",
+      "evidenceIds": [
+        "ev_c37e03"
+      ]
+    },
+    {
+      "claimId": "clm_c37k03",
+      "partyId": "pty_c37rsp",
+      "assertion": "Sam refunded $112.50 on 2025-06-06",
+      "amount": 11250,
+      "evidenceIds": [
+        "ev_c37e04",
+        "ev_c37e03"
+      ]
+    },
+    {
+      "claimId": "clm_c37k04",
+      "partyId": "pty_c37rsp",
+      "assertion": "The terms give a 50% refund for cancellations 7 to 13 days before the rental date",
+      "evidenceIds": [
+        "ev_c37e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c37e01",
+      "partyId": "pty_c37rsp",
+      "type": "contract",
+      "sha256": "b2b5b4e0d072b7f97c3b28a73e24b8f644e6abe2b2b4ead14ec73ab64da4c574",
+      "uri": "evidence/booking-terms.txt"
+    },
+    {
+      "evidenceId": "ev_c37e02",
+      "partyId": "pty_c37clm",
+      "type": "receipt",
+      "sha256": "6e3b93d59253f85aa19e86bac90c994d483fbd2e12c106d9f20987c58e5e57bc",
+      "uri": "evidence/payment-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c37e03",
+      "partyId": "pty_c37clm",
+      "type": "message",
+      "sha256": "6c8f7dfa952b773fc08ee41a4b1366875ac0e28b04bc23b275cec8c314498b62",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c37e04",
+      "partyId": "pty_c37rsp",
+      "type": "receipt",
+      "sha256": "71eb3586dcdd4f8e51df2f7fbde930e97a3fc821fcc747649939813a238170e5",
+      "uri": "evidence/refund-record.txt"
+    }
+  ],
+  "offers": []
+}

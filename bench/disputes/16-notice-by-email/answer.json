@@ -1,0 +1,8 @@
+{
+  "owedCents": 100000,
+  "lowCents": 100000,
+  "highCents": 100000,
+  "reasoning": "Lease s.2 expressly accepts email notice to the listed address; Beatriz emailed on 4/25, 36 days before 5/31, and Otis acknowledged (lease, emails). Certified mail is not required. Rent was paid through May (pay), and the walkthrough found no damage (notice). No valid deduction, so the full $1,000 is owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

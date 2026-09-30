@@ -1,0 +1,5 @@
+TASKTRAIL BILLING EXPORT (produced by TaskTrail) - card ending 4417
+
+Subscription SUB-1 (account fenna@example.test), Team Plan $29.00/mo: charged 2025-02-01, 03-01, 04-01, 05-01, 06-01. Logins: 61.
+Subscription SUB-2 (account fenna.ostrow@example.test), Team Plan $29.00/mo: charged 2025-02-01, 03-01, 04-01, 05-01, 06-01. Logins: 0. Created 2025-01-30 by checkout retry.
+Credit note CN-4410 dated 2025-03-05: refund $29.00 for SUB-2 charge of 2025-02-01.

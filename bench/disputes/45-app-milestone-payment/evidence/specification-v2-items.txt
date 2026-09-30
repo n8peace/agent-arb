@@ -1,0 +1,8 @@
+SPECIFICATION v2 - MILESTONE 3 ITEMS
+S1 Calculate a delivery route for up to 40 stops.
+S2 Respect customer delivery time windows.
+S3 Allow driver to reorder stops; route recalculates.
+S4 Cache the day's route offline.
+S5 Notify driver 15 minutes before each window closes.
+S6 Admin can export the day's routes as CSV.
+(No performance target and no brand color are specified.)

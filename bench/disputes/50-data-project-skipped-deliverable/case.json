@@ -1,0 +1,112 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0050",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c50clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c50rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c50e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c50k01",
+      "partyId": "pty_c50clm",
+      "assertion": "D1 and D2 were uploaded on time on 2025-05-12 and 2025-05-16",
+      "evidenceIds": [
+        "ev_c50e03",
+        "ev_c50e02"
+      ]
+    },
+    {
+      "claimId": "clm_c50k02",
+      "partyId": "pty_c50clm",
+      "assertion": "Client removed D3 in writing on 2025-05-20 by chat message",
+      "evidenceIds": [
+        "ev_c50e02"
+      ]
+    },
+    {
+      "claimId": "clm_c50k03",
+      "partyId": "pty_c50clm",
+      "assertion": "Analyst invoiced $2,750 including 70% completed work on D3",
+      "amount": 275000,
+      "evidenceIds": [
+        "ev_c50e05"
+      ]
+    },
+    {
+      "claimId": "clm_c50k04",
+      "partyId": "pty_c50rsp",
+      "assertion": "Client's own review on 2025-05-19 shows every checklist item passing for D1 and D2",
+      "evidenceIds": [
+        "ev_c50e04"
+      ]
+    },
+    {
+      "claimId": "clm_c50k05",
+      "partyId": "pty_c50rsp",
+      "assertion": "No forecasting model was delivered",
+      "evidenceIds": [
+        "ev_c50e03",
+        "ev_c50e02"
+      ]
+    },
+    {
+      "claimId": "clm_c50k06",
+      "partyId": "pty_c50rsp",
+      "assertion": "SOW section 5 makes removed deliverables and work on them not payable",
+      "evidenceIds": [
+        "ev_c50e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c50e01",
+      "partyId": "pty_c50clm",
+      "type": "contract",
+      "sha256": "b4256cf8c2df0c5f55451d29ea2c253344ce5217695536c54955060a514823cc",
+      "uri": "evidence/statement-of-work.txt"
+    },
+    {
+      "evidenceId": "ev_c50e02",
+      "partyId": "pty_c50clm",
+      "type": "message",
+      "sha256": "cde861043e11a394ad5116e7fec4e44f3881d24668249a5b48d2fc4afca64c03",
+      "uri": "evidence/project-chat.txt"
+    },
+    {
+      "evidenceId": "ev_c50e03",
+      "partyId": "pty_c50rsp",
+      "type": "other",
+      "sha256": "0156cd716e3cfcf3476644a6cc9a2fdabb8c2ad5b25564469162e2b8f435d37a",
+      "uri": "evidence/portal-upload-log.txt"
+    },
+    {
+      "evidenceId": "ev_c50e04",
+      "partyId": "pty_c50rsp",
+      "type": "other",
+      "sha256": "479e361706c16f4ffa156633384ade2937866bea7b71f9b2f94ad720b6ca4ac2",
+      "uri": "evidence/acceptance-checklist-review.txt"
+    },
+    {
+      "evidenceId": "ev_c50e05",
+      "partyId": "pty_c50clm",
+      "type": "invoice",
+      "sha256": "0f7574bac890f3c217588912efc92b9369a45ca2c440a8c254eee049301808ab",
+      "uri": "evidence/invoice-0611.txt"
+    }
+  ],
+  "offers": []
+}

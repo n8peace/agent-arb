@@ -1,0 +1,106 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0009",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c09clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c09rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c09e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c09k01",
+      "partyId": "pty_c09clm",
+      "assertion": "Landlord texted 'Sure, go ahead, keep it tasteful' when asked about painting the bedroom dark green",
+      "evidenceIds": [
+        "ev_c09e02"
+      ]
+    },
+    {
+      "claimId": "clm_c09k02",
+      "partyId": "pty_c09clm",
+      "assertion": "Unit was clean at move-out, as shown in the 2025-09-30 photo log",
+      "evidenceIds": [
+        "ev_c09e03"
+      ]
+    },
+    {
+      "claimId": "clm_c09k03",
+      "partyId": "pty_c09clm",
+      "assertion": "Landlord withheld $680 and refunded $720",
+      "amount": 68000,
+      "evidenceIds": [
+        "ev_c09e04"
+      ]
+    },
+    {
+      "claimId": "clm_c09k04",
+      "partyId": "pty_c09rsp",
+      "assertion": "Lease requires restoring repainted walls to white unless Landlord waives in writing",
+      "evidenceIds": [
+        "ev_c09e01"
+      ]
+    },
+    {
+      "claimId": "clm_c09k05",
+      "partyId": "pty_c09rsp",
+      "assertion": "Repainting the small bedroom white cost $480",
+      "amount": 48000,
+      "evidenceIds": [
+        "ev_c09e04"
+      ]
+    },
+    {
+      "claimId": "clm_c09k06",
+      "partyId": "pty_c09rsp",
+      "assertion": "Landlord charged $200 for general cleaning with no invoice",
+      "amount": 20000,
+      "evidenceIds": [
+        "ev_c09e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c09e01",
+      "partyId": "pty_c09rsp",
+      "type": "contract",
+      "sha256": "172adb15a0befdbd27509088e27ccebfb5dda69b13759fc8aebd309848f8d9ec",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c09e02",
+      "partyId": "pty_c09clm",
+      "type": "message",
+      "sha256": "09058dfe537fe1314108c5216eaa87cd69b886ce1fdf71e3f3518e2b52c567d3",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c09e03",
+      "partyId": "pty_c09clm",
+      "type": "photo",
+      "sha256": "079962685a18b64c4ebc6b0fd00a1ce22b9df1a275ea4fc8635a5739ce9e0dc4",
+      "uri": "evidence/move-out-photo-log-2025-09-30.txt"
+    },
+    {
+      "evidenceId": "ev_c09e04",
+      "partyId": "pty_c09rsp",
+      "type": "statement",
+      "sha256": "1188527ca339cf6585ef0e53b66871e176bfa099c050a447fac7622a1542af88",
+      "uri": "evidence/deduction-statement-with-invoice.txt"
+    }
+  ],
+  "offers": []
+}

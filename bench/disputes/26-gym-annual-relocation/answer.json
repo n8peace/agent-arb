@@ -1,0 +1,8 @@
+{
+  "owedCents": 20900,
+  "lowCents": 20900,
+  "highCents": 20900,
+  "reasoning": "The relocation exception in section 3 applies: 138 miles with proof (proof, emails, terms). Notice received 2025-05-31, so the 30-day period ends 2025-06-30; periods beginning after that are July through December = 6 x $39 = $234, less the $25 fee = $209.",
+  "difficulty": "hard",
+  "infoAsymmetry": false
+}

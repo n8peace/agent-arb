@@ -1,0 +1,95 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0046",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c46clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c46rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c46e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c46k01",
+      "partyId": "pty_c46clm",
+      "assertion": "Camille delivered eight articles on or before 2025-07-15",
+      "evidenceIds": [
+        "ev_c46e03"
+      ]
+    },
+    {
+      "claimId": "clm_c46k02",
+      "partyId": "pty_c46clm",
+      "assertion": "The 16% match on Article 2 is to Camille's own portfolio page",
+      "evidenceIds": [
+        "ev_c46e02"
+      ]
+    },
+    {
+      "claimId": "clm_c46k03",
+      "partyId": "pty_c46clm",
+      "assertion": "Camille invoiced a balance of $1,500 after the $900 deposit",
+      "amount": 150000,
+      "evidenceIds": [
+        "ev_c46e04"
+      ]
+    },
+    {
+      "claimId": "clm_c46k04",
+      "partyId": "pty_c46rsp",
+      "assertion": "Article 5 scored 41% against a third-party site",
+      "evidenceIds": [
+        "ev_c46e02"
+      ]
+    },
+    {
+      "claimId": "clm_c46k05",
+      "partyId": "pty_c46rsp",
+      "assertion": "Client claims Articles 2 and 5 failed the 15% originality threshold and will pay only the deposit",
+      "evidenceIds": [
+        "ev_c46e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c46e01",
+      "partyId": "pty_c46clm",
+      "type": "contract",
+      "sha256": "95097f75d898086653f276e7193e05e07fbd08924cd248f1af522da7465cd422",
+      "uri": "evidence/writing-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c46e02",
+      "partyId": "pty_c46rsp",
+      "type": "other",
+      "sha256": "0cf32599c0ca213deb477794dd39616dabab1d693923ad24f78c855238ae5e60",
+      "uri": "evidence/originality-reports.txt"
+    },
+    {
+      "evidenceId": "ev_c46e03",
+      "partyId": "pty_c46clm",
+      "type": "message",
+      "sha256": "b07adef2d8fd1b4251d2d2bcbd7b39121696edde207b1703729966cc67b5b964",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c46e04",
+      "partyId": "pty_c46clm",
+      "type": "invoice",
+      "sha256": "9e3ab17f34949a3927afc46be7d10b5a2d2fb2c1541e9d37ec89948531160dfc",
+      "uri": "evidence/invoice-0301.txt"
+    }
+  ],
+  "offers": []
+}

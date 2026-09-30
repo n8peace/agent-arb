@@ -1,0 +1,8 @@
+{
+  "owedCents": 0,
+  "lowCents": 0,
+  "highCents": 0,
+  "reasoning": "April rent ($1,700) is unpaid by the tenant's own bank statement (bank) and text admission (msg); lease clause 5 keeps him liable through 4/30 (lease). Rent plus $85 late fee is $1,785, exceeding the $1,500 deposit, so no deposit is owed back even though the unit was left clean.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

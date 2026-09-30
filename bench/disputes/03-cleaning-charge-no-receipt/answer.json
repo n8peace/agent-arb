@@ -1,0 +1,8 @@
+{
+  "owedCents": 37000,
+  "lowCents": 37000,
+  "highCents": 40000,
+  "reasoning": "No pro cleaner was hired (msg); statement has no receipt (stmt). Lease clause 7 allows $30/hr for the landlord's own time, and he admits about one hour (msg), matching the two small spots in photos. Valid deduction $30, so $400 - $30 = $370 owed. Upper bound $400 if a reader excuses the item; the file does not support that.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

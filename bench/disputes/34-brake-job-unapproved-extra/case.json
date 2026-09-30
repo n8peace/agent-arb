@@ -1,0 +1,109 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0034",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c34clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c34rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c34e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c34k01",
+      "partyId": "pty_c34clm",
+      "assertion": "The signed estimate was $480 and the shop agreed not to exceed it without customer approval",
+      "amount": 48000,
+      "evidenceIds": [
+        "ev_c34e01"
+      ]
+    },
+    {
+      "claimId": "clm_c34k02",
+      "partyId": "pty_c34clm",
+      "assertion": "The customer approved only the $100 brake fluid flush by phone",
+      "amount": 10000,
+      "evidenceIds": [
+        "ev_c34e03",
+        "ev_c34e04"
+      ]
+    },
+    {
+      "claimId": "clm_c34k03",
+      "partyId": "pty_c34clm",
+      "assertion": "The customer paid $870 at pickup",
+      "amount": 87000,
+      "evidenceIds": [
+        "ev_c34e02"
+      ]
+    },
+    {
+      "claimId": "clm_c34k04",
+      "partyId": "pty_c34rsp",
+      "assertion": "The shop's call log records the caliper rebuild as not approved",
+      "amount": 29000,
+      "evidenceIds": [
+        "ev_c34e03"
+      ]
+    },
+    {
+      "claimId": "clm_c34k05",
+      "partyId": "pty_c34rsp",
+      "assertion": "The caliper rebuild was performed at 3:10 PM and billed at $290",
+      "amount": 29000,
+      "evidenceIds": [
+        "ev_c34e03",
+        "ev_c34e02"
+      ]
+    },
+    {
+      "claimId": "clm_c34k06",
+      "partyId": "pty_c34rsp",
+      "assertion": "The shop states the caliper work was needed for safety",
+      "evidenceIds": [
+        "ev_c34e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c34e01",
+      "partyId": "pty_c34clm",
+      "type": "contract",
+      "sha256": "a70d835e059f51b78abee6bbcb45f0972e351fee7352de2ac65d41dbdfd0e9be",
+      "uri": "evidence/signed-estimate.txt"
+    },
+    {
+      "evidenceId": "ev_c34e02",
+      "partyId": "pty_c34rsp",
+      "type": "invoice",
+      "sha256": "cca81751f3eda637470fefb5bae8f041b51c7311219c640425b6ce925077fea8",
+      "uri": "evidence/final-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c34e03",
+      "partyId": "pty_c34rsp",
+      "type": "other",
+      "sha256": "4a1a9bbe68788fb6fdf8f4d3c193b7f031a7e1c70478a311fb59f9d2b0d5548a",
+      "uri": "evidence/shop-call-log.txt"
+    },
+    {
+      "evidenceId": "ev_c34e04",
+      "partyId": "pty_c34clm",
+      "type": "message",
+      "sha256": "93b0ffcf9202ac4ed3583d8bb703bc2aa031c6f3f32021bc8aac1291e3a2b117",
+      "uri": "evidence/emails.txt"
+    }
+  ],
+  "offers": []
+}

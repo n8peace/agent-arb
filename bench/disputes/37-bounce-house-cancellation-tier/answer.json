@@ -1,0 +1,8 @@
+{
+  "owedCents": 11250,
+  "lowCents": 11250,
+  "highCents": 11250,
+  "reasoning": "Cancelled 10 days before the rental, in the 7-13 day tier: 50% of $450 = $225 (terms, msg). Sam already refunded $112.50 (refund), so $112.50 is still owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,8 @@
+{
+  "owedCents": 32500,
+  "lowCents": 32500,
+  "highCents": 41000,
+  "reasoning": "Lease s.9: age failures are the landlord's; objects placed by tenant or guests are the tenant's. The technician's own invoice says the pump failed from age regardless of the fork (invoice), so the $325 pump replacement is invalid. The fork removal ($85) is chargeable. Owed $325. High bound $410 if a reader blames the fork for the whole repair, which the invoice contradicts.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0039",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c39clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c39rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c39e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c39k01",
+      "partyId": "pty_c39clm",
+      "assertion": "Client approved the design in writing on 2025-04-22 and final files were delivered on 2025-04-23",
+      "evidenceIds": [
+        "ev_c39e02"
+      ]
+    },
+    {
+      "claimId": "clm_c39k02",
+      "partyId": "pty_c39clm",
+      "assertion": "Agreement makes the $750 final payment due within 7 days of delivery and not conditioned on a later search",
+      "amount": 75000,
+      "evidenceIds": [
+        "ev_c39e01",
+        "ev_c39e04"
+      ]
+    },
+    {
+      "claimId": "clm_c39k03",
+      "partyId": "pty_c39clm",
+      "assertion": "Client paid $750 at signing on 2025-03-28",
+      "amount": 75000,
+      "evidenceIds": [
+        "ev_c39e04"
+      ]
+    },
+    {
+      "claimId": "clm_c39k04",
+      "partyId": "pty_c39rsp",
+      "assertion": "Client's reverse image search found a footwear logo with a circular badge and a curved line",
+      "evidenceIds": [
+        "ev_c39e03"
+      ]
+    },
+    {
+      "claimId": "clm_c39k05",
+      "partyId": "pty_c39rsp",
+      "assertion": "Client is withholding the final $750 until the logo is changed",
+      "amount": 75000,
+      "evidenceIds": [
+        "ev_c39e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c39e01",
+      "partyId": "pty_c39clm",
+      "type": "contract",
+      "sha256": "513e024b8816f7925c3137770cfe8e759508e6f05afc66a4a4af7be6a4f01099",
+      "uri": "evidence/design-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c39e02",
+      "partyId": "pty_c39clm",
+      "type": "message",
+      "sha256": "b9e4941b3d82c871517912f628006b2d1f01c8cc2f1d7065a297581434aacbf8",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c39e03",
+      "partyId": "pty_c39rsp",
+      "type": "photo",
+      "sha256": "419ec80e7d43459fa57c511fc1b386404d353de2ff51e133946e8807acc0383b",
+      "uri": "evidence/client-image-search-notes.txt"
+    },
+    {
+      "evidenceId": "ev_c39e04",
+      "partyId": "pty_c39clm",
+      "type": "invoice",
+      "sha256": "e5db2506587e3811c6942c5e342b6a5235c9221f609c745f0a17a06eae8db45d",
+      "uri": "evidence/invoice-0417.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,109 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0011",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c11clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c11rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c11e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c11k01",
+      "partyId": "pty_c11clm",
+      "assertion": "Tenant placed the key envelope in the office drop box at 4:40 PM on 2025-01-31, the last day of the term",
+      "evidenceIds": [
+        "ev_c11e02",
+        "ev_c11e03"
+      ]
+    },
+    {
+      "claimId": "clm_c11k02",
+      "partyId": "pty_c11clm",
+      "assertion": "Lease section 14 says keys are returned when placed in the drop box",
+      "evidenceIds": [
+        "ev_c11e01"
+      ]
+    },
+    {
+      "claimId": "clm_c11k03",
+      "partyId": "pty_c11clm",
+      "assertion": "Landlord withheld $280 and refunded $1,420",
+      "amount": 28000,
+      "evidenceIds": [
+        "ev_c11e04"
+      ]
+    },
+    {
+      "claimId": "clm_c11k04",
+      "partyId": "pty_c11rsp",
+      "assertion": "Keys were logged as received on 2025-02-03 when the drop box was emptied",
+      "evidenceIds": [
+        "ev_c11e03"
+      ]
+    },
+    {
+      "claimId": "clm_c11k05",
+      "partyId": "pty_c11rsp",
+      "assertion": "Holdover of 3 days at $65 was charged",
+      "amount": 19500,
+      "evidenceIds": [
+        "ev_c11e04",
+        "ev_c11e01"
+      ]
+    },
+    {
+      "claimId": "clm_c11k06",
+      "partyId": "pty_c11rsp",
+      "assertion": "A couch was left in the unit and cost $85 to haul away",
+      "amount": 8500,
+      "evidenceIds": [
+        "ev_c11e03",
+        "ev_c11e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c11e01",
+      "partyId": "pty_c11rsp",
+      "type": "contract",
+      "sha256": "ea7e3af1ea4b1c9c0325a81a21b502bbc6fc1dc8fce159ea47c8a61ea5037ab3",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c11e02",
+      "partyId": "pty_c11clm",
+      "type": "message",
+      "sha256": "bf295b41d60fddfe8dedc9e27b3158d7e95ff66de177849da61fcb44b6fa7db2",
+      "uri": "evidence/tenant-emails.txt"
+    },
+    {
+      "evidenceId": "ev_c11e03",
+      "partyId": "pty_c11rsp",
+      "type": "other",
+      "sha256": "52b0cd2acc190c37ea1ce1be4589030cbb76bf04d678d22c3ea6b4075006400f",
+      "uri": "evidence/key-log-and-office-procedure.txt"
+    },
+    {
+      "evidenceId": "ev_c11e04",
+      "partyId": "pty_c11rsp",
+      "type": "statement",
+      "sha256": "9cc0a9b1aa65b15938b1cac64ebbc6ce2fc8fd2810e8fab8fcf0d2c1bcc129ff",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,8 @@
+{
+  "owedCents": 186000,
+  "lowCents": 186000,
+  "highCents": 186000,
+  "reasoning": "Materials above $460 need written pre-approval and none was given (agreement, emails, receipts). Billable materials are capped at $460, not the $400 the client offers and not $520. Total = $2,800 + $460 = $3,260, less $1,400 deposit = $1,860.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

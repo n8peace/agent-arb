@@ -1,0 +1,8 @@
+{
+  "owedCents": 600000,
+  "lowCents": 600000,
+  "highCents": 600000,
+  "reasoning": "Notice window ended 2025-06-09 (5 business days after Monday 6/2); Client's 6/13 notice is late so the milestone is deemed accepted (msa s.7, delivery). The three complaints are not S1-S6 non-conformances (spec) and warranty defects do not reduce payment (msa s.8). Client's own production log shows deployment to all drivers on 6/4 (release). Full $6,000 owed. The release log is held only by Client.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

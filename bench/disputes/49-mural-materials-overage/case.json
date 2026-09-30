@@ -1,0 +1,100 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0049",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c49clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c49rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c49e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c49k01",
+      "partyId": "pty_c49clm",
+      "assertion": "Materials cost $520 per receipts",
+      "amount": 52000,
+      "evidenceIds": [
+        "ev_c49e02",
+        "ev_c49e04"
+      ]
+    },
+    {
+      "claimId": "clm_c49k02",
+      "partyId": "pty_c49clm",
+      "assertion": "Artist first told Client of the $520 materials total on 2025-05-30, after the purchases of 2025-05-19 and 2025-05-20",
+      "evidenceIds": [
+        "ev_c49e03",
+        "ev_c49e02"
+      ]
+    },
+    {
+      "claimId": "clm_c49k03",
+      "partyId": "pty_c49clm",
+      "assertion": "Artist invoiced a balance of $1,920",
+      "amount": 192000,
+      "evidenceIds": [
+        "ev_c49e04"
+      ]
+    },
+    {
+      "claimId": "clm_c49k04",
+      "partyId": "pty_c49rsp",
+      "assertion": "Agreement caps unapproved materials at 115% of the $400 estimate, $460",
+      "amount": 46000,
+      "evidenceIds": [
+        "ev_c49e01"
+      ]
+    },
+    {
+      "claimId": "clm_c49k05",
+      "partyId": "pty_c49rsp",
+      "assertion": "Client says she will pay only $400 for materials and never approved more",
+      "amount": 40000,
+      "evidenceIds": [
+        "ev_c49e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c49e01",
+      "partyId": "pty_c49clm",
+      "type": "contract",
+      "sha256": "e6346a2b9a6d4fdd12154893addf5a7c79e2c22bb8baef6764bb866b778d67f2",
+      "uri": "evidence/mural-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c49e02",
+      "partyId": "pty_c49clm",
+      "type": "receipt",
+      "sha256": "0d2fc36921e89a53f0275f679952fb99339dd0303613b0d670ce34886b2cc047",
+      "uri": "evidence/materials-receipts.txt"
+    },
+    {
+      "evidenceId": "ev_c49e03",
+      "partyId": "pty_c49clm",
+      "type": "message",
+      "sha256": "36fc47a4805681a93394c7aa5c9c9d400c0277e14b1534909575059e595d5ed5",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c49e04",
+      "partyId": "pty_c49clm",
+      "type": "invoice",
+      "sha256": "1286ec4e93e4971f2ac62b7b6e203f18e5907fe4b0c6ff9ffcdbd674d8abf53d",
+      "uri": "evidence/final-invoice.txt"
+    }
+  ],
+  "offers": []
+}

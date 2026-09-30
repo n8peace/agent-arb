@@ -1,0 +1,8 @@
+{
+  "owedCents": 30500,
+  "lowCents": 30500,
+  "highCents": 30500,
+  "reasoning": "Blinds damage pre-dates tenancy (movein), so $210 is invalid. All keys were returned (keys), so the $95 re-key is invalid under lease clause 8. Door hole is new damage (movein: door good; moveout: hole) so $340 stands. $210 + $95 = $305 owed.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

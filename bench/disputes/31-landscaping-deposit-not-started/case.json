@@ -1,0 +1,108 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0031",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c31clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c31rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c31e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c31k01",
+      "partyId": "pty_c31clm",
+      "assertion": "Work had not begun by the 2025-04-24 start deadline, and Customer cancelled in writing on 2025-04-30",
+      "evidenceIds": [
+        "ev_c31e03",
+        "ev_c31e01"
+      ]
+    },
+    {
+      "claimId": "clm_c31k02",
+      "partyId": "pty_c31clm",
+      "assertion": "Customer paid a $1,200 deposit on 2025-03-10",
+      "amount": 120000,
+      "evidenceIds": [
+        "ev_c31e02"
+      ]
+    },
+    {
+      "claimId": "clm_c31k03",
+      "partyId": "pty_c31clm",
+      "assertion": "Contractor offered to refund $590 of the deposit",
+      "amount": 59000,
+      "evidenceIds": [
+        "ev_c31e03"
+      ]
+    },
+    {
+      "claimId": "clm_c31k04",
+      "partyId": "pty_c31rsp",
+      "assertion": "Contractor purchased special-order non-returnable Japanese maples costing $350",
+      "amount": 35000,
+      "evidenceIds": [
+        "ev_c31e04"
+      ]
+    },
+    {
+      "claimId": "clm_c31k05",
+      "partyId": "pty_c31rsp",
+      "assertion": "Contractor purchased boxwood costing $260 and returned it for a $260 credit on 2025-05-06",
+      "amount": 26000,
+      "evidenceIds": [
+        "ev_c31e04"
+      ]
+    },
+    {
+      "claimId": "clm_c31k06",
+      "partyId": "pty_c31rsp",
+      "assertion": "Contractor retained $610 for materials",
+      "amount": 61000,
+      "evidenceIds": [
+        "ev_c31e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c31e01",
+      "partyId": "pty_c31rsp",
+      "type": "contract",
+      "sha256": "baf615a8eebadf44db1160dbe243646dc6fd178ce5731a327950da425ddd243d",
+      "uri": "evidence/service-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c31e02",
+      "partyId": "pty_c31clm",
+      "type": "receipt",
+      "sha256": "1491f1c33725948f9a55342eeccfa69cfe0d55b79f9f72deb93a27359fac9246",
+      "uri": "evidence/deposit-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c31e03",
+      "partyId": "pty_c31clm",
+      "type": "message",
+      "sha256": "5300d82d7cfb3e41f817e9f4b934826e7af81043bd0fb5b78b14f6ded1762e52",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c31e04",
+      "partyId": "pty_c31rsp",
+      "type": "invoice",
+      "sha256": "4bb412e99177e307ec4be689f4f80f517cb35af6deba0d5be6acd44a2201282f",
+      "uri": "evidence/supplier-invoice-and-credit.txt"
+    }
+  ],
+  "offers": []
+}

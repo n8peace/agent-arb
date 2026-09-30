@@ -1,0 +1,8 @@
+{
+  "owedCents": 85500,
+  "lowCents": 85500,
+  "highCents": 85500,
+  "reasoning": "Re-key is admitted and receipted, so $45 stands (msg, receipt). August rent was paid in full (zelle) so $450 is invalid. The door frame crack appears in the owner's own move-in log (movein), so $405 is invalid. $900 - $45 = $855 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

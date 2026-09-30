@@ -1,0 +1,8 @@
+{
+  "owedCents": 110000,
+  "lowCents": 110000,
+  "highCents": 110000,
+  "reasoning": "Final delivery was 4 days after the target, well under the 14-day cancellation threshold, and the agreement says delay under 14 days does not reduce the fee (agreement, emails). The only requested fix was completed the next day. Full $1,100 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

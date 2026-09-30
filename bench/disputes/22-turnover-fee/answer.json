@@ -1,0 +1,8 @@
+{
+  "owedCents": 40000,
+  "lowCents": 40000,
+  "highCents": 40000,
+  "reasoning": "Cleaning of $145 is accepted by the tenant and supported (inspection, msg). The $400 flat turnover fee covers re-keying, advertising and admin, which are landlord operating costs, not unpaid rent, cleaning or damage beyond wear; lease s.12 itself limits deductions to those categories, and CA Civ. Code 1950.5 does not permit a general turnover fee to be taken from the deposit (lease, stmt). Owed $400.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

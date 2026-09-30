@@ -1,0 +1,8 @@
+{
+  "owedCents": 18000,
+  "lowCents": 18000,
+  "highCents": 18000,
+  "reasoning": "Oil stains were on the move-in sheet and unchanged at move-out (movein, moveout), so the $180 charge is invalid. The renter admits breaking the shelf (msg) and the $70 repair is documented (stmt). $250 - $70 = $180 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

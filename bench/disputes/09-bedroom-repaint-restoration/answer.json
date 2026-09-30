@@ -1,0 +1,8 @@
+{
+  "owedCents": 20000,
+  "lowCents": 20000,
+  "highCents": 20000,
+  "reasoning": "The text consent to paint (msg) satisfies the consent requirement but is not a written waiver of restoration; lease clause 10 requires restoring white (lease), so the $480 repaint with invoice is valid (stmt). Cleaning: photos show a clean unit (photos) and no work is documented, so $200 is invalid.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,99 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0033",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c33clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c33rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c33e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c33k01",
+      "partyId": "pty_c33clm",
+      "assertion": "The reservation confirmation states a total price of $408 that includes all taxes and mandatory fees",
+      "amount": 40800,
+      "evidenceIds": [
+        "ev_c33e01"
+      ]
+    },
+    {
+      "claimId": "clm_c33k02",
+      "partyId": "pty_c33clm",
+      "assertion": "The guest was charged $488 at checkout",
+      "amount": 48800,
+      "evidenceIds": [
+        "ev_c33e02"
+      ]
+    },
+    {
+      "claimId": "clm_c33k03",
+      "partyId": "pty_c33clm",
+      "assertion": "The difference of $80 is the resort fee",
+      "amount": 8000,
+      "evidenceIds": [
+        "ev_c33e02",
+        "ev_c33e01"
+      ]
+    },
+    {
+      "claimId": "clm_c33k04",
+      "partyId": "pty_c33rsp",
+      "assertion": "The hotel's policies page lists a $40 per night resort fee charged at check-out",
+      "evidenceIds": [
+        "ev_c33e03"
+      ]
+    },
+    {
+      "claimId": "clm_c33k05",
+      "partyId": "pty_c33rsp",
+      "assertion": "The resort fee was charged for 2 nights",
+      "amount": 8000,
+      "evidenceIds": [
+        "ev_c33e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c33e01",
+      "partyId": "pty_c33clm",
+      "type": "contract",
+      "sha256": "c478135f0b0b40afe0d3162294498f355106d88f73630956e5445ad1c79f401a",
+      "uri": "evidence/booking-confirmation.txt"
+    },
+    {
+      "evidenceId": "ev_c33e02",
+      "partyId": "pty_c33rsp",
+      "type": "statement",
+      "sha256": "048a0218a0088995216c3d622eef8216f5fda31ed837ffdbe6073d71f84671ec",
+      "uri": "evidence/checkout-folio.txt"
+    },
+    {
+      "evidenceId": "ev_c33e03",
+      "partyId": "pty_c33rsp",
+      "type": "policy",
+      "sha256": "b4f846da23a2993c0fc768177456fbdd566343c2c8ca89b9aa5adc0e73362339",
+      "uri": "evidence/resort-fee-page.txt"
+    },
+    {
+      "evidenceId": "ev_c33e04",
+      "partyId": "pty_c33clm",
+      "type": "message",
+      "sha256": "fed65a76d9bd7c09ec61761f2f70e57064b64b37be3de38fdb95aa6d3a242edf",
+      "uri": "evidence/emails.txt"
+    }
+  ],
+  "offers": []
+}

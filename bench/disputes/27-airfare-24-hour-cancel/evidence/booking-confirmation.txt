@@ -1,0 +1,5 @@
+SKYLARK AIR - BOOKING CONFIRMATION
+Passenger: Ilya Petrenko. Confirmation code: SKL7QW.
+Booked: 2025-03-03 10:15 AM (Pacific).
+Flight SK 214, Fernwood to Harborview, departs 2025-03-20 7:05 AM.
+Fare: Basic Economy. Base fare and taxes: $412.00. Paid by card ending 3305.

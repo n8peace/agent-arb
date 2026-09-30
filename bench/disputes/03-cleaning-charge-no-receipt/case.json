@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0003",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c03clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c03rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c03e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c03k01",
+      "partyId": "pty_c03clm",
+      "assertion": "Tenant left the unit swept, wiped and vacuumed on 2025-07-31 except for two greasy stove drip pans and a sticky fridge shelf",
+      "evidenceIds": [
+        "ev_c03e02"
+      ]
+    },
+    {
+      "claimId": "clm_c03k02",
+      "partyId": "pty_c03clm",
+      "assertion": "No professional cleaner was hired or paid",
+      "evidenceIds": [
+        "ev_c03e04",
+        "ev_c03e03"
+      ]
+    },
+    {
+      "claimId": "clm_c03k03",
+      "partyId": "pty_c03clm",
+      "assertion": "Landlord withheld $400 and refunded $800 of the $1,200 deposit",
+      "amount": 40000,
+      "evidenceIds": [
+        "ev_c03e03"
+      ]
+    },
+    {
+      "claimId": "clm_c03k04",
+      "partyId": "pty_c03rsp",
+      "assertion": "Landlord personally cleaned the fridge shelf and stove pans in about one hour",
+      "evidenceIds": [
+        "ev_c03e04"
+      ]
+    },
+    {
+      "claimId": "clm_c03k05",
+      "partyId": "pty_c03rsp",
+      "assertion": "Lease charges $30 per hour when Landlord cleans personally",
+      "amount": 3000,
+      "evidenceIds": [
+        "ev_c03e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c03e01",
+      "partyId": "pty_c03rsp",
+      "type": "contract",
+      "sha256": "cb9d48a332c14e5b775700ef0de254126066b1f61a5bda38c42703f3a71c2f43",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c03e02",
+      "partyId": "pty_c03clm",
+      "type": "photo",
+      "sha256": "5c15adf28c99b48509327c723451c08e0bc64134dc761c3f2393ffe375cd68c5",
+      "uri": "evidence/move-out-photo-log.txt"
+    },
+    {
+      "evidenceId": "ev_c03e03",
+      "partyId": "pty_c03rsp",
+      "type": "statement",
+      "sha256": "a24e5fee008b8700558a9557815b33fd2c2ec3465e8af74649a248601a8713c4",
+      "uri": "evidence/deduction-statement.txt"
+    },
+    {
+      "evidenceId": "ev_c03e04",
+      "partyId": "pty_c03rsp",
+      "type": "message",
+      "sha256": "46826d237b2478c2c73951ef6659731b6190378bc5819425671ff6234e13ce48",
+      "uri": "evidence/text-messages.txt"
+    }
+  ],
+  "offers": []
+}

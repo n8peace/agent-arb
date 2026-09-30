@@ -1,0 +1,114 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0021",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c21clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c21rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c21e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c21k01",
+      "partyId": "pty_c21clm",
+      "assertion": "Tenant's unit is 2D, which has a galley kitchen with a single wall of cabinets and no island",
+      "evidenceIds": [
+        "ev_c21e01"
+      ]
+    },
+    {
+      "claimId": "clm_c21k02",
+      "partyId": "pty_c21clm",
+      "assertion": "Tenant's 2025-05-31 photos show intact, dry cabinets in Unit 2D",
+      "evidenceIds": [
+        "ev_c21e02"
+      ]
+    },
+    {
+      "claimId": "clm_c21k03",
+      "partyId": "pty_c21clm",
+      "assertion": "Landlord withheld $1,150 and refunded $1,150",
+      "amount": 115000,
+      "evidenceIds": [
+        "ev_c21e05"
+      ]
+    },
+    {
+      "claimId": "clm_c21k04",
+      "partyId": "pty_c21rsp",
+      "assertion": "Landlord's inspection report, work order and invoice all identify the cabinet work as Unit 2B",
+      "evidenceIds": [
+        "ev_c21e03",
+        "ev_c21e04"
+      ]
+    },
+    {
+      "claimId": "clm_c21k05",
+      "partyId": "pty_c21rsp",
+      "assertion": "The inspection report describes an L-shaped kitchen with an island and names J. Whitlow as tenant of record",
+      "evidenceIds": [
+        "ev_c21e03"
+      ]
+    },
+    {
+      "claimId": "clm_c21k06",
+      "partyId": "pty_c21rsp",
+      "assertion": "Cabinet replacement was charged to Unit 2D's deposit at $1,150",
+      "amount": 115000,
+      "evidenceIds": [
+        "ev_c21e05",
+        "ev_c21e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c21e01",
+      "partyId": "pty_c21rsp",
+      "type": "contract",
+      "sha256": "bd1b7104b2c0294d1c9e1e92473b453ece803c0b7e11495bead2fd859a9095a3",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c21e02",
+      "partyId": "pty_c21clm",
+      "type": "photo",
+      "sha256": "5d9da1adef829266803487b3852a360c0933172368efe0a858dd5fe290df1286",
+      "uri": "evidence/tenant-move-out-photo-log-2025-05-31.txt"
+    },
+    {
+      "evidenceId": "ev_c21e03",
+      "partyId": "pty_c21rsp",
+      "type": "other",
+      "sha256": "1afdf200b580e4a71164514eb6a836f7eb6d7eaefce1033fd4d5dcbf3042d6d0",
+      "uri": "evidence/move-out-inspection-report.txt"
+    },
+    {
+      "evidenceId": "ev_c21e04",
+      "partyId": "pty_c21rsp",
+      "type": "invoice",
+      "sha256": "5deb9cefd91629e139e9a39632c60bea1045688bce8febeb4686ea511893210d",
+      "uri": "evidence/work-order-and-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c21e05",
+      "partyId": "pty_c21rsp",
+      "type": "statement",
+      "sha256": "1d4dd92dfd40e54d42d71774bed4d1465d4e441aa8a6ec46a7774a64edea4106",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

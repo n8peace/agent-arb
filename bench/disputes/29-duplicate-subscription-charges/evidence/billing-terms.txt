@@ -1,0 +1,4 @@
+TASKTRAIL - BILLING TERMS (excerpt)
+
+6.2 DUPLICATE CHARGES. If a customer is charged more than once for the same plan in the same billing period, TaskTrail refunds each duplicate charge in full on request.
+6.3 Charges for plans the customer actually used are not duplicates.

@@ -1,0 +1,8 @@
+{
+  "owedCents": 133500,
+  "lowCents": 133500,
+  "highCents": 133500,
+  "reasoning": "Reported within 7 days (emails). Policy s.3 says signing confirms delivery, not condition, and condition is decided on inspection; Hearthside's own inspection found a manufacturing defect with no impact damage (inspect). Policy s.2 then refunds item price plus delivery fee: $1,240 + $95 = $1,335. The inspection report is internal to Hearthside.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

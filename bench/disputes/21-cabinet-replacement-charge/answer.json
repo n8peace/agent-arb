@@ -1,0 +1,8 @@
+{
+  "owedCents": 115000,
+  "lowCents": 115000,
+  "highCents": 115000,
+  "reasoning": "The damage documentation (inspection, workorder) is for Unit 2B, a different tenant (J. Whitlow), and describes an L-shaped kitchen with island that Unit 2D does not have (lease). Tenant's dated photos show intact cabinets in 2D (photos). Nothing shows damage in 2D, so the full $1,150 withheld is owed. The internal 2B records are held only by the landlord.",
+  "difficulty": "hard",
+  "infoAsymmetry": true
+}

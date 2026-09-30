@@ -1,0 +1,97 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0026",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c26clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c26rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c26e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c26k01",
+      "partyId": "pty_c26clm",
+      "assertion": "Tamsin sent written notice with proof of a new address 138 miles from the nearest FitNest club, received on 2025-05-31",
+      "evidenceIds": [
+        "ev_c26e03",
+        "ev_c26e04"
+      ]
+    },
+    {
+      "claimId": "clm_c26k02",
+      "partyId": "pty_c26clm",
+      "assertion": "Tamsin paid $468 for the annual plan on 2025-01-01",
+      "amount": 46800,
+      "evidenceIds": [
+        "ev_c26e02"
+      ]
+    },
+    {
+      "claimId": "clm_c26k03",
+      "partyId": "pty_c26clm",
+      "assertion": "FitNest confirmed on 2025-06-02 that the membership would end June 30",
+      "evidenceIds": [
+        "ev_c26e03"
+      ]
+    },
+    {
+      "claimId": "clm_c26k04",
+      "partyId": "pty_c26rsp",
+      "assertion": "Section 3 refunds $39 per full monthly period beginning after the 30-day notice period, less a $25 fee",
+      "evidenceIds": [
+        "ev_c26e01"
+      ]
+    },
+    {
+      "claimId": "clm_c26k05",
+      "partyId": "pty_c26rsp",
+      "assertion": "FitNest's sign-up summary and support replies describe the annual plan as non-refundable",
+      "evidenceIds": [
+        "ev_c26e02",
+        "ev_c26e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c26e01",
+      "partyId": "pty_c26rsp",
+      "type": "policy",
+      "sha256": "e5a0890e184758824e30bf0c7a01b2be35c87bafb92df9075b776f6bdf09b4f1",
+      "uri": "evidence/membership-terms.txt"
+    },
+    {
+      "evidenceId": "ev_c26e02",
+      "partyId": "pty_c26clm",
+      "type": "receipt",
+      "sha256": "47cba575d6038b3bd080c1707f49bb60596868e0e363f6130caabecef9d99c2e",
+      "uri": "evidence/signup-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c26e03",
+      "partyId": "pty_c26clm",
+      "type": "message",
+      "sha256": "caaf0ed0bce43f7f99ce90aef81df715da6a7a30cf3f2201303d037de55d33ca",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c26e04",
+      "partyId": "pty_c26clm",
+      "type": "other",
+      "sha256": "5de33bb709a5b5696ed34610c34226fb9b2c305545ca99b45fcacd3b4a07475f",
+      "uri": "evidence/relocation-proof.txt"
+    }
+  ],
+  "offers": []
+}

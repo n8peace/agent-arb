@@ -1,0 +1,8 @@
+{
+  "owedCents": 195000,
+  "lowCents": 195000,
+  "highCents": 195000,
+  "reasoning": "The 50-hour cap can be raised by written email approval (sow); Karen's 6/10 email approves up to 60 total hours (emails). Billable = 60 total, 30 already paid, so 30 hours x $65 = $1,950 (log). The last 2 hours were beyond the approved limit and are not billable. Invoice 2 overstated by $130.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

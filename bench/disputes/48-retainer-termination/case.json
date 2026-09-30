@@ -1,0 +1,106 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0048",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c48clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c48rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c48e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c48k01",
+      "partyId": "pty_c48clm",
+      "assertion": "Client gave 30-day written notice of termination on 2025-03-12, so the effective date is 2025-04-11",
+      "evidenceIds": [
+        "ev_c48e02",
+        "ev_c48e01"
+      ]
+    },
+    {
+      "claimId": "clm_c48k02",
+      "partyId": "pty_c48clm",
+      "assertion": "Designer did design work between 2025-04-02 and 2025-04-10 totaling 10 hours",
+      "evidenceIds": [
+        "ev_c48e03"
+      ]
+    },
+    {
+      "claimId": "clm_c48k03",
+      "partyId": "pty_c48clm",
+      "assertion": "March retainer of $1,200 was paid on 2025-03-05",
+      "amount": 120000,
+      "evidenceIds": [
+        "ev_c48e04"
+      ]
+    },
+    {
+      "claimId": "clm_c48k04",
+      "partyId": "pty_c48clm",
+      "assertion": "Designer invoiced a full $1,200 for April",
+      "amount": 120000,
+      "evidenceIds": [
+        "ev_c48e04"
+      ]
+    },
+    {
+      "claimId": "clm_c48k05",
+      "partyId": "pty_c48rsp",
+      "assertion": "Client says the agreement ended in March and no April fees are due",
+      "evidenceIds": [
+        "ev_c48e02"
+      ]
+    },
+    {
+      "claimId": "clm_c48k06",
+      "partyId": "pty_c48rsp",
+      "assertion": "The retainer accrues at $40 per day through the effective date",
+      "amount": 4000,
+      "evidenceIds": [
+        "ev_c48e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c48e01",
+      "partyId": "pty_c48clm",
+      "type": "contract",
+      "sha256": "044a7094a0db755c901017240b1e08fbb07d112340190bfa5e71a41076813697",
+      "uri": "evidence/retainer-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c48e02",
+      "partyId": "pty_c48clm",
+      "type": "message",
+      "sha256": "a23c50ec03af460129c1018ce380a6a0e7245af82ece634c21bd70ad6d912323",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c48e03",
+      "partyId": "pty_c48clm",
+      "type": "other",
+      "sha256": "85afce8d6cbe2ebf2d69a6a1ecf9ef8da4317598566680b9caf5044fbf5da6f3",
+      "uri": "evidence/work-log-april.txt"
+    },
+    {
+      "evidenceId": "ev_c48e04",
+      "partyId": "pty_c48clm",
+      "type": "invoice",
+      "sha256": "f67ce60cde81c592d39abe7fae0592db5558953bf2a620886b979d73eaae44a1",
+      "uri": "evidence/invoice-april.txt"
+    }
+  ],
+  "offers": []
+}

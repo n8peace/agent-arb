@@ -1,0 +1,112 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0017",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c17clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c17rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c17e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c17k01",
+      "partyId": "pty_c17clm",
+      "assertion": "Tenant returned the keys on 2024-12-31 and requested his $1,200 deposit",
+      "amount": 120000,
+      "evidenceIds": [
+        "ev_c17e04"
+      ]
+    },
+    {
+      "claimId": "clm_c17k02",
+      "partyId": "pty_c17clm",
+      "assertion": "Tenant believes landlord's insurance should cover the repair costs",
+      "evidenceIds": [
+        "ev_c17e04"
+      ]
+    },
+    {
+      "claimId": "clm_c17k03",
+      "partyId": "pty_c17rsp",
+      "assertion": "The fire department attributes the fire to a pan of oil left heating on the stove with no one in the kitchen",
+      "evidenceIds": [
+        "ev_c17e02"
+      ]
+    },
+    {
+      "claimId": "clm_c17k04",
+      "partyId": "pty_c17rsp",
+      "assertion": "Tenant acknowledged in writing that he left oil heating and stepped out",
+      "evidenceIds": [
+        "ev_c17e04"
+      ]
+    },
+    {
+      "claimId": "clm_c17k05",
+      "partyId": "pty_c17rsp",
+      "assertion": "Repair of fire damage cost $3,850",
+      "amount": 385000,
+      "evidenceIds": [
+        "ev_c17e03"
+      ]
+    },
+    {
+      "claimId": "clm_c17k06",
+      "partyId": "pty_c17rsp",
+      "assertion": "Lease makes Tenant liable for damage from unattended cooking",
+      "evidenceIds": [
+        "ev_c17e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c17e01",
+      "partyId": "pty_c17rsp",
+      "type": "contract",
+      "sha256": "eb8ff3660b4cf12e14d1a67e7414538692a8f723581c0760fc772317b4726f60",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c17e02",
+      "partyId": "pty_c17rsp",
+      "type": "other",
+      "sha256": "674e598c1fec01a172ad12c3a07f74ba92af659668f9b9d275f4c06d4375ae7b",
+      "uri": "evidence/fire-department-report.txt"
+    },
+    {
+      "evidenceId": "ev_c17e03",
+      "partyId": "pty_c17rsp",
+      "type": "invoice",
+      "sha256": "3923ce2a0991159beab74810fd4741d7ad321db00d1a64962587ff7fcf511305",
+      "uri": "evidence/contractor-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c17e04",
+      "partyId": "pty_c17clm",
+      "type": "message",
+      "sha256": "11cc3da7684d92507ac6a2cfb71d754cae02fcf932752df79be992232e84c5dc",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c17e05",
+      "partyId": "pty_c17rsp",
+      "type": "statement",
+      "sha256": "aa70e1c85f8fefe7b24a8e4321e1cab0d9ef73d04c2a2a4b7a01cda3b92c7020",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

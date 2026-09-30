@@ -1,0 +1,97 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0041",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c41clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c41rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c41e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c41k01",
+      "partyId": "pty_c41clm",
+      "assertion": "The source file as delivered by Client has 17,940 words including footnotes and endnotes",
+      "evidenceIds": [
+        "ev_c41e02"
+      ]
+    },
+    {
+      "claimId": "clm_c41k02",
+      "partyId": "pty_c41clm",
+      "assertion": "The agreement counts words including footnotes and endnotes at $0.12 per word",
+      "evidenceIds": [
+        "ev_c41e01"
+      ]
+    },
+    {
+      "claimId": "clm_c41k03",
+      "partyId": "pty_c41clm",
+      "assertion": "Client paid a $500 deposit",
+      "amount": 50000,
+      "evidenceIds": [
+        "ev_c41e03"
+      ]
+    },
+    {
+      "claimId": "clm_c41k04",
+      "partyId": "pty_c41clm",
+      "assertion": "Translator invoiced 18,000 words, $2,160, leaving a balance of $1,660",
+      "amount": 166000,
+      "evidenceIds": [
+        "ev_c41e03"
+      ]
+    },
+    {
+      "claimId": "clm_c41k05",
+      "partyId": "pty_c41rsp",
+      "assertion": "Client's tool shows 15,212 words without footnotes and he offered $1,325.44",
+      "amount": 132544,
+      "evidenceIds": [
+        "ev_c41e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c41e01",
+      "partyId": "pty_c41clm",
+      "type": "contract",
+      "sha256": "895c76c2cf7ec897f9d7a7e17f53aa2bc652e424a2aeb83338b73c7789ad9c0c",
+      "uri": "evidence/translation-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c41e02",
+      "partyId": "pty_c41clm",
+      "type": "other",
+      "sha256": "4f7057ceb37411a694123a2c34016160e91d8aabf8bd5632b7e794dff04c83c7",
+      "uri": "evidence/word-count-report.txt"
+    },
+    {
+      "evidenceId": "ev_c41e03",
+      "partyId": "pty_c41clm",
+      "type": "invoice",
+      "sha256": "2c3481c64ea69e8fb017015e315b48a0d90c8c8fbf2d6467ff739a4e7749b5e3",
+      "uri": "evidence/invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c41e04",
+      "partyId": "pty_c41rsp",
+      "type": "message",
+      "sha256": "313e74712386f0e6b76f9e85c4e123bad56d15d463a5f1e74ebba8dfe716c221",
+      "uri": "evidence/emails.txt"
+    }
+  ],
+  "offers": []
+}

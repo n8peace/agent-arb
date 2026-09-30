@@ -1,0 +1,8 @@
+{
+  "owedCents": 8000,
+  "lowCents": 8000,
+  "highCents": 8000,
+  "reasoning": "The confirmation the hotel issued to the guest states a $408 total including all taxes and mandatory fees (confirmation); the $80 resort fee (folio) is a mandatory fee not in that total. A generic policies page does not override the specific quoted total, and California requires mandatory fees to be included in the quoted price. Owed $80.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

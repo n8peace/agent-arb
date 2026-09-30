@@ -1,0 +1,8 @@
+{
+  "owedCents": 0,
+  "lowCents": 0,
+  "highCents": 0,
+  "reasoning": "Fire cause is unattended cooking (fire) and admitted by the tenant (msg). Lease s.8 makes him liable for such damage; repair cost $3,850 (invoice) exceeds the $1,200 deposit, so the deposit is fully consumed and nothing is owed back.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

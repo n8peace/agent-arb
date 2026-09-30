@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0032",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c32clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c32rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c32e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c32k01",
+      "partyId": "pty_c32clm",
+      "assertion": "Marcus's written withdrawal was received on 2025-06-16, 14 days after the 2025-06-02 start date",
+      "evidenceIds": [
+        "ev_c32e03",
+        "ev_c32e01"
+      ]
+    },
+    {
+      "claimId": "clm_c32k02",
+      "partyId": "pty_c32clm",
+      "assertion": "Marcus paid $1,299 total, of which tuition was $1,200",
+      "amount": 129900,
+      "evidenceIds": [
+        "ev_c32e02",
+        "ev_c32e01"
+      ]
+    },
+    {
+      "claimId": "clm_c32k03",
+      "partyId": "pty_c32rsp",
+      "assertion": "Marcus attended all ten sessions from 2025-06-02 to 2025-06-13",
+      "evidenceIds": [
+        "ev_c32e04"
+      ]
+    },
+    {
+      "claimId": "clm_c32k04",
+      "partyId": "pty_c32rsp",
+      "assertion": "The registration fee of $99 is non-refundable",
+      "amount": 9900,
+      "evidenceIds": [
+        "ev_c32e01"
+      ]
+    },
+    {
+      "claimId": "clm_c32k05",
+      "partyId": "pty_c32rsp",
+      "assertion": "CodeCrest's support replies state a one-week refund limit",
+      "evidenceIds": [
+        "ev_c32e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c32e01",
+      "partyId": "pty_c32rsp",
+      "type": "contract",
+      "sha256": "e9215a6ef2875f32a367bd7fe95edf88cc59d0a1a3be82719285c5c6c0a27289",
+      "uri": "evidence/enrollment-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c32e02",
+      "partyId": "pty_c32clm",
+      "type": "receipt",
+      "sha256": "437daf800f0b08102dc2764f1bbf6d3e52b3bed698d6e23f35c6709b1901c033",
+      "uri": "evidence/payment-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c32e03",
+      "partyId": "pty_c32clm",
+      "type": "message",
+      "sha256": "7468dfd5afb87c57048220d29910db6c1ff8257bfd5915960196666ca04e922c",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c32e04",
+      "partyId": "pty_c32rsp",
+      "type": "other",
+      "sha256": "79d4708c6ce2505b015dffbd0101a79b9437e51907753224b8d866fa7bf94c9d",
+      "uri": "evidence/attendance-record.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,101 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0022",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c22clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c22rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c22e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c22k01",
+      "partyId": "pty_c22clm",
+      "assertion": "Tenant accepts the $145 cleaning charge for refrigerator and oven",
+      "amount": 14500,
+      "evidenceIds": [
+        "ev_c22e04",
+        "ev_c22e02"
+      ]
+    },
+    {
+      "claimId": "clm_c22k02",
+      "partyId": "pty_c22clm",
+      "assertion": "The move-out inspection found no damage beyond light wear and all keys returned",
+      "evidenceIds": [
+        "ev_c22e02"
+      ]
+    },
+    {
+      "claimId": "clm_c22k03",
+      "partyId": "pty_c22clm",
+      "assertion": "Landlord withheld $545 and refunded $1,405",
+      "amount": 54500,
+      "evidenceIds": [
+        "ev_c22e03"
+      ]
+    },
+    {
+      "claimId": "clm_c22k04",
+      "partyId": "pty_c22rsp",
+      "assertion": "Lease section 11 sets a fixed $400 turnover fee for re-keying, listing photos, advertising and administration",
+      "amount": 40000,
+      "evidenceIds": [
+        "ev_c22e01"
+      ]
+    },
+    {
+      "claimId": "clm_c22k05",
+      "partyId": "pty_c22rsp",
+      "assertion": "Refrigerator and oven cleaning cost $145",
+      "amount": 14500,
+      "evidenceIds": [
+        "ev_c22e03",
+        "ev_c22e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c22e01",
+      "partyId": "pty_c22rsp",
+      "type": "contract",
+      "sha256": "d91d238f1daf8bc95139e02ab77fecf5168a0e153f6d183f66dc145a43cbcdc4",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c22e02",
+      "partyId": "pty_c22rsp",
+      "type": "other",
+      "sha256": "040592f6c29e38e317878285403bcf1eee547bf6eeff4df5273d5202dd6de472",
+      "uri": "evidence/move-out-inspection-2025-08-31.txt"
+    },
+    {
+      "evidenceId": "ev_c22e03",
+      "partyId": "pty_c22rsp",
+      "type": "statement",
+      "sha256": "6a498c07f73404af68f8c1004c866cf12a08cd3e77359f18d6e5c2352d14c6de",
+      "uri": "evidence/deposit-statement.txt"
+    },
+    {
+      "evidenceId": "ev_c22e04",
+      "partyId": "pty_c22clm",
+      "type": "message",
+      "sha256": "7798343d364a8bdfbb81664af3ccce925eb0cd0af1d2b6f294080ee7a22f90ed",
+      "uri": "evidence/emails.txt"
+    }
+  ],
+  "offers": []
+}

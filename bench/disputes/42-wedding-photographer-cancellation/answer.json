@@ -1,0 +1,8 @@
+{
+  "owedCents": 30000,
+  "lowCents": 30000,
+  "highCents": 30000,
+  "reasoning": "Cancelled 10 days out, so section 5 applies: 50% of $1,800 = $900 (contract, emails). The retainer is credited toward it, not a separate payment settling everything. $900 - $600 = $300 owed. The photographer's $1,200 invoice ignores her own contract's 50% cap.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

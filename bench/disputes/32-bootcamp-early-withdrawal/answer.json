@@ -1,0 +1,8 @@
+{
+  "owedCents": 96000,
+  "lowCents": 96000,
+  "highCents": 96000,
+  "reasoning": "Withdrawal in writing on day 14 (June 16 minus June 2), before day 18 (emails, agreement). Section 5 formula: $1,200 x (70 - 14) / 70 = $960; attendance is irrelevant and the $99 registration fee is excluded (agreement). The support staff's 'one week' policy is not in the agreement.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

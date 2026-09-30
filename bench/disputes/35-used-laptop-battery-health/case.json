@@ -1,0 +1,111 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0035",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c35clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c35rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c35e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c35k01",
+      "partyId": "pty_c35clm",
+      "assertion": "The listing states battery health of 90% and the seller confirmed 'It's 90%, I checked' on 2025-05-29",
+      "evidenceIds": [
+        "ev_c35e01",
+        "ev_c35e02"
+      ]
+    },
+    {
+      "claimId": "clm_c35k02",
+      "partyId": "pty_c35clm",
+      "assertion": "The buyer told the seller before buying that he needed at least 80% battery health",
+      "evidenceIds": [
+        "ev_c35e02"
+      ]
+    },
+    {
+      "claimId": "clm_c35k03",
+      "partyId": "pty_c35clm",
+      "assertion": "A battery report on 2025-06-02 shows 62% health at 512 cycles",
+      "evidenceIds": [
+        "ev_c35e03"
+      ]
+    },
+    {
+      "claimId": "clm_c35k04",
+      "partyId": "pty_c35clm",
+      "assertion": "A replacement battery costs $119 parts and labor",
+      "amount": 11900,
+      "evidenceIds": [
+        "ev_c35e05"
+      ]
+    },
+    {
+      "claimId": "clm_c35k05",
+      "partyId": "pty_c35rsp",
+      "assertion": "The listing says sold as-is with no returns",
+      "evidenceIds": [
+        "ev_c35e01"
+      ]
+    },
+    {
+      "claimId": "clm_c35k06",
+      "partyId": "pty_c35rsp",
+      "assertion": "The seller's 90% screenshot is date-stamped 2024-12-03 and shows 341 cycles",
+      "evidenceIds": [
+        "ev_c35e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c35e01",
+      "partyId": "pty_c35rsp",
+      "type": "contract",
+      "sha256": "f7c27f27675e1016dc5a464d28c537574ae5edb1d183419b9d2d00fa48acc1bd",
+      "uri": "evidence/listing.txt"
+    },
+    {
+      "evidenceId": "ev_c35e02",
+      "partyId": "pty_c35clm",
+      "type": "message",
+      "sha256": "872ee2ffbf6f622c379429ca92dba36ea03400d196cffa51f8e6218d98b8d94c",
+      "uri": "evidence/chat-before-and-after.txt"
+    },
+    {
+      "evidenceId": "ev_c35e03",
+      "partyId": "pty_c35clm",
+      "type": "other",
+      "sha256": "429b875a4971a5e2952771787ef94627ca239decfbfd7ebaf55ed040fed618ed",
+      "uri": "evidence/battery-report.txt"
+    },
+    {
+      "evidenceId": "ev_c35e04",
+      "partyId": "pty_c35rsp",
+      "type": "photo",
+      "sha256": "8f16ff7377fe5a42bebe4ded67e80dcd42835fee36d6f37341671bb2ac393670",
+      "uri": "evidence/seller-screenshot-description.txt"
+    },
+    {
+      "evidenceId": "ev_c35e05",
+      "partyId": "pty_c35clm",
+      "type": "receipt",
+      "sha256": "a219e016eb7abae8a324145f2fd4b1f7a6329f2c41a32c77e217c309fb509b96",
+      "uri": "evidence/repair-quote.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,97 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0036",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c36clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c36rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c36e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c36k01",
+      "partyId": "pty_c36clm",
+      "assertion": "Noor paid Cade $300 by Zelle on 2025-07-11 for two tickets",
+      "amount": 30000,
+      "evidenceIds": [
+        "ev_c36e02",
+        "ev_c36e01"
+      ]
+    },
+    {
+      "claimId": "clm_c36k02",
+      "partyId": "pty_c36clm",
+      "assertion": "The venue cancelled Noor's transfer because the same tickets were accepted by another account at 5:31 PM",
+      "evidenceIds": [
+        "ev_c36e03",
+        "ev_c36e04"
+      ]
+    },
+    {
+      "claimId": "clm_c36k03",
+      "partyId": "pty_c36clm",
+      "assertion": "Cade admitted he sold the same pair to a friend first and agreed to refund the money",
+      "evidenceIds": [
+        "ev_c36e01"
+      ]
+    },
+    {
+      "claimId": "clm_c36k04",
+      "partyId": "pty_c36rsp",
+      "assertion": "Cade had sent the same two tickets to another buyer before Noor's transfer",
+      "evidenceIds": [
+        "ev_c36e04"
+      ]
+    },
+    {
+      "claimId": "clm_c36k05",
+      "partyId": "pty_c36rsp",
+      "assertion": "No refund has been paid to Noor",
+      "evidenceIds": [
+        "ev_c36e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c36e01",
+      "partyId": "pty_c36clm",
+      "type": "message",
+      "sha256": "49c1b85b4e9373215d2a74acf81730ead2091dcdb1f28bc144ab9375c11b05df",
+      "uri": "evidence/chat-agreement-and-admission.txt"
+    },
+    {
+      "evidenceId": "ev_c36e02",
+      "partyId": "pty_c36clm",
+      "type": "receipt",
+      "sha256": "52b4407775b89fab73e35e282b30cd9de0866aa5290a0ca135d08c33efe444bb",
+      "uri": "evidence/zelle-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c36e03",
+      "partyId": "pty_c36clm",
+      "type": "other",
+      "sha256": "c75aa0c8d258e34a8692fcd6ea561fb077876ca7ecd2083fb388a6058fc2e630",
+      "uri": "evidence/venue-email.txt"
+    },
+    {
+      "evidenceId": "ev_c36e04",
+      "partyId": "pty_c36rsp",
+      "type": "other",
+      "sha256": "e7d8925b816f2c37a14015469f56fd777f105ce61b20cfde7e39e75fcf71591c",
+      "uri": "evidence/seller-app-transfer-history.txt"
+    }
+  ],
+  "offers": []
+}

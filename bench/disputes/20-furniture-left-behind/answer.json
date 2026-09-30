@@ -1,0 +1,8 @@
+{
+  "owedCents": 25000,
+  "lowCents": 25000,
+  "highCents": 25000,
+  "reasoning": "Hauling $350 is supported by the receipt and the tenant's texts (receipt, msg). Lost rent is only chargeable if the unit could not be re-let on the scheduled date because of the tenant (lease s.10); the new lease was signed 8/22 to start 9/15 (newlease), so no rent was lost Sept 1-5. Owed $250. The new lease is held only by the landlord.",
+  "difficulty": "easy",
+  "infoAsymmetry": true
+}

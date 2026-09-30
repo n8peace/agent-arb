@@ -1,0 +1,89 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0008",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c08clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c08rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c08e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c08k01",
+      "partyId": "pty_c08clm",
+      "assertion": "Tenant gave written notice by email on 2025-04-20 and moved out on 2025-05-21",
+      "evidenceIds": [
+        "ev_c08e02"
+      ]
+    },
+    {
+      "claimId": "clm_c08k02",
+      "partyId": "pty_c08clm",
+      "assertion": "Lease section 12 sets the termination fee at 75% of one month's rent",
+      "evidenceIds": [
+        "ev_c08e01"
+      ]
+    },
+    {
+      "claimId": "clm_c08k03",
+      "partyId": "pty_c08clm",
+      "assertion": "Unit was clean with no damage at move-out inspection",
+      "evidenceIds": [
+        "ev_c08e03"
+      ]
+    },
+    {
+      "claimId": "clm_c08k04",
+      "partyId": "pty_c08rsp",
+      "assertion": "Landlord kept the full $1,600 deposit as an early termination fee",
+      "amount": 160000,
+      "evidenceIds": [
+        "ev_c08e03"
+      ]
+    },
+    {
+      "claimId": "clm_c08k05",
+      "partyId": "pty_c08rsp",
+      "assertion": "Landlord's stated policy is a fee of one month's rent",
+      "evidenceIds": [
+        "ev_c08e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c08e01",
+      "partyId": "pty_c08rsp",
+      "type": "contract",
+      "sha256": "48aa7f2e74b1c06bc5c6190eaa0df065606e8c0610024d35752af7eb5cdbebef",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c08e02",
+      "partyId": "pty_c08clm",
+      "type": "message",
+      "sha256": "0931d291560faa6149cd64ae4dbb7c2180b13a93d2e703bc2fddb22e788edc0c",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c08e03",
+      "partyId": "pty_c08rsp",
+      "type": "statement",
+      "sha256": "406fca86320232bc8e1148c60e8e648159c0157e811b674a0993e35d8421aef3",
+      "uri": "evidence/deposit-notice.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,8 @@
+Project chat, Ilse Brandt and Owen Park (Northfield Freight Co.)
+
+2025-05-12 Ilse: D1 dashboards uploaded to the portal.
+2025-05-16 Ilse: D2 cleaned dataset uploaded.
+2025-05-20 Owen: Let's skip the forecasting model for now, we'll revisit next quarter. Pay for the rest as normal.
+2025-05-20 Ilse: Ok, stopping D3. I'd built about 70% of it.
+2025-06-10 Owen: Finance says we're not paying anything, the project didn't deliver a forecast.
+2025-06-10 Ilse: You removed D3 in writing. D1 and D2 are accepted. Invoice attached for $2,750 including the work I'd done on D3.

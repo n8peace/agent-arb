@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0038",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c38clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c38rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c38e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c38k01",
+      "partyId": "pty_c38clm",
+      "assertion": "Odette prepaid $240 for 4 hours at $60 per hour starting 10:00 AM on 2025-08-09",
+      "amount": 24000,
+      "evidenceIds": [
+        "ev_c38e02",
+        "ev_c38e01"
+      ]
+    },
+    {
+      "claimId": "clm_c38k02",
+      "partyId": "pty_c38clm",
+      "assertion": "The helper arrived at 10:03 AM and left at 12:29 PM, about 2.5 hours",
+      "evidenceIds": [
+        "ev_c38e03",
+        "ev_c38e04"
+      ]
+    },
+    {
+      "claimId": "clm_c38k03",
+      "partyId": "pty_c38clm",
+      "assertion": "A bookshelf and six boxes remained at the old apartment when the helper left",
+      "evidenceIds": [
+        "ev_c38e03",
+        "ev_c38e04"
+      ]
+    },
+    {
+      "claimId": "clm_c38k04",
+      "partyId": "pty_c38rsp",
+      "assertion": "The helper's post refunds unused prepaid hours and bills actual time to the nearest half hour",
+      "evidenceIds": [
+        "ev_c38e01"
+      ]
+    },
+    {
+      "claimId": "clm_c38k05",
+      "partyId": "pty_c38rsp",
+      "assertion": "The helper stated he did the heavy lifting first and left for another job",
+      "evidenceIds": [
+        "ev_c38e04"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c38e01",
+      "partyId": "pty_c38rsp",
+      "type": "contract",
+      "sha256": "ef842ad94d0c551570166fc2c23f47ab46745d7dfdf4ba8363089dc4732e3221",
+      "uri": "evidence/helper-post-and-booking.txt"
+    },
+    {
+      "evidenceId": "ev_c38e02",
+      "partyId": "pty_c38clm",
+      "type": "receipt",
+      "sha256": "582fcb0c0dc9359adc37032f2f0293b954d9d11abbffa40325c7e3d35ce8e34a",
+      "uri": "evidence/payment-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c38e03",
+      "partyId": "pty_c38clm",
+      "type": "photo",
+      "sha256": "bf4b0643667f169285efa1694ea5d360331366f922fddab871241874854ccaba",
+      "uri": "evidence/moving-day-photo-timeline.txt"
+    },
+    {
+      "evidenceId": "ev_c38e04",
+      "partyId": "pty_c38clm",
+      "type": "message",
+      "sha256": "f85d2a6d55505e06c178bb7bc79a41c4d5569f937818f1da77ac6cca58724fac",
+      "uri": "evidence/text-messages.txt"
+    }
+  ],
+  "offers": []
+}

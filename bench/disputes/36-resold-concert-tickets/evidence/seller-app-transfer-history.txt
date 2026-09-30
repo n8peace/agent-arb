@@ -1,0 +1,4 @@
+SELLER'S TICKET APP - TRANSFER HISTORY (screenshot description)
+
+2025-07-11 5:02 PM: sent 2 GA to J. Pruett. Status: accepted 5:31 PM.
+2025-07-11 5:40 PM: sent 2 GA to N. Haddad. Status: cancelled by system 5:31 PM - ticket already accepted by another account.

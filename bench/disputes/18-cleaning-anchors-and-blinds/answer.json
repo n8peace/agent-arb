@@ -1,0 +1,8 @@
+{
+  "owedCents": 13000,
+  "lowCents": 13000,
+  "highCents": 35000,
+  "reasoning": "Cleaning valid: oven and bathroom were clean at move-in and dirty at move-out (movein, moveout). Anchor holes are beyond a picture nail under lease s.7 and the tenant had no written consent; her unanswered portal message (msg) is a request, not a consent, so $220 stands. Blind damage pre-dates the tenancy (movein), so $130 is invalid. Owed $130. High bound $350 if a reader treats the unanswered request as consent.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

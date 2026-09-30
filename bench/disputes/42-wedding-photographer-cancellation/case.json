@@ -1,0 +1,90 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0042",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c42clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c42rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c42e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c42k01",
+      "partyId": "pty_c42clm",
+      "assertion": "Client cancelled on 2025-09-10, ten days before the 2025-09-20 event",
+      "evidenceIds": [
+        "ev_c42e02"
+      ]
+    },
+    {
+      "claimId": "clm_c42k02",
+      "partyId": "pty_c42clm",
+      "assertion": "Section 5 makes Client owe 50% of the $1,800 fee less the $600 retainer when cancelling under 14 days before",
+      "evidenceIds": [
+        "ev_c42e01"
+      ]
+    },
+    {
+      "claimId": "clm_c42k03",
+      "partyId": "pty_c42clm",
+      "assertion": "Photographer invoiced the full $1,200 balance",
+      "amount": 120000,
+      "evidenceIds": [
+        "ev_c42e03"
+      ]
+    },
+    {
+      "claimId": "clm_c42k04",
+      "partyId": "pty_c42rsp",
+      "assertion": "Client says the non-refundable retainer settles the account",
+      "evidenceIds": [
+        "ev_c42e02"
+      ]
+    },
+    {
+      "claimId": "clm_c42k05",
+      "partyId": "pty_c42rsp",
+      "assertion": "The retainer of $600 was paid on 2025-06-15",
+      "amount": 60000,
+      "evidenceIds": [
+        "ev_c42e03",
+        "ev_c42e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c42e01",
+      "partyId": "pty_c42clm",
+      "type": "contract",
+      "sha256": "d70cba4c929955c393a38d034ca7f50b05315ae4e417f6347ad0a1dc058e9b45",
+      "uri": "evidence/photography-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c42e02",
+      "partyId": "pty_c42clm",
+      "type": "message",
+      "sha256": "de7d992c68e492c06bfd19ce4b15441fb8363813f47ca6fe9bcdeaecfec225d2",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c42e03",
+      "partyId": "pty_c42clm",
+      "type": "invoice",
+      "sha256": "cc7d3c6ea76beeb83f4c35f25295d8264896d1b5c52c541e1e3d95992b9a9eac",
+      "uri": "evidence/invoice-0509.txt"
+    }
+  ],
+  "offers": []
+}

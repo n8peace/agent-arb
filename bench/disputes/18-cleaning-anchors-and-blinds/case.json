@@ -1,0 +1,124 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0018",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c18clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c18rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c18e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c18k01",
+      "partyId": "pty_c18clm",
+      "assertion": "The living room blind was already cracked with two broken slats at move-in",
+      "evidenceIds": [
+        "ev_c18e02"
+      ]
+    },
+    {
+      "claimId": "clm_c18k02",
+      "partyId": "pty_c18clm",
+      "assertion": "Tenant asked the landlord in writing on 2024-06-02 about mounting a TV and received no reply",
+      "evidenceIds": [
+        "ev_c18e04"
+      ]
+    },
+    {
+      "claimId": "clm_c18k03",
+      "partyId": "pty_c18clm",
+      "assertion": "Landlord withheld $530 and refunded $1,720",
+      "amount": 53000,
+      "evidenceIds": [
+        "ev_c18e05"
+      ]
+    },
+    {
+      "claimId": "clm_c18k04",
+      "partyId": "pty_c18rsp",
+      "assertion": "Oven, stove and bathroom were dirty at move-out; cleaning cost $180",
+      "amount": 18000,
+      "evidenceIds": [
+        "ev_c18e03",
+        "ev_c18e05"
+      ]
+    },
+    {
+      "claimId": "clm_c18k05",
+      "partyId": "pty_c18rsp",
+      "assertion": "Four anchor holes of about 3/8 inch were found above the TV console, repair cost $220",
+      "amount": 22000,
+      "evidenceIds": [
+        "ev_c18e03",
+        "ev_c18e05"
+      ]
+    },
+    {
+      "claimId": "clm_c18k06",
+      "partyId": "pty_c18rsp",
+      "assertion": "Lease requires written consent for anchors larger than a picture nail",
+      "evidenceIds": [
+        "ev_c18e01"
+      ]
+    },
+    {
+      "claimId": "clm_c18k07",
+      "partyId": "pty_c18rsp",
+      "assertion": "Blind replacement cost $130",
+      "amount": 13000,
+      "evidenceIds": [
+        "ev_c18e05"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c18e01",
+      "partyId": "pty_c18rsp",
+      "type": "contract",
+      "sha256": "b3c0a98992df1f3163b0c27b284b0272ae3d4c4b48549e1e93f1db78e72865d5",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c18e02",
+      "partyId": "pty_c18clm",
+      "type": "other",
+      "sha256": "15db7230aaab6cf5efe9b61d1152a34f5b06eda48326932450ea4d4ad052fc25",
+      "uri": "evidence/move-in-checklist-2023-10-01.txt"
+    },
+    {
+      "evidenceId": "ev_c18e03",
+      "partyId": "pty_c18rsp",
+      "type": "other",
+      "sha256": "0887efe41f480f7aaab81bd8450a29f645b655df6a5b28edf231e7dd7cb92e2a",
+      "uri": "evidence/move-out-inspection-2025-09-30.txt"
+    },
+    {
+      "evidenceId": "ev_c18e04",
+      "partyId": "pty_c18clm",
+      "type": "message",
+      "sha256": "7f15f5fea360005b3c71af36dd02aaf165480a0655205782b075311db34988c8",
+      "uri": "evidence/tenant-message.txt"
+    },
+    {
+      "evidenceId": "ev_c18e05",
+      "partyId": "pty_c18rsp",
+      "type": "statement",
+      "sha256": "703c7e5aabe6f82a22c8930c65a37f4d857c04d24486beff64290442ec0634c9",
+      "uri": "evidence/deduction-statement-with-invoices.txt"
+    }
+  ],
+  "offers": []
+}

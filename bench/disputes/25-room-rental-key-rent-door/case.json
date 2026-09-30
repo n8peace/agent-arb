@@ -1,0 +1,123 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0025",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c25clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c25rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c25e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c25k01",
+      "partyId": "pty_c25clm",
+      "assertion": "Tenant paid $900 rent by Zelle on 2025-06-01, 2025-07-01 and 2025-08-01",
+      "amount": 90000,
+      "evidenceIds": [
+        "ev_c25e03"
+      ]
+    },
+    {
+      "claimId": "clm_c25k02",
+      "partyId": "pty_c25clm",
+      "assertion": "The owner's own move-in photo log shows a 12-inch crack in the closet door frame at 2024-11-01",
+      "evidenceIds": [
+        "ev_c25e02"
+      ]
+    },
+    {
+      "claimId": "clm_c25k03",
+      "partyId": "pty_c25clm",
+      "assertion": "Owner retained the whole $900 deposit",
+      "amount": 90000,
+      "evidenceIds": [
+        "ev_c25e06"
+      ]
+    },
+    {
+      "claimId": "clm_c25k04",
+      "partyId": "pty_c25rsp",
+      "assertion": "Renter lost a house key and agreed to pay for a re-key costing $45",
+      "amount": 4500,
+      "evidenceIds": [
+        "ev_c25e04",
+        "ev_c25e05"
+      ]
+    },
+    {
+      "claimId": "clm_c25k05",
+      "partyId": "pty_c25rsp",
+      "assertion": "Owner claims $450 for an August rent shortfall",
+      "amount": 45000,
+      "evidenceIds": [
+        "ev_c25e06"
+      ]
+    },
+    {
+      "claimId": "clm_c25k06",
+      "partyId": "pty_c25rsp",
+      "assertion": "Owner claims $405 for closet door frame damage",
+      "amount": 40500,
+      "evidenceIds": [
+        "ev_c25e06"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c25e01",
+      "partyId": "pty_c25rsp",
+      "type": "contract",
+      "sha256": "8c73274bcde0b868d924195ef9e21ad64e186d2f34a9d26705166dd0297b831f",
+      "uri": "evidence/room-rental-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c25e02",
+      "partyId": "pty_c25rsp",
+      "type": "photo",
+      "sha256": "455fdeb42c3a5a95bfc68da942c9c8e4af26207d324a7582ccacce77d7324974",
+      "uri": "evidence/move-in-photo-log-2024-11-01.txt"
+    },
+    {
+      "evidenceId": "ev_c25e03",
+      "partyId": "pty_c25clm",
+      "type": "receipt",
+      "sha256": "33181b25afb2c7ad8337f0185a86291ad31842dded3ff7effc994f86795e7053",
+      "uri": "evidence/zelle-records.txt"
+    },
+    {
+      "evidenceId": "ev_c25e04",
+      "partyId": "pty_c25clm",
+      "type": "message",
+      "sha256": "29c05ab49ea7a7398d9752f47ae59accb3bdbd588ef1cfa63cd06d8969fa7be1",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c25e05",
+      "partyId": "pty_c25rsp",
+      "type": "receipt",
+      "sha256": "3e3ad50f472b307801037f9a72c23e234e2b5b8189bc44ba0fdead49a320d1a9",
+      "uri": "evidence/locksmith-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c25e06",
+      "partyId": "pty_c25rsp",
+      "type": "statement",
+      "sha256": "d4fc655d6d8b9c3a547342fefb8c09436221a8ff142806f6655d1b3d6909a9e7",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

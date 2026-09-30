@@ -1,0 +1,114 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0020",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c20clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c20rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c20e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c20k01",
+      "partyId": "pty_c20clm",
+      "assertion": "Tenant told Landlord on 2025-09-03 to dispose of the left-behind furniture as needed",
+      "evidenceIds": [
+        "ev_c20e02"
+      ]
+    },
+    {
+      "claimId": "clm_c20k02",
+      "partyId": "pty_c20clm",
+      "assertion": "The next lease was signed on 2025-08-22 with a start date of 2025-09-15",
+      "evidenceIds": [
+        "ev_c20e04"
+      ]
+    },
+    {
+      "claimId": "clm_c20k03",
+      "partyId": "pty_c20clm",
+      "assertion": "Landlord withheld $600 and refunded $1,100",
+      "amount": 60000,
+      "evidenceIds": [
+        "ev_c20e05"
+      ]
+    },
+    {
+      "claimId": "clm_c20k04",
+      "partyId": "pty_c20rsp",
+      "assertion": "Tenant left a sofa, desk and mattress and hauling cost $350",
+      "amount": 35000,
+      "evidenceIds": [
+        "ev_c20e02",
+        "ev_c20e03"
+      ]
+    },
+    {
+      "claimId": "clm_c20k05",
+      "partyId": "pty_c20rsp",
+      "assertion": "Landlord charged $250 for lost rent for September 1-5",
+      "amount": 25000,
+      "evidenceIds": [
+        "ev_c20e05"
+      ]
+    },
+    {
+      "claimId": "clm_c20k06",
+      "partyId": "pty_c20rsp",
+      "assertion": "Lease allows lost rent only if the unit cannot be re-let on the scheduled date because of Tenant's breach",
+      "evidenceIds": [
+        "ev_c20e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c20e01",
+      "partyId": "pty_c20rsp",
+      "type": "contract",
+      "sha256": "00022b067e1a1b5c09c8cc37af74e558ff1d9d1911fc6d77ea51c13f37bfce50",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c20e02",
+      "partyId": "pty_c20clm",
+      "type": "message",
+      "sha256": "a2666657bf7991242574872f14eeaa02a72aeebb4654c093449709df75cce61c",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c20e03",
+      "partyId": "pty_c20rsp",
+      "type": "receipt",
+      "sha256": "e229988fd3839af4079ab011bdec9690559a0cd4014e3e319d9a158f578ee29c",
+      "uri": "evidence/hauler-receipt.txt"
+    },
+    {
+      "evidenceId": "ev_c20e04",
+      "partyId": "pty_c20rsp",
+      "type": "contract",
+      "sha256": "b41d0fbc2f427957e2b156ab06a9c2e6d182da9d74453f7dbd8eab88d14b45d8",
+      "uri": "evidence/new-lease-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c20e05",
+      "partyId": "pty_c20rsp",
+      "type": "statement",
+      "sha256": "290a4fe26947662133b93a966fb7520a76b956f7d3d4263b783e5deac9ccbb7d",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

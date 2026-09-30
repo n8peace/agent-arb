@@ -1,0 +1,8 @@
+{
+  "owedCents": 95000,
+  "lowCents": 95000,
+  "highCents": 95000,
+  "reasoning": "Carpet was already worn at move-in (movein) and unchanged at move-out (moveout); worn carpet and scuffed walls after a five-year tenancy are ordinary wear and tear under lease clause 10 and CA Civ. Code 1950.5. Oven was clean at move-in, greasy at move-out, so the $120 cleaning is valid (moveout, stmt). Withheld $1,070 minus $120 = $950 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

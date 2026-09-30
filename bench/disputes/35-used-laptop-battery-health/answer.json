@@ -1,0 +1,8 @@
+{
+  "owedCents": 11900,
+  "lowCents": 11900,
+  "highCents": 11900,
+  "reasoning": "'As-is' covers unknown defects, not the seller's express statement of a specific spec ('90%, I checked') that the buyer relied on (listing, chat). His only support is a screenshot from December at 341 cycles versus 512 cycles now (screenshot, report), so the statement was not current when made. The buyer chose to keep the laptop and asked only for replacement cost (chat), $119 (quote). Full refund is not supported by the file.",
+  "difficulty": "hard",
+  "infoAsymmetry": false
+}

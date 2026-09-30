@@ -1,0 +1,113 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0045",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c45clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c45rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c45e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c45k01",
+      "partyId": "pty_c45clm",
+      "assertion": "Milestone 3 was delivered on Monday 2025-06-02 and Client's rejection notice was sent on 2025-06-13",
+      "evidenceIds": [
+        "ev_c45e02"
+      ]
+    },
+    {
+      "claimId": "clm_c45k02",
+      "partyId": "pty_c45clm",
+      "assertion": "The five business day notice period ended on 2025-06-09",
+      "evidenceIds": [
+        "ev_c45e02",
+        "ev_c45e01"
+      ]
+    },
+    {
+      "claimId": "clm_c45k03",
+      "partyId": "pty_c45clm",
+      "assertion": "The three issues Client raised are not among Specification items S1-S6",
+      "evidenceIds": [
+        "ev_c45e03",
+        "ev_c45e02"
+      ]
+    },
+    {
+      "claimId": "clm_c45k04",
+      "partyId": "pty_c45clm",
+      "assertion": "Milestone 3 price is $6,000",
+      "amount": 600000,
+      "evidenceIds": [
+        "ev_c45e01",
+        "ev_c45e05"
+      ]
+    },
+    {
+      "claimId": "clm_c45k05",
+      "partyId": "pty_c45rsp",
+      "assertion": "Client released the Route Optimizer module to all 300 drivers in production on 2025-06-04",
+      "evidenceIds": [
+        "ev_c45e04"
+      ]
+    },
+    {
+      "claimId": "clm_c45k06",
+      "partyId": "pty_c45rsp",
+      "assertion": "Client's rejection cited button color, speed on older phones and a CSV header typo",
+      "evidenceIds": [
+        "ev_c45e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c45e01",
+      "partyId": "pty_c45clm",
+      "type": "contract",
+      "sha256": "fae4078ab8709d3eaa27a77156302beb95afb24729d15cece329267096ffca84",
+      "uri": "evidence/master-services-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c45e02",
+      "partyId": "pty_c45clm",
+      "type": "message",
+      "sha256": "606aebe70082d765bb03f2c0a518cb4d3508dea26604b149c3e58917ca746dce",
+      "uri": "evidence/delivery-and-rejection-emails.txt"
+    },
+    {
+      "evidenceId": "ev_c45e03",
+      "partyId": "pty_c45clm",
+      "type": "other",
+      "sha256": "1b158644c4698602d1b395e6265f428ecf573eae61ccef8b15a3062e5cf81f22",
+      "uri": "evidence/specification-v2-items.txt"
+    },
+    {
+      "evidenceId": "ev_c45e04",
+      "partyId": "pty_c45rsp",
+      "type": "other",
+      "sha256": "f9ec2c7a7df03a623293b96e104f97e31155032d8f30c5a4653926a3f88530dd",
+      "uri": "evidence/production-release-log.txt"
+    },
+    {
+      "evidenceId": "ev_c45e05",
+      "partyId": "pty_c45clm",
+      "type": "invoice",
+      "sha256": "3829786a627ef606b30910c0cc58b27a7085f7ca966f5633c25042b80c0254f2",
+      "uri": "evidence/invoice-m3.txt"
+    }
+  ],
+  "offers": []
+}

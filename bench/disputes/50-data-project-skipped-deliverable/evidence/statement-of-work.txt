@@ -1,0 +1,9 @@
+STATEMENT OF WORK - Ilse Brandt ("Analyst") and Northfield Freight Co. ("Client")
+Deliverables and prices:
+  D1 Operations dashboards: $1,000 (due 2025-05-12)
+  D2 Cleaned shipment dataset: $750 (due 2025-05-16)
+  D3 Delivery-time forecasting model: $1,000 (due 2025-05-30)
+Total $2,750.
+
+4. ACCEPTANCE. Each deliverable is accepted when it passes the Acceptance Checklist, or after 5 business days without written objection. Payment for a deliverable is due 10 days after acceptance.
+5. REMOVED WORK. Client may remove a deliverable by written notice. Removed deliverables and work on them are not payable.

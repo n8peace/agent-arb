@@ -1,0 +1,8 @@
+{
+  "owedCents": 40000,
+  "lowCents": 40000,
+  "highCents": 40000,
+  "reasoning": "Proper 30-day notice given 4/20 for a 5/21 move-out (msg), so the option applies. The lease fixes the fee at 75% of $1,600 = $1,200 (lease); the office's 'policy' of one month is not in the contract. No other deductions (stmt). $1,600 - $1,200 = $400 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,5 @@
+CODECREST ACADEMY - ENROLLMENT AGREEMENT
+Student: Marcus Ellery. Program: Web Development Immersive, 10 weeks, 2025-06-02 to 2025-08-10 (70 calendar days).
+Tuition: $1,200. Registration fee: $99. Total: $1,299.
+
+5. REFUNDS. A student who withdraws in writing before day 18 of the program receives a refund of tuition equal to tuition x (70 minus days elapsed) / 70. Days elapsed are counted from the program start date to the date the written withdrawal is received by CodeCrest. The registration fee is non-refundable. After day 17, no refund. Attendance does not change the calculation.

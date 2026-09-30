@@ -1,0 +1,5 @@
+NORTHFIELD FREIGHT CO. - VENDOR PORTAL LOG (produced by Northfield)
+
+2025-05-12 3:40 PM: D1 Operations dashboards uploaded by I. Brandt.
+2025-05-16 11:20 AM: D2 Cleaned shipment dataset uploaded by I. Brandt.
+No D3 upload.

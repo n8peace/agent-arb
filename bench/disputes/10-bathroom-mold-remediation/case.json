@@ -1,0 +1,123 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0010",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c10clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c10rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c10e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c10k01",
+      "partyId": "pty_c10clm",
+      "assertion": "Tenant reported a corroded, dripping supply line under the bathroom sink on 2024-10-03 and followed up on 2024-12-15",
+      "evidenceIds": [
+        "ev_c10e02"
+      ]
+    },
+    {
+      "claimId": "clm_c10k02",
+      "partyId": "pty_c10clm",
+      "assertion": "No repair visit occurred after 2024-10-08",
+      "evidenceIds": [
+        "ev_c10e03"
+      ]
+    },
+    {
+      "claimId": "clm_c10k03",
+      "partyId": "pty_c10clm",
+      "assertion": "Landlord withheld $870 of the $2,000 deposit",
+      "amount": 87000,
+      "evidenceIds": [
+        "ev_c10e05"
+      ]
+    },
+    {
+      "claimId": "clm_c10k04",
+      "partyId": "pty_c10rsp",
+      "assertion": "Mold remediation cost $780",
+      "amount": 78000,
+      "evidenceIds": [
+        "ev_c10e04",
+        "ev_c10e05"
+      ]
+    },
+    {
+      "claimId": "clm_c10k05",
+      "partyId": "pty_c10rsp",
+      "assertion": "Tenant failed to ventilate the bathroom",
+      "evidenceIds": [
+        "ev_c10e05",
+        "ev_c10e01"
+      ]
+    },
+    {
+      "claimId": "clm_c10k06",
+      "partyId": "pty_c10rsp",
+      "assertion": "Oven interior was heavily greased at the signed move-out inspection and cleaning cost $90",
+      "amount": 9000,
+      "evidenceIds": [
+        "ev_c10e05"
+      ]
+    },
+    {
+      "claimId": "clm_c10k07",
+      "partyId": "pty_c10rsp",
+      "assertion": "Vendor attended once on 2024-10-08 and got no answer",
+      "evidenceIds": [
+        "ev_c10e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c10e01",
+      "partyId": "pty_c10rsp",
+      "type": "contract",
+      "sha256": "0a570e1a574d87cf6045706d3ae15c8f3f32470ad9a35a458681d3eaee3b2f35",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c10e02",
+      "partyId": "pty_c10clm",
+      "type": "message",
+      "sha256": "dd8dc92986dca5c177fa6471c97e8a2a8bd66e74cb3662ba16564e132249a254",
+      "uri": "evidence/maintenance-requests.txt"
+    },
+    {
+      "evidenceId": "ev_c10e03",
+      "partyId": "pty_c10rsp",
+      "type": "other",
+      "sha256": "e0c6b987537f1f6368ed614ea9243e599ff014b52f82a24976cee87c42bde8f3",
+      "uri": "evidence/landlord-ticket-log.txt"
+    },
+    {
+      "evidenceId": "ev_c10e04",
+      "partyId": "pty_c10rsp",
+      "type": "other",
+      "sha256": "8c3b50a692f770c404499c0e2fc0efc4bd5077ebc64fda9ccf4408f0b3ca0283",
+      "uri": "evidence/remediation-report.txt"
+    },
+    {
+      "evidenceId": "ev_c10e05",
+      "partyId": "pty_c10rsp",
+      "type": "statement",
+      "sha256": "8b91efb8e1e4af5b9bbe69f152129ee589475b3716039a70037875fa70763864",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

@@ -1,0 +1,114 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0040",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c40clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c40rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c40e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c40k01",
+      "partyId": "pty_c40clm",
+      "assertion": "Change Order 1 for 3 product pages at $600 was signed by both parties on 2025-04-08",
+      "amount": 60000,
+      "evidenceIds": [
+        "ev_c40e02"
+      ]
+    },
+    {
+      "claimId": "clm_c40k02",
+      "partyId": "pty_c40clm",
+      "assertion": "Client approved the Team page by email at $525 on 2025-04-30",
+      "amount": 52500,
+      "evidenceIds": [
+        "ev_c40e03"
+      ]
+    },
+    {
+      "claimId": "clm_c40k03",
+      "partyId": "pty_c40clm",
+      "assertion": "The site launched on 2025-05-19 and the $960 launch payment is due",
+      "amount": 96000,
+      "evidenceIds": [
+        "ev_c40e04",
+        "ev_c40e01"
+      ]
+    },
+    {
+      "claimId": "clm_c40k04",
+      "partyId": "pty_c40rsp",
+      "assertion": "Client wrote on 2025-05-06 'Let's talk about that before you start, no promises' about the Blog page, and no approval followed",
+      "evidenceIds": [
+        "ev_c40e03"
+      ]
+    },
+    {
+      "claimId": "clm_c40k05",
+      "partyId": "pty_c40rsp",
+      "assertion": "Developer built the Blog page after saying she had already sketched the layout",
+      "amount": 52500,
+      "evidenceIds": [
+        "ev_c40e03"
+      ]
+    },
+    {
+      "claimId": "clm_c40k06",
+      "partyId": "pty_c40rsp",
+      "assertion": "Contract makes unapproved extra work not billable",
+      "evidenceIds": [
+        "ev_c40e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c40e01",
+      "partyId": "pty_c40clm",
+      "type": "contract",
+      "sha256": "cefdfb4a71689685571be36c0c8b745792bd472901e524a89f22aa90c79743ee",
+      "uri": "evidence/web-design-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c40e02",
+      "partyId": "pty_c40clm",
+      "type": "contract",
+      "sha256": "6881d3dd90221866c7e40069db78ec5f9bf297f4e8d5d6a9f7122305224001d7",
+      "uri": "evidence/change-order-1.txt"
+    },
+    {
+      "evidenceId": "ev_c40e03",
+      "partyId": "pty_c40clm",
+      "type": "message",
+      "sha256": "34338cdb891a1da1560bc3b0f7afbeedbfcb095c96b613f7d011b2255529da62",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c40e04",
+      "partyId": "pty_c40clm",
+      "type": "invoice",
+      "sha256": "1bcd8cd5ea553b8a1dea636e601e04945fc0060bb382771beb7d4a3fe533f7aa",
+      "uri": "evidence/final-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c40e05",
+      "partyId": "pty_c40rsp",
+      "type": "other",
+      "sha256": "6fc680e64600997b8f3dbf0ca45b0354da2ea286da70c9e3a099e06cf1e711ce",
+      "uri": "evidence/client-payment-notice.txt"
+    }
+  ],
+  "offers": []
+}

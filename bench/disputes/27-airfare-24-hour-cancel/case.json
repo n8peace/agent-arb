@@ -1,0 +1,89 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0027",
+  "kind": "refund",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c27clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c27rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c27e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c27k01",
+      "partyId": "pty_c27clm",
+      "assertion": "The booking was made 2025-03-03 at 10:15 AM for a flight on 2025-03-20, 17 days before departure",
+      "evidenceIds": [
+        "ev_c27e02"
+      ]
+    },
+    {
+      "claimId": "clm_c27k02",
+      "partyId": "pty_c27clm",
+      "assertion": "The passenger asked to cancel on 2025-03-04 at 9:40 AM, within 24 hours of booking",
+      "evidenceIds": [
+        "ev_c27e03",
+        "ev_c27e02"
+      ]
+    },
+    {
+      "claimId": "clm_c27k03",
+      "partyId": "pty_c27clm",
+      "assertion": "The fare paid was $412.00",
+      "amount": 41200,
+      "evidenceIds": [
+        "ev_c27e02"
+      ]
+    },
+    {
+      "claimId": "clm_c27k04",
+      "partyId": "pty_c27rsp",
+      "assertion": "The agent stated Basic Economy is non-refundable and offered a $313 travel credit",
+      "evidenceIds": [
+        "ev_c27e03"
+      ]
+    },
+    {
+      "claimId": "clm_c27k05",
+      "partyId": "pty_c27rsp",
+      "assertion": "Section 4.1 makes Basic Economy non-refundable after the 24-hour period",
+      "evidenceIds": [
+        "ev_c27e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c27e01",
+      "partyId": "pty_c27rsp",
+      "type": "policy",
+      "sha256": "8bf2962aaeee9aad9eaf67971001516976775039e8c31e480bab57953acaa99f",
+      "uri": "evidence/conditions-of-carriage-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c27e02",
+      "partyId": "pty_c27clm",
+      "type": "receipt",
+      "sha256": "c37835bac77d845382567abfb6d36960d5e31edfe13b0920908e83c72bdab77f",
+      "uri": "evidence/booking-confirmation.txt"
+    },
+    {
+      "evidenceId": "ev_c27e03",
+      "partyId": "pty_c27clm",
+      "type": "message",
+      "sha256": "0f7dfbbe1a495e86cbfff6378b71e12797767c2b8d381786d3e315d098e80093",
+      "uri": "evidence/chat-transcript.txt"
+    }
+  ],
+  "offers": []
+}

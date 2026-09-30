@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0044",
+  "kind": "invoice",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c44clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c44rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c44e01"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c44k01",
+      "partyId": "pty_c44clm",
+      "assertion": "Client used the recording in YouTube and Instagram ads, which require the $250 online license",
+      "amount": 25000,
+      "evidenceIds": [
+        "ev_c44e02",
+        "ev_c44e01"
+      ]
+    },
+    {
+      "claimId": "clm_c44k02",
+      "partyId": "pty_c44clm",
+      "assertion": "Voice Talent asked for the $250 online license fee on 2025-04-18 before the online use began",
+      "amount": 25000,
+      "evidenceIds": [
+        "ev_c44e03"
+      ]
+    },
+    {
+      "claimId": "clm_c44k03",
+      "partyId": "pty_c44clm",
+      "assertion": "Voice Talent invoiced $850 for online and television licenses",
+      "amount": 85000,
+      "evidenceIds": [
+        "ev_c44e04"
+      ]
+    },
+    {
+      "claimId": "clm_c44k04",
+      "partyId": "pty_c44rsp",
+      "assertion": "Client's ad report shows no radio, television network or paid streaming TV service placements",
+      "evidenceIds": [
+        "ev_c44e02"
+      ]
+    },
+    {
+      "claimId": "clm_c44k05",
+      "partyId": "pty_c44rsp",
+      "assertion": "Five percent of YouTube views came from the smart-TV YouTube app",
+      "evidenceIds": [
+        "ev_c44e02"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c44e01",
+      "partyId": "pty_c44clm",
+      "type": "contract",
+      "sha256": "8691c58469236a08b752520fb385dbfa3fe0dc3b0c29caa2b807b16c9fd5ac5b",
+      "uri": "evidence/voiceover-license-quote.txt"
+    },
+    {
+      "evidenceId": "ev_c44e02",
+      "partyId": "pty_c44rsp",
+      "type": "other",
+      "sha256": "3a89dee3a86ee9f76672510df8fb21b07bfca0e0debbdf750ef0e3e9c0347ea6",
+      "uri": "evidence/ad-platform-report.txt"
+    },
+    {
+      "evidenceId": "ev_c44e03",
+      "partyId": "pty_c44clm",
+      "type": "message",
+      "sha256": "83a6caab4e4136cb50380e06d1d90ea2aaa869a0eda9216a1f4354765a90d6dc",
+      "uri": "evidence/emails.txt"
+    },
+    {
+      "evidenceId": "ev_c44e04",
+      "partyId": "pty_c44clm",
+      "type": "invoice",
+      "sha256": "bc9a4abbc7944cb8aad6ebfafa2f0d10184aab07c15bfb397465433856c7f90f",
+      "uri": "evidence/invoice-0088.txt"
+    }
+  ],
+  "offers": []
+}

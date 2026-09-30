@@ -1,0 +1,4 @@
+TALLGRASS LOGISTICS - PRODUCTION RELEASE LOG (produced by Tallgrass)
+
+2025-06-04 10:30 AM: Driver app build 3.1 released to production, including Route Optimizer module (v0.3.0). Rollout: 300 of 300 drivers.
+2025-06-05: 1,140 routes calculated in production. No rollback recorded.

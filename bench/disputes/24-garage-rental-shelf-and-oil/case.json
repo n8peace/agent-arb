@@ -1,0 +1,112 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0024",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c24clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c24rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c24e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c24k01",
+      "partyId": "pty_c24clm",
+      "assertion": "Oil stains near the back wall were recorded on the move-in sheet of 2024-03-01, about 3 feet across",
+      "evidenceIds": [
+        "ev_c24e02"
+      ]
+    },
+    {
+      "claimId": "clm_c24k02",
+      "partyId": "pty_c24clm",
+      "assertion": "The move-out sheet records the same oil stains and no new stains",
+      "evidenceIds": [
+        "ev_c24e03"
+      ]
+    },
+    {
+      "claimId": "clm_c24k03",
+      "partyId": "pty_c24clm",
+      "assertion": "Renter accepts responsibility for the damaged shelf bracket",
+      "evidenceIds": [
+        "ev_c24e04"
+      ]
+    },
+    {
+      "claimId": "clm_c24k04",
+      "partyId": "pty_c24rsp",
+      "assertion": "Right wall shelf bracket was bent and torn from the wall at move-out",
+      "evidenceIds": [
+        "ev_c24e03"
+      ]
+    },
+    {
+      "claimId": "clm_c24k05",
+      "partyId": "pty_c24rsp",
+      "assertion": "Bracket replacement cost $70 (parts $32, labor $38)",
+      "amount": 7000,
+      "evidenceIds": [
+        "ev_c24e05"
+      ]
+    },
+    {
+      "claimId": "clm_c24k06",
+      "partyId": "pty_c24rsp",
+      "assertion": "Owner charged $180 for oil stain degreasing and retained the whole $250 deposit",
+      "amount": 25000,
+      "evidenceIds": [
+        "ev_c24e05"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c24e01",
+      "partyId": "pty_c24rsp",
+      "type": "contract",
+      "sha256": "d4f4bdc55f020dd4521805dcbe0850bae509bc2c09de7dca90223324a6c01754",
+      "uri": "evidence/garage-rental-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c24e02",
+      "partyId": "pty_c24clm",
+      "type": "other",
+      "sha256": "481c557cc4b54d10a5e4b8caf1ab410d3d4db85a15ba8e35113af438e78ef922",
+      "uri": "evidence/move-in-sheet-2024-03-01.txt"
+    },
+    {
+      "evidenceId": "ev_c24e03",
+      "partyId": "pty_c24rsp",
+      "type": "other",
+      "sha256": "4f348e27762f16e655c105fd5330aaa9bfd86b5d783e7cfdc24b26655099cac3",
+      "uri": "evidence/move-out-sheet-2025-06-30.txt"
+    },
+    {
+      "evidenceId": "ev_c24e04",
+      "partyId": "pty_c24clm",
+      "type": "message",
+      "sha256": "d18745000cce096ea608096ac11dc1a9e42c984e0913869e82c35bd280e6cd9e",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c24e05",
+      "partyId": "pty_c24rsp",
+      "type": "statement",
+      "sha256": "8d890e509850ee558a3eb1eaf05d9b75ce3052c0dda9a0a5ed2af7ad75e623d8",
+      "uri": "evidence/deposit-statement.txt"
+    }
+  ],
+  "offers": []
+}

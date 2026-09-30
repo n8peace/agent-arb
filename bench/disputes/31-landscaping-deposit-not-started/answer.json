@@ -1,0 +1,8 @@
+{
+  "owedCents": 85000,
+  "lowCents": 85000,
+  "highCents": 85000,
+  "reasoning": "Section 4 lets the customer cancel for a late start and get the deposit less special-order, non-returnable materials shown by supplier documents (agreement). Only the maples ($350) qualify; the boxwood was stock, returnable and was credited back to GreenLeaf (supplier). $1,200 - $350 = $850 owed. The supplier invoice and credit memo are held only by GreenLeaf.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

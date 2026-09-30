@@ -1,0 +1,5 @@
+HIGHLINE PROPERTY SERVICES - INTERNAL TICKET LOG (produced by Highline)
+
+8841 opened 2024-10-03. Vendor assigned: PipeWorks. 2024-10-08 note: "Vendor tried once, no answer at door 11:15 AM (weekday)." 2024-10-09: status set to "closed - tenant unresponsive". Tenant not notified.
+9310 opened 2024-12-15. 2024-12-16: "Duplicate of 8841, merged, closed."
+No vendor visits after 2024-10-08.

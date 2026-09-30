@@ -1,0 +1,7 @@
+MAINTENANCE REQUESTS SUBMITTED BY TENANT (portal export saved by tenant)
+
+Ticket 8841 - 2024-10-03 - Anselm Grady
+"Water under bathroom sink. Supply line looks corroded and is dripping. Cabinet floor is soft. Please send someone. I'm home evenings and weekends."
+Ticket 9310 - 2024-12-15 - Anselm Grady
+"Following up on ticket 8841. Nobody has come. Dripping continues. Smell in the cabinet now."
+Status shown to tenant on both: "Open".

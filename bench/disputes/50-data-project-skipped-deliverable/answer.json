@@ -1,0 +1,8 @@
+{
+  "owedCents": 175000,
+  "lowCents": 175000,
+  "highCents": 175000,
+  "reasoning": "D1 and D2 were delivered on time and passed the client's own checklist (portal, review), so they are accepted and payable: $1,000 + $750 = $1,750. Owen removed D3 in writing ('skip the model, pay for the rest'), and SOW s.5 makes removed work not payable even if 70% built (chat, sow). The internal checklist review is held only by Client.",
+  "difficulty": "medium",
+  "infoAsymmetry": true
+}

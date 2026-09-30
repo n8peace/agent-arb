@@ -1,0 +1,10 @@
+BAYLEAF RESIDENTIAL MANAGEMENT - TENANT LEDGER
+Tenant: Devon Pruitt, 88 Quarry Road #3B
+
+2025-01-02  Rent Jan        1,700.00 charge   1,700.00 payment
+2025-02-03  Rent Feb        1,700.00 charge   1,700.00 payment
+2025-03-02  Rent Mar        1,700.00 charge   1,700.00 payment
+2025-04-01  Rent Apr        1,700.00 charge          0.00 payment
+2025-04-06  Late fee Apr       85.00 charge          0.00 payment
+Balance due: $1,785.00
+Deposit held: $1,500.00. Deposit applied to balance. Remaining balance due from tenant: $285.00.

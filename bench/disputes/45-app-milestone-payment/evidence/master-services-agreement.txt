@@ -1,0 +1,5 @@
+MASTER SERVICES AGREEMENT - Rafael Ostrow ("Developer") and Tallgrass Logistics Inc. ("Client")
+Project: driver mobile app, four milestones. Milestone 3 (Route Optimizer module): $6,000, per Specification v2 items S1-S6 (route calculation, delivery time windows, multi-stop reorder, offline cache, driver notifications, admin CSV export).
+
+7. ACCEPTANCE. Client has 5 business days after delivery to give written notice of material non-conformance with the Specification. If no such notice is given, the milestone is deemed accepted and payment is due within 10 days after acceptance.
+8. Defects that are not non-conformance with the Specification are fixed under the 30-day warranty; they do not delay or reduce payment.

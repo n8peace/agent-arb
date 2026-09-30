@@ -1,0 +1,126 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0006",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c06clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c06rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c06e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c06k01",
+      "partyId": "pty_c06clm",
+      "assertion": "The living room floor was freshly refinished on 2021-01-15, before move-in",
+      "evidenceIds": [
+        "ev_c06e02"
+      ]
+    },
+    {
+      "claimId": "clm_c06k02",
+      "partyId": "pty_c06clm",
+      "assertion": "Landlord withheld $1,780 of the $2,400 deposit",
+      "amount": 178000,
+      "evidenceIds": [
+        "ev_c06e06"
+      ]
+    },
+    {
+      "claimId": "clm_c06k03",
+      "partyId": "pty_c06clm",
+      "assertion": "Landlord's policy prorates finish charges by remaining useful life",
+      "evidenceIds": [
+        "ev_c06e05"
+      ]
+    },
+    {
+      "claimId": "clm_c06k04",
+      "partyId": "pty_c06rsp",
+      "assertion": "Two pet urine stains damaged six boards through the finish",
+      "evidenceIds": [
+        "ev_c06e03"
+      ]
+    },
+    {
+      "claimId": "clm_c06k05",
+      "partyId": "pty_c06rsp",
+      "assertion": "Board replacement cost $260 and full-room refinish cost $1,520",
+      "amount": 178000,
+      "evidenceIds": [
+        "ev_c06e04"
+      ]
+    },
+    {
+      "claimId": "clm_c06k06",
+      "partyId": "pty_c06rsp",
+      "assertion": "Policy charges structural board repair at full cost and hardwood finish over a 10-year life",
+      "evidenceIds": [
+        "ev_c06e05"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c06e01",
+      "partyId": "pty_c06rsp",
+      "type": "contract",
+      "sha256": "49b14302a7a9a521d2c51af37917e54b316715ab70105723c678995b2df4a541",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c06e02",
+      "partyId": "pty_c06clm",
+      "type": "other",
+      "sha256": "2e44769bee7b5fba23384cec7b9086b27817877f4129ffde9f9e23e50d79df7a",
+      "uri": "evidence/move-in-checklist-2021-02-01.txt"
+    },
+    {
+      "evidenceId": "ev_c06e03",
+      "partyId": "pty_c06rsp",
+      "type": "photo",
+      "sha256": "ff5c9ef4f23b0ae8b4b64a3bfb8abe0c0047ad4c9f7d482d32dba6830a10451a",
+      "uri": "evidence/move-out-photo-log-2025-01-31.txt"
+    },
+    {
+      "evidenceId": "ev_c06e04",
+      "partyId": "pty_c06rsp",
+      "type": "invoice",
+      "sha256": "7c3f922fe37174ba6450bd86ad71cb21cd5e7abba609e2f90beb86a706cab670",
+      "uri": "evidence/flooring-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c06e05",
+      "partyId": "pty_c06rsp",
+      "type": "policy",
+      "sha256": "00fe8874265debef008ee48b8495c2906d59df4f53d55eb3d01a56a8d560f4ca",
+      "uri": "evidence/turnover-cost-policy.txt"
+    },
+    {
+      "evidenceId": "ev_c06e06",
+      "partyId": "pty_c06rsp",
+      "type": "statement",
+      "sha256": "fd9e038e5ae502cde730d54cdbe0961fe13f7c8b94c76a2f5c9d1ef74f872fb0",
+      "uri": "evidence/deduction-statement-2025-02-18.txt"
+    }
+  ],
+  "offers": [],
+  "disclosures": [
+    {
+      "partyId": "pty_c06rsp",
+      "topic": "Turnover cost proration policy applied to floor charges",
+      "evidenceId": "ev_c06e05"
+    }
+  ]
+}

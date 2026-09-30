@@ -1,0 +1,127 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0012",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c12clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c12rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c12e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c12k01",
+      "partyId": "pty_c12clm",
+      "assertion": "Jonah paid Priyanka $800 as his one-third share of the deposit on 2024-01-28",
+      "amount": 80000,
+      "evidenceIds": [
+        "ev_c12e02",
+        "ev_c12e01"
+      ]
+    },
+    {
+      "claimId": "clm_c12k02",
+      "partyId": "pty_c12clm",
+      "assertion": "Jonah paid the February, March and April electric shares but not May",
+      "amount": 7000,
+      "evidenceIds": [
+        "ev_c12e02"
+      ]
+    },
+    {
+      "claimId": "clm_c12k03",
+      "partyId": "pty_c12clm",
+      "assertion": "Priyanka received a $2,100 refund from the landlord on 2025-07-10",
+      "amount": 210000,
+      "evidenceIds": [
+        "ev_c12e03"
+      ]
+    },
+    {
+      "claimId": "clm_c12k04",
+      "partyId": "pty_c12clm",
+      "assertion": "No cleaning invoice or receipt exists for Bedroom B",
+      "evidenceIds": [
+        "ev_c12e05"
+      ]
+    },
+    {
+      "claimId": "clm_c12k05",
+      "partyId": "pty_c12rsp",
+      "assertion": "Landlord deducted $300 for drywall damage in Bedroom B, which was Jonah's room",
+      "amount": 30000,
+      "evidenceIds": [
+        "ev_c12e03",
+        "ev_c12e01"
+      ]
+    },
+    {
+      "claimId": "clm_c12k06",
+      "partyId": "pty_c12rsp",
+      "assertion": "The May electric bill was $210, so Jonah's one-third share is $70",
+      "amount": 7000,
+      "evidenceIds": [
+        "ev_c12e04",
+        "ev_c12e01"
+      ]
+    },
+    {
+      "claimId": "clm_c12k07",
+      "partyId": "pty_c12rsp",
+      "assertion": "Priyanka claims $180 for cleaning Bedroom B herself",
+      "amount": 18000,
+      "evidenceIds": [
+        "ev_c12e05"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c12e01",
+      "partyId": "pty_c12clm",
+      "type": "contract",
+      "sha256": "c07ffe278e4e26edd7aa26f7ee63ab52dca0f1f02529e5b3b7187d5fc4f133fd",
+      "uri": "evidence/roommate-agreement.txt"
+    },
+    {
+      "evidenceId": "ev_c12e02",
+      "partyId": "pty_c12clm",
+      "type": "receipt",
+      "sha256": "37ede4fbd25ff1504f4b0002a9aad2ffe239c3f55636779d1ac98a845fcd5ac1",
+      "uri": "evidence/payment-records.txt"
+    },
+    {
+      "evidenceId": "ev_c12e03",
+      "partyId": "pty_c12rsp",
+      "type": "statement",
+      "sha256": "a37d28333b84011a8da340fd320edc6f7d2483aa982f928e5c97105d8b7c4483",
+      "uri": "evidence/landlord-deposit-statement.txt"
+    },
+    {
+      "evidenceId": "ev_c12e04",
+      "partyId": "pty_c12rsp",
+      "type": "invoice",
+      "sha256": "66efdc79c6a68d502289833956638ee687d3008e23fe6f05ede9bf6aaae5061c",
+      "uri": "evidence/electric-bill-may.txt"
+    },
+    {
+      "evidenceId": "ev_c12e05",
+      "partyId": "pty_c12clm",
+      "type": "message",
+      "sha256": "10a513a2d4bbcc37db84642788466ad3e80dc2d63dcb66cded20d2ad60d4c0b8",
+      "uri": "evidence/text-messages.txt"
+    }
+  ],
+  "offers": []
+}

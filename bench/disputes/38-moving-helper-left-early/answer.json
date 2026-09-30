@@ -1,0 +1,8 @@
+{
+  "owedCents": 9000,
+  "lowCents": 9000,
+  "highCents": 9000,
+  "reasoning": "Post bills actual time rounded to the half hour and refunds unused prepaid hours (post). Worked 10:03-12:29 = about 2.5 hours (timeline, msg), or $150. $240 - $150 = $90 owed.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

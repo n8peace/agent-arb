@@ -1,0 +1,8 @@
+{
+  "owedCents": 208500,
+  "lowCents": 208500,
+  "highCents": 208500,
+  "reasoning": "Launch balance $960 is due and conceded (invoice, dana). CO-1 is signed by both parties so $600 stands, despite the client's 'original scope' assertion (co1). Team page: written email approval with price before work (emails, contract s.6) = $525. Blog page: no approval, expressly deferred, so not billable (emails, contract s.6). $960 + $600 + $525 = $2,085.",
+  "difficulty": "hard",
+  "infoAsymmetry": false
+}

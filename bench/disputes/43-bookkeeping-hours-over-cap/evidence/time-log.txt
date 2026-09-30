@@ -1,0 +1,6 @@
+TIME LOG - Tobias Wren, Alderman Dental Group
+
+Invoice 1 period (to 2025-05-28): 30.0 hours. Invoiced $1,950, paid 2025-06-04.
+Invoice 2 period (2025-05-29 to 2025-06-26): 32.0 hours.
+  Hours through 2025-06-10 (before the approval email): cumulative 44.5.
+  Hours after 2025-06-10: 17.5. Cumulative at completion: 62.0.

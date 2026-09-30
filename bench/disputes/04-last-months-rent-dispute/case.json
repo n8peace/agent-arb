@@ -1,0 +1,98 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0004",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c04clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c04rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c04e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c04k01",
+      "partyId": "pty_c04clm",
+      "assertion": "Tenant sent $1,650 by Zelle to the lease payment number on 2025-06-01 and it was delivered",
+      "amount": 165000,
+      "evidenceIds": [
+        "ev_c04e02",
+        "ev_c04e01"
+      ]
+    },
+    {
+      "claimId": "clm_c04k02",
+      "partyId": "pty_c04clm",
+      "assertion": "Landlord replied 'Got it, thanks Malik' on 2025-06-01",
+      "evidenceIds": [
+        "ev_c04e03"
+      ]
+    },
+    {
+      "claimId": "clm_c04k03",
+      "partyId": "pty_c04clm",
+      "assertion": "Landlord's own notice reports no damage at the 2025-06-30 walkthrough",
+      "evidenceIds": [
+        "ev_c04e04"
+      ]
+    },
+    {
+      "claimId": "clm_c04k04",
+      "partyId": "pty_c04rsp",
+      "assertion": "Landlord retained the full $1,650 deposit for unpaid June 2025 rent",
+      "amount": 165000,
+      "evidenceIds": [
+        "ev_c04e04"
+      ]
+    },
+    {
+      "claimId": "clm_c04k05",
+      "partyId": "pty_c04rsp",
+      "assertion": "Landlord states she never saw a June payment",
+      "evidenceIds": [
+        "ev_c04e03"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c04e01",
+      "partyId": "pty_c04rsp",
+      "type": "contract",
+      "sha256": "2b1e19ce3d87fd6aeb60b7650e6d6c44912d90e715aaa73c4c95e1fcab1335f2",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c04e02",
+      "partyId": "pty_c04clm",
+      "type": "receipt",
+      "sha256": "104147fe82d4a1a5f7fd91eb9170b399d42fa389c49ef4047f6f49682eb92397",
+      "uri": "evidence/zelle-confirmations.txt"
+    },
+    {
+      "evidenceId": "ev_c04e03",
+      "partyId": "pty_c04clm",
+      "type": "message",
+      "sha256": "e7a7a534ab82f91ca926f0b3ce7cecf3913feb2172485babf4193318f0010983",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c04e04",
+      "partyId": "pty_c04rsp",
+      "type": "statement",
+      "sha256": "949e7befc228a6d2a6176ff8a9eebfc9ee262c2112d2b9a9a2437c44d8c254cf",
+      "uri": "evidence/landlord-notice.txt"
+    }
+  ],
+  "offers": []
+}

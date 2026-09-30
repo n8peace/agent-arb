@@ -1,0 +1,8 @@
+{
+  "owedCents": 165280,
+  "lowCents": 165280,
+  "highCents": 166000,
+  "reasoning": "Agreement fixes the count at Word's figure including footnotes and endnotes (contract); the delivered file shows 17,940 (wordcount). Fee is 17,940 x $0.12 = $2,152.80, less $500 deposit = $1,652.80. Her invoice rounded to 18,000 words ($1,660 balance), which overstates by $7.20.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

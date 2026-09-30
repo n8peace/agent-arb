@@ -1,0 +1,8 @@
+{
+  "owedCents": 41200,
+  "lowCents": 41200,
+  "highCents": 41200,
+  "reasoning": "Booked 3/3 10:15 AM; cancelled 3/4 9:40 AM, inside 24 hours and 17 days before departure (booking, chat). Section 4.2 gives a full cash refund of the fare to the original payment method for all fare types, and 4.1 applies only after that window (conditions). Owed $412.",
+  "difficulty": "easy",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,2 @@
+BATTERY REPORT generated on buyer's laptop 2025-06-02 9:20 AM
+Design capacity: 58,000 mWh. Full charge capacity: 35,960 mWh. Health: 62%. Cycle count: 512.

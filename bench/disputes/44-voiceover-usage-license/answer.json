@@ -1,0 +1,8 @@
+{
+  "owedCents": 25000,
+  "lowCents": 25000,
+  "highCents": 25000,
+  "reasoning": "Online/social use (YouTube, Instagram) is proven (adreport) and requires the $250 license (license, emails). The TV license covers broadcast, cable or a paid streaming TV service placement; the ad report shows none, and viewing the YouTube app on a smart TV is not such a placement (license, adreport). Owed $250.",
+  "difficulty": "medium",
+  "infoAsymmetry": false
+}

@@ -1,0 +1,4 @@
+NIGHTOWL TICKETS - EMAIL LOG (produced by NightOwl)
+
+Notice "Your event has been postponed" - sent 2025-08-01 09:02 to brianna.locke@example.test. Status: delivered. Opened 2025-08-01 09:40.
+New date: 2026-03-14. Refund request link included; 30-day window ends 2025-08-31.

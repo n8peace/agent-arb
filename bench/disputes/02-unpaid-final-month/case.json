@@ -1,0 +1,107 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0002",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c02clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c02rsp",
+      "role": "respondent",
+      "type": "business"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c02e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c02k01",
+      "partyId": "pty_c02clm",
+      "assertion": "Tenant paid rent for January through March 2025 by ACH",
+      "evidenceIds": [
+        "ev_c02e03"
+      ]
+    },
+    {
+      "claimId": "clm_c02k02",
+      "partyId": "pty_c02clm",
+      "assertion": "The unit was left clean and undamaged on 2025-04-18",
+      "evidenceIds": [
+        "ev_c02e04"
+      ]
+    },
+    {
+      "claimId": "clm_c02k03",
+      "partyId": "pty_c02clm",
+      "assertion": "Tenant vacated on 2025-04-18, before the lease term ended",
+      "evidenceIds": [
+        "ev_c02e04"
+      ]
+    },
+    {
+      "claimId": "clm_c02k04",
+      "partyId": "pty_c02rsp",
+      "assertion": "April 2025 rent of $1,700 was not paid",
+      "amount": 170000,
+      "evidenceIds": [
+        "ev_c02e02",
+        "ev_c02e03"
+      ]
+    },
+    {
+      "claimId": "clm_c02k05",
+      "partyId": "pty_c02rsp",
+      "assertion": "A 5% late fee of $85 applies to unpaid April rent",
+      "amount": 8500,
+      "evidenceIds": [
+        "ev_c02e01",
+        "ev_c02e02"
+      ]
+    },
+    {
+      "claimId": "clm_c02k06",
+      "partyId": "pty_c02rsp",
+      "assertion": "The lease made Tenant liable for rent through 2025-04-30",
+      "evidenceIds": [
+        "ev_c02e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c02e01",
+      "partyId": "pty_c02rsp",
+      "type": "contract",
+      "sha256": "8ca1f0c38c4048c7c256f30ba8fc3d1d2819cdf1c9f332da5db806abef3b9937",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c02e02",
+      "partyId": "pty_c02rsp",
+      "type": "statement",
+      "sha256": "9a9a95c9e6817b6a22ca9f6e963b67be56f32db74028983ce7e4cb00ae213c6c",
+      "uri": "evidence/tenant-ledger.txt"
+    },
+    {
+      "evidenceId": "ev_c02e03",
+      "partyId": "pty_c02clm",
+      "type": "statement",
+      "sha256": "e0bc8300ca52b9aa4ddb843130c9f6e6b212cc4125be21292c0f56ba1571446f",
+      "uri": "evidence/bank-statement-excerpt.txt"
+    },
+    {
+      "evidenceId": "ev_c02e04",
+      "partyId": "pty_c02clm",
+      "type": "message",
+      "sha256": "cbabae6ad6ffd3a078974845758a27d2c7a4979d1be6723a8de6fd0fe1b02163",
+      "uri": "evidence/text-messages.txt"
+    }
+  ],
+  "offers": []
+}

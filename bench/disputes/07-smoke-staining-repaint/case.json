@@ -1,0 +1,105 @@
+{
+  "version": "0.1",
+  "caseId": "case_benchset0007",
+  "kind": "security_deposit",
+  "currency": "USD",
+  "parties": [
+    {
+      "partyId": "pty_c07clm",
+      "role": "claimant",
+      "type": "person"
+    },
+    {
+      "partyId": "pty_c07rsp",
+      "role": "respondent",
+      "type": "person"
+    }
+  ],
+  "contract": {
+    "evidenceId": "ev_c07e01",
+    "jurisdiction": "US-CA"
+  },
+  "claims": [
+    {
+      "claimId": "clm_c07k01",
+      "partyId": "pty_c07clm",
+      "assertion": "Tenant left the unit clean on 2025-08-14",
+      "evidenceIds": [
+        "ev_c07e02"
+      ]
+    },
+    {
+      "claimId": "clm_c07k02",
+      "partyId": "pty_c07clm",
+      "assertion": "Landlord withheld $780 for repainting and refunded $1,020",
+      "amount": 78000,
+      "evidenceIds": [
+        "ev_c07e04"
+      ]
+    },
+    {
+      "claimId": "clm_c07k03",
+      "partyId": "pty_c07rsp",
+      "assertion": "Tenant's roommate smoked inside the unit, as Tenant acknowledged on 2025-02-11",
+      "evidenceIds": [
+        "ev_c07e02"
+      ]
+    },
+    {
+      "claimId": "clm_c07k04",
+      "partyId": "pty_c07rsp",
+      "assertion": "Painter found nicotine film on kitchen and living room ceilings and walls",
+      "evidenceIds": [
+        "ev_c07e03"
+      ]
+    },
+    {
+      "claimId": "clm_c07k05",
+      "partyId": "pty_c07rsp",
+      "assertion": "Repainting was needed because of tenant damage and cost $780",
+      "amount": 78000,
+      "evidenceIds": [
+        "ev_c07e03"
+      ]
+    },
+    {
+      "claimId": "clm_c07k06",
+      "partyId": "pty_c07rsp",
+      "assertion": "Lease charges the unamortized repaint cost over a 3-year life counted in whole years from 2023-08-01",
+      "evidenceIds": [
+        "ev_c07e01"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "ev_c07e01",
+      "partyId": "pty_c07rsp",
+      "type": "contract",
+      "sha256": "3ad39dbda5384bd36bce3fff0d6dc7aabddf3cc9d6af0b358dcc8dc836af5c9c",
+      "uri": "evidence/lease.txt"
+    },
+    {
+      "evidenceId": "ev_c07e02",
+      "partyId": "pty_c07rsp",
+      "type": "message",
+      "sha256": "2365286d2552ceddb19f78b90a28af7c2b11eb6e274a6dc26f18d9e61b53c65e",
+      "uri": "evidence/text-messages.txt"
+    },
+    {
+      "evidenceId": "ev_c07e03",
+      "partyId": "pty_c07rsp",
+      "type": "invoice",
+      "sha256": "0e7bb3aac3052b050fc68093af5fdc6a5c77be8940a6c825c75cc7f909e0ec9e",
+      "uri": "evidence/painter-invoice.txt"
+    },
+    {
+      "evidenceId": "ev_c07e04",
+      "partyId": "pty_c07rsp",
+      "type": "statement",
+      "sha256": "c3726206bf9e42b7bca4ab5daab9a3e1703602c5ec9281d2174cbb7b128c0e67",
+      "uri": "evidence/deduction-statement.txt"
+    }
+  ],
+  "offers": []
+}

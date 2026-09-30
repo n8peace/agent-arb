@@ -1,0 +1,8 @@
+{
+  "owedCents": 11600,
+  "lowCents": 11600,
+  "highCents": 11600,
+  "reasoning": "SUB-2 duplicated SUB-1 on the same plan and period (export, terms 6.2); no 30-day limit exists in the terms (terms, chat). Five duplicate charges, one already credited (CN-4410, cardstmt), leaves March-June = 4 x $29 = $116. The duplicate subscription record is visible only in TaskTrail's export.",
+  "difficulty": "easy",
+  "infoAsymmetry": true
+}
