@@ -1,0 +1,6 @@
+# The harness itself uses only the Python standard library.
+# Nothing here is needed for offline runs or tests.
+# The built-in Anthropic/OpenAI providers talk to the APIs over plain HTTPS, so the SDKs
+# below are OPTIONAL (only if you later swap in SDK-based providers).
+# anthropic>=0.40
+# openai>=1.50
