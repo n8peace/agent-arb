@@ -54,7 +54,7 @@
       "required": ["mechanism", "outcome"],
       "additionalProperties": false,
       "properties": {
-        "mechanism": { "enum": ["final_offer", "nash_owed", "human_review"] },
+        "mechanism": { "enum": ["final_offer", "clamped", "nash_owed", "human_review"] },
         "winningPartyId": { "type": "string" },
         "outcome": { "type": "integer", "minimum": 0, "description": "Amount the respondent pays the claimant, in minor units." },
         "explanation": { "type": "string" }

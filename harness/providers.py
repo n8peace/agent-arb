@@ -11,6 +11,7 @@ import urllib.request
 from typing import Dict, List, Optional
 
 from . import config
+from .prompts import SEALED_MODE_LINE
 from .protocol import ACCEPT_LINE, format_offer, parse_action
 
 
@@ -30,6 +31,18 @@ class Provider:
 # ---------------------------------------------------------------------------
 
 STRENGTH_PRESETS = {"weak": 0.2, "strong": 0.9}
+
+# Sealed-offer strategy (arb mechanisms), as a share of the claim, per role and strength.
+# The "claim" is the claimant's demand as each side can see it (see _sealed_offer).
+#   weak   = naive: its own position, shaded 10% toward the other side.
+#   strong = its estimate of what a neutral would find: claimants usually get most but not
+#            all of a documented claim; a respondent that sees only its own side of the
+#            dispute expects a neutral to land near the middle.
+# Hand-picked, stylized stand-ins for reading the evidence, like the haggle constants.
+SEALED_SHARE = {
+    "claimant": {"weak": 0.90, "strong": 0.75},
+    "respondent": {"weak": 0.10, "strong": 0.50},
+}
 
 _CLAIM_RE = re.compile(r"^CLAIM (\S+) \| amount_cents=(\d+|none) \| evidence: (\S+) \| (.*)$", re.M)
 _DOC_RE = re.compile(r"^=== DOCUMENT (\S+) \| type: (\S+) \| submitted by: (\S+) \| (shared|private to you) ===$", re.M)
@@ -67,7 +80,8 @@ class ScriptedProvider(Provider):
     @staticmethod
     def _view(system: str):
         role = _ROLE_RE.search(system).group(1)
-        rounds = int(_ROUNDS_RE.search(system).group(1))
+        m_rounds = _ROUNDS_RE.search(system)
+        rounds = int(m_rounds.group(1)) if m_rounds else 1   # sealed prompts have no rounds
         claims = []
         for m in _CLAIM_RE.finditer(system):
             claims.append((m.group(1), None if m.group(2) == "none" else int(m.group(2))))
@@ -103,6 +117,8 @@ class ScriptedProvider(Provider):
     # -- decision -------------------------------------------------------------
     def reply(self, system: str, messages: List[dict]) -> str:
         role, rounds, claims, docs, shared_text = self._view(system)
+        if SEALED_MODE_LINE in system:
+            return self._sealed_offer(system, role, claims, docs, shared_text)
         s = self.s
         their = self._their_offers(messages)
         mine = self._my_offers(messages)
@@ -131,6 +147,22 @@ class ScriptedProvider(Provider):
             offer = belief + int(round((demand - belief) * (0.3 - 0.3 * s)))
             return self._compose(role, "open", min(offer, cap), cites)
         return self._respond_respondent(their[-1], mine[-1], cap, turn, rounds, cites)
+
+    def _sealed_offer(self, system, role, claims, docs, shared_text) -> str:
+        """One sealed offer from this side's own view only (the system prompt). It never sees
+        the other side's offer, so the number cannot depend on it."""
+        amounts = [a for _, a in claims if a is not None]
+        if role == "claimant":
+            # the claim: the biggest amount I claim; else the biggest dollar figure in shared docs
+            claim = max(amounts) if amounts else max(_money_cents(shared_text), default=0)
+        else:
+            # the claim as I can see it: the total of my own disputed amounts (usually what I
+            # withheld or refused); else the biggest dollar figure in any document I can see
+            visible = system.split("SHARED DOCUMENTS", 1)[-1].split("YOUR CLAIMS", 1)[0]
+            claim = sum(amounts) if amounts else max(_money_cents(visible), default=0)
+        tier = "strong" if self.s >= 0.5 else "weak"
+        offer = int(round(claim * SEALED_SHARE[role][tier]))
+        return self._compose(role, "sealed", offer, self._citations(docs))
 
     def _give_up(self) -> float:
         # share of the distance to the other side's opening offer that I will travel at most
@@ -174,7 +206,10 @@ class ScriptedProvider(Provider):
         ev = ""
         if strong and cites:
             ev = " Relevant records: %s." % ", ".join(cites[:4])
-        if kind == "open":
+        if kind == "sealed":
+            body = ("This is my offer." if not strong
+                    else "This is my estimate of what the record supports.%s" % ev)
+        elif kind == "open":
             body = ("Hello. I would like to settle this quickly and fairly." if not strong
                     else "Based on the documents, this is the amount that is owed.%s I will not move far from it." % ev)
         else:

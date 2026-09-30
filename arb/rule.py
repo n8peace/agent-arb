@@ -11,6 +11,7 @@ Inputs
   offers    the two sealed offers [{"partyId", "amount", ...}], revealed only now.
             (case["offers"] is ignored.)
   previous  hash of the prior record in the log, or None.
+  mechanism "final_offer" (default) or "clamped" (see decide.py).
 
 Adverse inference is honoured only on claims owned by a business party, because
 only businesses carry disclosure duties. Flagging a person's claim is an error.
@@ -69,7 +70,9 @@ def _clean_votes(votes) -> List[dict]:
 
 
 def rule(case: dict, findings: Iterable[dict], offers: Iterable[dict],
-         previous: Optional[str] = None) -> dict:
+         previous: Optional[str] = None, mechanism: str = decide.MECH_FINAL_OFFER) -> dict:
+    if mechanism not in decide.MECHANISMS:
+        raise ValueError("unknown mechanism %r" % (mechanism,))
     errs = schema_errors(case, CASE_SCHEMA)
     if errs:
         raise ValueError("case does not match case.schema.json: %s" % "; ".join(errs[:3]))
@@ -102,7 +105,8 @@ def rule(case: dict, findings: Iterable[dict], offers: Iterable[dict],
                        "amount": claim.get("amount"), "adverseInference": adverse})
 
     owed = owed_mod.compute_owed(inputs)
-    decision = decide.final_offer(owed["point"], offers, parties, owed_range=(owed["low"], owed["high"]))
+    decision = decide.apply_mechanism(mechanism, owed["point"], offers, parties,
+                                      owed_range=(owed["low"], owed["high"]))
 
     body = copy.deepcopy({
         "version": case["version"],

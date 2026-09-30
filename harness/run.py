@@ -14,8 +14,10 @@ from .scoring import STRENGTHS, load_answer, score_run, summarize
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_DISPUTES = os.path.join(REPO_ROOT, "bench", "disputes")
-ARB_LABEL = ("UPPER BOUND, not a real result: mechanism 'arb' uses answer.json owedCents as a perfect "
-             "fact panel and scripted opening offers that are not truly sealed.")
+ARB_LABEL = ("UPPER BOUND, not a real result: arb mechanisms use answer.json (owedCents, lowCents, "
+             "highCents) as a perfect fact panel. Offers are sealed and scripted.")
+MECHANISM_CHOICES = ["haggle", "arb-final", "arb-clamped", "arb"]
+MECHANISM_ALIASES = {"arb": "arb-final"}
 
 
 def run_cases(case_dirs: List[str], provider_kind: str, max_rounds: int, friction_cents: int,
@@ -79,15 +81,19 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument("--provider", choices=["scripted", "anthropic", "openai"], default="scripted")
     ap.add_argument("--cases", default="all", help="'all', or e.g. '1,7,12-15'")
     ap.add_argument("--out", default=None, help="output JSON path (default results/<timestamp>.json)")
-    ap.add_argument("--mechanism", choices=["haggle", "arb"], default="haggle",
-                    help="haggle = open agent-vs-agent baseline (default). arb = Agent Arb final-offer rule "
-                         "with a perfect-panel stand-in; scripted only, an UPPER BOUND, not a real result")
+    ap.add_argument("--mechanism", choices=MECHANISM_CHOICES, default="haggle",
+                    help="haggle = open agent-vs-agent baseline (default). arb-final = Agent Arb final-offer "
+                         "rule; arb-clamped = final-offer clamped to the panel's range, panel amount when the "
+                         "range is narrow. arb is an alias for arb-final. Both arb modes use sealed offers and "
+                         "a perfect-panel stand-in; scripted only, an UPPER BOUND, not a real result")
     ap.add_argument("--rounds", type=int, default=config.MAX_ROUNDS)
     ap.add_argument("--friction-cents", type=int, default=config.COURT_FRICTION_CENTS)
     ap.add_argument("--disputes-dir", default=DEFAULT_DISPUTES)
     ap.add_argument(config.PAID_CONFIRM_FLAG, dest="confirm_paid", action="store_true",
                     help="required for anthropic/openai: acknowledges that real runs cost money")
     args = ap.parse_args(argv)
+    args.mechanism = MECHANISM_ALIASES.get(args.mechanism, args.mechanism)
+    is_arb = args.mechanism != "haggle"
 
     if args.provider != "scripted" and not args.confirm_paid:
         print("Refusing to run: --provider %s makes paid API calls. Add %s to confirm, "
@@ -95,16 +101,17 @@ def main(argv: Optional[List[str]] = None) -> int:
               file=sys.stderr)
         return 2
 
-    if args.mechanism == "arb" and args.provider != "scripted":
-        print("Refusing to run: --mechanism arb is scripted-only for now (it uses answer.json as a "
-              "stand-in panel). Use --provider scripted.", file=sys.stderr)
+    if is_arb and args.provider != "scripted":
+        print("Refusing to run: --mechanism %s is scripted-only for now (it uses answer.json as a "
+              "stand-in panel). Use --provider scripted." % args.mechanism, file=sys.stderr)
         return 2
 
     case_dirs = list_case_dirs(args.disputes_dir, args.cases)
     try:
-        if args.mechanism == "arb":
-            from arb.bench import run_cases_arb
-            runs = run_cases_arb(case_dirs, args.friction_cents)
+        if is_arb:
+            from arb.bench import HARNESS_MECHANISMS, run_cases_arb
+            runs = run_cases_arb(case_dirs, args.friction_cents,
+                                 mechanism=HARNESS_MECHANISMS[args.mechanism])
         else:
             runs = run_cases(case_dirs, args.provider, args.rounds, args.friction_cents)
     except ProviderError as e:
@@ -120,7 +127,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             "generatedAt": datetime.datetime.now().isoformat(timespec="seconds"),
             "provider": args.provider,
             "mechanism": args.mechanism,
-            "notARealResult": None if args.mechanism == "haggle" else ARB_LABEL,
+            "notARealResult": ARB_LABEL if is_arb else None,
             "cases": len(case_dirs),
             "maxRounds": args.rounds,
             "courtFrictionCents": args.friction_cents,
@@ -131,10 +138,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     }
     with open(out, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=2)
-    if args.mechanism == "arb":
+    if is_arb:
         print("*** %s ***\n" % ARB_LABEL)
     print(format_summary(summary, len(case_dirs), args.friction_cents))
-    if args.mechanism == "arb":
+    if is_arb:
         print("\n*** %s ***" % ARB_LABEL)
     print("\nWrote %s" % out)
     return 0

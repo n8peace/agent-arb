@@ -84,7 +84,7 @@ def mirror_offers(offers, pie=PIE):
 def raw_view(ruling):
     d = ruling["decision"]
     view = {"mechanism": d["mechanism"], "winningPartyId": d.get("winningPartyId")}
-    if d["mechanism"] == "final_offer":
+    if d["mechanism"] in ("final_offer", "clamped"):     # human_review awards nothing
         view["outcome"] = d["outcome"]
     view["owed"] = dict(ruling["owed"])
     return view

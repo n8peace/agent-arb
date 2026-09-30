@@ -16,6 +16,7 @@ python3 -m unittest
 - `--cases` takes `all`, or a list such as `1,7,12-15`.
 - `--out` defaults to `results/<timestamp>.json`. `results/` is git-ignored.
 - `--rounds N` (default 6) and `--friction-cents N` (default 15000) override the values in `harness/config.py`.
+- `--mechanism haggle` (default) is the open haggle. `--mechanism arb-final` and `--mechanism arb-clamped` run the same cases through the Agent Arb decision rules instead (`arb` is an alias for `arb-final`). Each side submits one sealed offer from only its own view of the case, and never sees the other side's offer. The panel is a stand-in that reads `answer.json` (owed amount and range), so these runs are an **UPPER BOUND, not a real result**. Scripted only.
 - The scripted bargainers are our own rule-based stand-ins (weak concedes fast and anchors near the other side; strong anchors hard, concedes slowly and cites evidence ids). Their numbers only prove the pipeline works. They say nothing about real models.
 
 ## How a run works
