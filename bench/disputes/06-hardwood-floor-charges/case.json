@@ -97,7 +97,7 @@
       "evidenceId": "ev_c06e04",
       "partyId": "pty_c06rsp",
       "type": "invoice",
-      "sha256": "7c3f922fe37174ba6450bd86ad71cb21cd5e7abba609e2f90beb86a706cab670",
+      "sha256": "3f0c2fb53ef89caa397624c0e56466ae54a44e925984e3af5ac99ceb963bdfa1",
       "uri": "evidence/flooring-invoice.txt"
     },
     {

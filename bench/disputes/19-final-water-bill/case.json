@@ -23,7 +23,7 @@
     {
       "claimId": "clm_c19k01",
       "partyId": "pty_c19clm",
-      "assertion": "Tenant paid $156.20 to Ridgeline on 2025-05-12 with memo 'WATER MAY'",
+      "assertion": "Tenant paid $156.20 to Ridgeline on 2025-06-03 with memo 'WATER MAY'",
       "amount": 15620,
       "evidenceIds": [
         "ev_c19e02"
@@ -80,7 +80,7 @@
       "evidenceId": "ev_c19e02",
       "partyId": "pty_c19clm",
       "type": "statement",
-      "sha256": "a0016bc8734f119aba4c0ca1ba8c4171be528a8bb21e45e328fb0eba4f8ffae0",
+      "sha256": "d23f27bf2540a82a2e4a86e63919bdadd02ffe84f675edd61c0270e71b59d670",
       "uri": "evidence/bank-statement-excerpt.txt"
     },
     {

@@ -1,8 +1,8 @@
 {
-  "owedCents": 95000,
-  "lowCents": 95000,
-  "highCents": 110000,
-  "reasoning": "Tenant is liable under lease s.4 until re-let. New tenant's term begins 2025-07-12, so the vacant days are June 1 - July 11 = 30 + 11 = 41 days x $50 = $2,050 (listing, lease). The landlord listed at the same price 3 days after move-out and showed the unit 4 times, which is reasonable mitigation (listing). Unit is clean (emails, stmt). $3,000 - $2,050 = $950 owed. High bound $1,100 if a reader deducts the 3-day listing delay. The listing log and new lease dates are held only by the landlord.",
+  "owedCents": 235000,
+  "lowCents": 235000,
+  "highCents": 235000,
+  "reasoning": "Under lease s.4 the tenant owes rent until a new tenant's lease term begins, not until the original term ends (lease). The new lease was signed 2025-06-09 but its term begins 2025-06-14, so the tenant owes June 1-13 = 13 days x $50 = $650 (listing, lease). The landlord listed the day after notice at the same rent and held 5 showings, which is reasonable mitigation (listing, emails). Unit was clean (emails, stmt) and the statement was mailed 2025-06-18, within 21 days of the 2025-05-31 move-out. $3,000 - $650 = $2,350 owed. A reader who wrongly stops rent at the signing date gets $2,600; one who charges through July gets $0. The listing log and new lease dates are held only by the landlord.",
   "difficulty": "hard",
   "infoAsymmetry": true
 }

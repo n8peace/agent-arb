@@ -2,7 +2,7 @@
   "owedCents": 21430,
   "lowCents": 21430,
   "highCents": 21430,
-  "reasoning": "The May bill ($156.20) was paid on 5/12 (bank) but never credited (ledger), so that deduction is invalid. The June final bill was $98.10 under lease s.5 (bills, lease), not the $156.20 charged, and remains unpaid, so $98.10 stands. Withheld $312.40 - $98.10 = $214.30 owed. The true June amount is only in the landlord's utility statements.",
+  "reasoning": "The May bill ($156.20) was paid on 6/3, after it was billed on 5/24 and before it was due on 6/5 (bank) but never credited (ledger), so that deduction is invalid. The June final bill was $98.10 under lease s.5 (bills, lease), not the $156.20 charged, and remains unpaid, so $98.10 stands. Withheld $312.40 - $98.10 = $214.30 owed. The true June amount is only in the landlord's utility statements.",
   "difficulty": "hard",
   "infoAsymmetry": true
 }
