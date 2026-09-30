@@ -27,9 +27,9 @@ It has one big flaw we have to fix. The standard version measures "better off" f
 ## How a case works
 
 1. **File.** Either side's agent opens a case: the dispute, the contract or policy, and the evidence. Agents connect through a standard plug-in for AI agents (MCP) or a plain API.
-2. **Answer.** The other side's agent responds in the same fixed format. No free-text arguments reach the decision.
+2. **Answer.** The other side's agent responds in the same fixed format. No free-text arguments reach the decision. **Both sides go through the same intake checklist.** The platform, not the agent, asks each side the same questions for this case type (for a deposit: move-in condition, each deduction, the itemization date, and so on), with the same limits on claims and files. A stronger agent can't win by filing more paperwork, and a weaker one can't lose by forgetting to ask.
 3. **Disclose.** The company side has to show the rules it applied (for example the claim-valuation factors or the refund policy). If it refuses, the panel assumes the missing rule would have favored the person, the same inference courts draw from hidden evidence.
-4. **Find the facts.** Three models from different companies each read the evidence on their own and answer set questions: what happened, what the contract says, and what range each side is owed. A fact counts only when at least two agree. No majority means the case goes to a human. (This is the same agreement rule [Open Election Data](https://github.com/n8peace/open-election-data) uses.)
+4. **Find the facts.** Three models from different companies each read the evidence on their own and answer set questions: what happened, what the contract says, and what range each side is owed. A fact counts only when at least two agree. The "owed" range is also set by agreement: its bottom and top are the middle panelist's bottom and top, so one outlier can't stretch the range. No majority means the case goes to a human. (This is the same agreement rule [Open Election Data](https://github.com/n8peace/open-election-data) uses.)
 5. **Decide with math.** Deterministic code, public and tested, turns the facts plus each side's offer into an outcome:
    - **v1, a single money amount** (refund, deposit, claim): *clamped final-offer.* When the panel's "owed" range is narrow, the award is exactly what's owed and the offers don't matter. When it's wide, each side's sealed number competes, the one closer to "owed" wins, and the award is capped to the panel's range. We tried plain final-offer first, where the winner gets its own number in full. It rewarded whoever guessed the ruling best, not whoever was right: even with a perfect panel, the average award was off by about $200. See [Results so far](#results-so-far).
    - **v2, several issues at once** (amount, timing, repairs, apology): the Nash bargaining solution measured from what each side is owed, using each side's stated priorities.
@@ -101,6 +101,19 @@ What this does and doesn't show:
 - The gap to beat is real in the harness, and clamping removes it *when the facts are found correctly*.
 - The clamped result mostly means "the panel decided it." 45 of 50 answer ranges are a single number. With a perfect panel, the whole fight moves into fact-finding and into which claims and evidence each agent files. That's where a stronger model will try to win next, and the next tests go there: an imperfect panel, then real models.
 - Human review could fire often once real panels return wider ranges. We'll measure that rate before we call v1 done.
+
+**Imperfect panel (simulated, 10 seeds).** Three panelists see the truth plus random error, and optionally lean toward whichever side filed more.
+
+| Clamped v1, 10% panel error, leans toward more paperwork | Strong claimant's edge | Strong respondent's edge | Award error | Sent to a human |
+|---|---|---|---|---|
+| Range = widest panelist spread | +$14 | +$28 | $73 | 13.4% |
+| Range = middle panelist (2 of 3) | +$37 | +$49 | — | 1.5% |
+| Same intake checklist for both sides | −$19 | −$15 | — | 12.4% |
+| **Both (now v1)** | **−$2** | **$0** | **$64** | **1.5%** |
+
+- The widest-spread range broke first. Once panel error passed 5%, almost every case went to the offers or to a human.
+- Paperwork bias passes straight into the award. Taking the middle of three panelists doesn't cancel a lean they all share. Only equal intake removes it.
+- Neither fix reduces the panel's own error (about $64 per case here). That needs better panels, and real models are the next test.
 
 ## Where to start
 

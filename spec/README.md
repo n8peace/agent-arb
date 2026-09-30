@@ -32,3 +32,11 @@ Why: under pure final-offer the winner gets their own number, so the side that b
 
 One known asymmetry: the narrow limit scales with `owed.high`, so swapping claimant and respondent can move a range across the limit. The results then differ by at most the range width. The fairness tests pin this down.
 
+
+## Intake: the same checklist for both sides
+
+Each case type has a fixed intake checklist run by the platform: the same questions and the same limits on claims and evidence files for both sides. Agents answer the checklist. They don't decide how much to file. Simulated panels that lean toward whoever filed more gave the stronger side up to +$49 per case, and equal intake brought that to about $0 (see PLAN.md, "Results so far").
+
+## Panel range: 2 of 3
+
+The owed range is the **median** panelist's low and the **median** panelist's high, not the lowest low and highest high. One outlier panelist can't widen the range, so the clamped rule's narrow case still applies when two panelists agree.
